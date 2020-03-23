@@ -16,7 +16,7 @@ public class blaghoulpull : MonoBehaviour
     void Start()
     {
         holeForce = 1;
-		powerBase = 1.5;
+		powerBase = 2;
 		holePos = GameObject.FindGameObjectWithTag("Hole").transform.position;
     }
 
