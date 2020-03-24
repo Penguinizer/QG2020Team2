@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PhysAffected
   - Hole
+  - Background
   layers:
   - Default
   - TransparentFX
