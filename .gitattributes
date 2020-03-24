@@ -1,4 +1,4 @@
-#* text=auto
+* text=auto
 
 # Unity files
 *.meta -text merge=unityyamlmerge diff
@@ -27,7 +27,7 @@
 # Image formats
 *.psd filter=lfs diff=lfs merge=lfs -binary
 *.jpg filter=lfs diff=lfs merge=lfs -binary
-*.png filter=lfs diff=lfs merge=lfs -binary
+*.png -binary
 *.gif filter=lfs diff=lfs merge=lfs -binary
 *.bmp filter=lfs diff=lfs merge=lfs -binary
 *.tga filter=lfs diff=lfs merge=lfs -binary
