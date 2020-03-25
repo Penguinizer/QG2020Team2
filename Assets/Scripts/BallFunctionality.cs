@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 //Script based on unity documentation example.
-public class ImpulseOnClick : MonoBehaviour
+public class BallFunctionality : MonoBehaviour
 {
 	//Rigidbody2D rb;
 	Vector3 newForce;
@@ -54,4 +54,17 @@ public class ImpulseOnClick : MonoBehaviour
 			}
 		}
     }
+	
+	void OnCollisionEnter(Collision collision){
+		if (gameObject.tag == "MinusBall"){
+			if (collision.collider.tag == "PosBall"){
+				Destroy(gameObject);
+			}
+		}
+		if (gameObject.tag == "PosBall"){
+			if (collision.collider.tag == "MinusBall"){
+				Destroy(gameObject);
+			}
+		}
+	}
 }
