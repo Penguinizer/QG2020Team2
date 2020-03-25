@@ -7,6 +7,8 @@ TagManager:
   - PhysAffected
   - Hole
   - Background
+  - MinusBall
+  - PosBall
   layers:
   - Default
   - TransparentFX

@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 7494579}
   m_Layer: 0
   m_Name: Ball Plus 2
-  m_TagString: PhysAffected
+  m_TagString: PosBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 1140024294}
   m_Layer: 0
   m_Name: Ball Minus
-  m_TagString: Untagged
+  m_TagString: PhysAffected
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 1643506256}
   m_Layer: 0
   m_Name: Ball Plus 1
-  m_TagString: PhysAffected
+  m_TagString: PosBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 1879350121}
   m_Layer: 0
   m_Name: Ball Minus 1
-  m_TagString: PhysAffected
+  m_TagString: MinusBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1171,7 +1171,7 @@ GameObject:
   - component: {fileID: 1925970180}
   m_Layer: 0
   m_Name: Ball Minus 2
-  m_TagString: PhysAffected
+  m_TagString: MinusBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1407,7 +1407,7 @@ GameObject:
   - component: {fileID: 2124236118}
   m_Layer: 0
   m_Name: Ball Plus
-  m_TagString: Untagged
+  m_TagString: PhysAffected
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
