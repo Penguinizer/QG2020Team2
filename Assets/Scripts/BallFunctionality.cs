@@ -26,7 +26,7 @@ public class BallFunctionality : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		// Figure out if mouse was pressed
+		// Code for pushing balls away from mouse when mouse is pressed.
         if (Input.GetMouseButtonDown(0)){
 			foreach (GameObject ball in GameObject.FindGameObjectsWithTag("PosBall")){
 				//Get mouse position, use to calculation vector from mouse to sphere.
@@ -55,14 +55,12 @@ public class BallFunctionality : MonoBehaviour
 		}
     }
 	
-	void OnCollisionEnter(Collision collision){
-		// && collision.collider.tag == "PosBall"
-		if (gameObject.tag == "MinusBall"){
+	void OnCollisionEnter2D(Collision2D collision){
+		if (gameObject.tag == "MinusBall" && collision.collider.tag == "PosBall"){
 			print("Colliding");
 			Destroy(gameObject);
 		}
-		// && collision.collider.tag == "MinusBall"
-		if (gameObject.tag == "PosBall"){
+		if (gameObject.tag == "PosBall" && collision.collider.tag == "MinusBall"){
 			print("Colliding");
 			Destroy(gameObject);
 		}
