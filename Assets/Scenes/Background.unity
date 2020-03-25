@@ -673,7 +673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101628746}
   m_LocalRotation: {x: -0.44414955, y: -0, z: -0, w: 0.89595264}
-  m_LocalPosition: {x: 1.59, y: 0.4022308, z: 0.25}
+  m_LocalPosition: {x: 5.95, y: 2.54, z: -5.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1192,6 +1192,7 @@ GameObject:
   - component: {fileID: 1879350123}
   - component: {fileID: 1879350122}
   - component: {fileID: 1879350121}
+  - component: {fileID: 1879350125}
   m_Layer: 0
   m_Name: Ball Minus 1
   m_TagString: MinusBall
@@ -1312,6 +1313,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1879350125
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879350119}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6
 --- !u!1 &1925970178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1325,6 +1342,7 @@ GameObject:
   - component: {fileID: 1925970182}
   - component: {fileID: 1925970181}
   - component: {fileID: 1925970180}
+  - component: {fileID: 1925970184}
   m_Layer: 0
   m_Name: Ball Minus 2
   m_TagString: MinusBall
@@ -1445,6 +1463,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1925970184
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925970178}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.6
 --- !u!1 &2013257636
 GameObject:
   m_ObjectHideFlags: 0

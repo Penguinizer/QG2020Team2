@@ -55,16 +55,16 @@ public class BallFunctionality : MonoBehaviour
 		}
     }
 	
-	void OnTriggerEnter(Collider other){
+	void OnCollisionEnter(Collision collision){
+		// && other.tag == "PosBall"
 		if (gameObject.tag == "MinusBall"){
-			if (other.tag == "PosBall"){
-				Destroy(gameObject);
-			}
+			print("Colliding");
+			Destroy(gameObject);
 		}
+		// && other.tag == "MinusBall"
 		if (gameObject.tag == "PosBall"){
-			if (other.tag == "MinusBall"){
-				Destroy(gameObject);
-			}
+			print("Colliding");
+			Destroy(gameObject);
 		}
 	}
 }
