@@ -11,9 +11,13 @@ public class BallFunctionality : MonoBehaviour
 	Vector3 forceDir;
 	Vector3 mousePos;
 	Vector3 ballPos;
+	float objDistance;
 	[SerializeField]
-	public float force = 300;
-	public double powerBase = 2;
+	public float impulseForce = 300;
+	public float repelForce = 1;
+	public float attractForce = 1;
+	public float powerBase = 2;
+	public float pushrepelDistance = 4;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +40,7 @@ public class BallFunctionality : MonoBehaviour
 				//Normalize vector to avoid fuckery
 				forceDir.Normalize();
 				//Multiply direction with force to get force vector
-				newForce = forceDir * (float)(force/Math.Pow(powerBase,Vector3.Distance(mousePos,ballPos)));
+				newForce = forceDir * (float)(impulseForce/Math.Pow(powerBase,Vector3.Distance(mousePos,ballPos)));
 				//Apply impulse to sphere
 				ball.GetComponent<Rigidbody2D>().AddForce(newForce,ForceMode2D.Impulse);
 			}
@@ -48,20 +52,58 @@ public class BallFunctionality : MonoBehaviour
 				//Normalize vector to avoid fuckery
 				forceDir.Normalize();
 				//Multiply direction with force to get force vector
-				newForce = forceDir * (float)(force/Math.Pow(powerBase,Vector3.Distance(mousePos,ballPos)));
+				newForce = forceDir * (float)(impulseForce/Math.Pow(powerBase,Vector3.Distance(mousePos,ballPos)));
 				//Apply impulse to sphere
 				ball.GetComponent<Rigidbody2D>().AddForce(newForce,ForceMode2D.Impulse);
+			}
+		}
+		//Balls of the same type repel and different types pull eachother
+		foreach (GameObject ball in GameObject.FindGameObjectsWithTag("MinusBall")){
+			objDistance = Vector3.Distance(ball.GetComponent<Rigidbody2D>().position, gameObject.GetComponent<Rigidbody2D>().position);
+			if(ball != gameObject && objDistance < pushrepelDistance){
+				forceDir = gameObject.GetComponent<Rigidbody2D>().position - ball.GetComponent<Rigidbody2D>().position;
+				forceDir.Normalize();
+				//Repel
+				if (gameObject.tag == "MinusBall"){	
+					newForce = -1 * forceDir * (float)(repelForce/Math.Pow(powerBase,objDistance));
+					ball.GetComponent<Rigidbody2D>().AddForce(newForce, ForceMode2D.Force);
+				}
+				//Attract
+				if (gameObject.tag == "PosBall"){
+					newForce = forceDir * (float)(attractForce/Math.Pow(powerBase,objDistance));
+					ball.GetComponent<Rigidbody2D>().AddForce(newForce, ForceMode2D.Force);
+				}
+			}
+		}
+		foreach (GameObject ball in GameObject.FindGameObjectsWithTag("PosBall")){
+			objDistance = Vector3.Distance(ball.GetComponent<Rigidbody2D>().position, gameObject.GetComponent<Rigidbody2D>().position);
+			if(ball != gameObject && objDistance < pushrepelDistance){
+				forceDir = gameObject.GetComponent<Rigidbody2D>().position - ball.GetComponent<Rigidbody2D>().position;
+				forceDir.Normalize();
+				//Repel
+				if (gameObject.tag == "PosBall"){	
+					newForce = -1 * forceDir * (float)(repelForce/Math.Pow(powerBase,objDistance));
+					ball.GetComponent<Rigidbody2D>().AddForce(newForce, ForceMode2D.Force);
+				}
+				//Attract
+				if (gameObject.tag == "MinusBall"){
+					newForce = forceDir * (float)(attractForce/Math.Pow(powerBase,objDistance));
+					ball.GetComponent<Rigidbody2D>().AddForce(newForce, ForceMode2D.Force);
+				}
 			}
 		}
     }
 	
 	void OnCollisionEnter2D(Collision2D collision){
 		if (gameObject.tag == "MinusBall" && collision.collider.tag == "PosBall"){
-			print("Colliding");
+			//print("Colliding");
 			Destroy(gameObject);
 		}
 		if (gameObject.tag == "PosBall" && collision.collider.tag == "MinusBall"){
-			print("Colliding");
+			//print("Colliding");
+			Destroy(gameObject);
+		}
+		if (collision.collider.tag == "Hole"){
 			Destroy(gameObject);
 		}
 	}
