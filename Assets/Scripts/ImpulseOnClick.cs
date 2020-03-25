@@ -11,8 +11,9 @@ public class ImpulseOnClick : MonoBehaviour
 	Vector3 forceDir;
 	Vector3 mousePos;
 	Vector3 ballPos;
-	float force;
-	double powerBase;
+	[SerializeField]
+	public float force = 300;
+	public double powerBase = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +21,6 @@ public class ImpulseOnClick : MonoBehaviour
         //rb = GetComponent<Rigidbody2D>();
 		
 		//Initialization nonsense
-		force = 300;
-		powerBase = 2;
     }
 
     // Update is called once per frame

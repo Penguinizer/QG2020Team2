@@ -10,13 +10,12 @@ public class blaghoulpull : MonoBehaviour
 	Vector3 forceDir;
 	Vector3 holePos;
 	Vector3 ballPos;
-	float holeForce;
-	double powerBase;
     // Start is called before the first frame update
+	[SerializeField]
+	public float holeForce = 1;
+	public double powerBase = 2;
     void Start()
     {
-        holeForce = 1;
-		powerBase = 2;
 		holePos = GameObject.FindGameObjectWithTag("Hole").transform.position;
     }
 
