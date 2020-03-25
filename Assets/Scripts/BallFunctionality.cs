@@ -15,13 +15,19 @@ public class BallFunctionality : MonoBehaviour
 	Vector3 upMousePos;
 	Vector3 ballPos;
 	float objDistance;
+	//Editor editable values
 	[SerializeField]
-	public float impulseDistance = 5;
-	public float impulseForce = 2;
-	public float repelForce = 1;
-	public float attractForce = 1;
-	public float powerBase = 2;
-	public float pushrepelDistance = 4;
+	float impulseDistance = 5;
+	[SerializeField]
+	float impulseForce = 2;
+	[SerializeField]
+	float repelForce = 1;
+	[SerializeField]
+	float attractForce = 1;
+	[SerializeField]
+	float powerBase = 2;
+	[SerializeField]
+	float pushrepelDistance = 4;
     // Start is called before the first frame update
     void Start()
     {
