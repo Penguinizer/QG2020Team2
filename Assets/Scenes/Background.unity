@@ -145,8 +145,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3060ede1b4c3bf244a359d38733ae627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 300
+  impulseDistance: 5
+  impulseForce: 2
+  repelForce: 1
+  attractForce: 1
   powerBase: 2
+  pushrepelDistance: 4
 --- !u!58 &7494580
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1161,8 +1165,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3060ede1b4c3bf244a359d38733ae627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 300
+  impulseDistance: 5
+  impulseForce: 2
+  repelForce: 1
+  attractForce: 1
   powerBase: 2
+  pushrepelDistance: 4
 --- !u!58 &1643506257
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1226,8 +1234,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3060ede1b4c3bf244a359d38733ae627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 300
+  impulseDistance: 5
+  impulseForce: 2
+  repelForce: 1
+  attractForce: 1
   powerBase: 2
+  pushrepelDistance: 4
 --- !u!58 &1879350122
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1376,8 +1388,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3060ede1b4c3bf244a359d38733ae627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 300
+  impulseDistance: 5
+  impulseForce: 2
+  repelForce: 1
+  attractForce: 1
   powerBase: 2
+  pushrepelDistance: 4
 --- !u!58 &1925970181
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1590,6 +1606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holeForce: 1
   powerBase: 2
+  holeDistance: 5
 --- !u!1 &2124236117
 GameObject:
   m_ObjectHideFlags: 0
