@@ -10,22 +10,22 @@ PrefabInstance:
     - target: {fileID: 7041279235237240736, guid: c33851fb49a6626408318c65f61aba80,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.16862746
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7041279235237240736, guid: c33851fb49a6626408318c65f61aba80,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.6408519
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7041279235237240736, guid: c33851fb49a6626408318c65f61aba80,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.8
+      value: 0.019385815
       objectReference: {fileID: 0}
     - target: {fileID: 7041279235237240741, guid: c33851fb49a6626408318c65f61aba80,
         type: 3}
       propertyPath: m_Name
-      value: PosParticleSystem
+      value: NegativeParticle
       objectReference: {fileID: 0}
     - target: {fileID: 7041279235237240742, guid: c33851fb49a6626408318c65f61aba80,
         type: 3}
