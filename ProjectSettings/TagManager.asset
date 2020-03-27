@@ -9,6 +9,8 @@ TagManager:
   - Background
   - MinusBall
   - PosBall
+  - Player1Owned
+  - Player2Owned
   layers:
   - Default
   - TransparentFX
