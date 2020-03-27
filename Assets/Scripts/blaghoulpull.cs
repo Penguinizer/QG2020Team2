@@ -12,8 +12,11 @@ public class blaghoulpull : MonoBehaviour
 	Vector3 ballPos;
     // Start is called before the first frame update
 	[SerializeField]
-	public float holeForce = 1;
-	public double powerBase = 2;
+	float holeForce = 1;
+	[SerializeField]
+	double powerBase = 2;
+	[SerializeField]
+	float holeDistance = 5;
     void Start()
     {
 		holePos = GameObject.FindGameObjectWithTag("Hole").transform.position;
@@ -33,7 +36,7 @@ public class blaghoulpull : MonoBehaviour
 		}
 		foreach(GameObject ball in GameObject.FindGameObjectsWithTag("PosBall")){
 			ballPos = new Vector3 (ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y,0);
-			if (Vector3.Distance(ballPos,holePos)<5.0){
+			if (Vector3.Distance(ballPos,holePos)<holeDistance){
 				forceDir=(holePos - ballPos);
 				forceDir.Normalize();
 				pullForce = forceDir * (float)(holeForce/Math.Pow(powerBase,Vector3.Distance(holePos,ballPos)));
