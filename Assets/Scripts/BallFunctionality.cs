@@ -28,6 +28,8 @@ public class BallFunctionality : MonoBehaviour
     float powerBase = 2;
     [SerializeField]
     float pushrepelDistance = 4;
+	[SerializeField]
+	bool ffToggle = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -133,12 +135,12 @@ public class BallFunctionality : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.tag == "MinusBall" && collision.collider.tag == "PosBall")
+        if (gameObject.tag == "MinusBall" && collision.collider.tag == "PosBall" && (gameObject.transform.parent.tag != collision.collider.transform.parent.tag | ffToggle))
         {
             //print("Colliding");
             Destroy(gameObject);
         }
-        if (gameObject.tag == "PosBall" && collision.collider.tag == "MinusBall")
+        if (gameObject.tag == "PosBall" && collision.collider.tag == "MinusBall" && (gameObject.transform.parent.tag != collision.collider.transform.parent.tag | ffToggle))
         {
             //print("Colliding");
             Destroy(gameObject);
