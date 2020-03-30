@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: pushrepelDistance
-      value: 1
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
@@ -20,12 +20,12 @@ PrefabInstance:
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: impulseDistance
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: impulseForce
-      value: 0.08
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
@@ -35,7 +35,7 @@ PrefabInstance:
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: attractForce
-      value: 0
+      value: 0.89
       objectReference: {fileID: 0}
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
