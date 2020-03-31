@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Saku_Sandbox.unity
     guid: 329ef21e68c384f4da47f009e1967c8d
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: f790f7aded700cf42bd411640ac84ca6
+  - enabled: 1
+    path: Assets/Scenes/Background.unity
+    guid: 8cf31997526b1e144af74eefca994b30
   m_configObjects: {}
