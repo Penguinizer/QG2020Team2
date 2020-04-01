@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
 	<RootPaths>
 		<ProjectRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<SourceFilesRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
