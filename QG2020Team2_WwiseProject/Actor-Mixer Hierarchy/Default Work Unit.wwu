@@ -1,6 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E5F8A6DB-2984-4905-830A-475CF7966F56}" SchemaVersion="97">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{E5F8A6DB-2984-4905-830A-475CF7966F56}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E5F8A6DB-2984-4905-830A-475CF7966F56}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Annihilation" ID="{ECD5E730-F98C-4ECF-8192-9EB2EE78FCB6}" ShortID="120543720">
+					<PropertyList>
+						<Property Name="BypassEffect0" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="BypassEffect1" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="BypassEffect2" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{B3F551B1-5999-4F32-B417-A4289101A38B}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="278"/>
+											<Property Name="Min" Type="Real64" Value="-253"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+						</Reference>
+						<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+							<ObjectRef Name="New_Wwise_Time_Stretch" ID="{B6588F20-EBE3-45C2-82E8-FC146DBC9354}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="Effect1" CompanyID="4095" PluginID="65535" PluginType="15">
+							<ObjectRef Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="Effect2" CompanyID="4095" PluginID="65535" PluginType="15">
+							<ObjectRef Name="Holy" ID="{CC7B8638-C670-4AD5-B3FB-331EA81037F6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Fart" ID="{E36CBA4F-A392-44A3-8390-AA17BE6C2A76}" ShortID="787189559">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Farts_Airy_ODC-0048-254" ID="{5476D9C0-14EE-437E-A7F3-6AD8389665EC}">
+									<PropertyList>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.374703196347039"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Farts_Airy_ODC-0048-254.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="106645714"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Farts_Airy_ODC-0048-254" ID="{5476D9C0-14EE-437E-A7F3-6AD8389665EC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Fart_01" ID="{12238342-56C8-48CF-895F-FEFA9724A1A9}" ShortID="309550332">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Farts_Airy_ODC-0048-254" ID="{586A4A77-9A1E-43A0-A1E8-0D0140E7B4F1}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.619751859352602"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.953789954337903"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Farts_Airy_ODC-0048-254.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="696736515"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Farts_Airy_ODC-0048-254" ID="{586A4A77-9A1E-43A0-A1E8-0D0140E7B4F1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Fart_02" ID="{C6203973-F372-49A9-8C76-3C12BAA403D8}" ShortID="92087607">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Farts_Airy_ODC-0048-254" ID="{6105EE34-44F0-4D6D-B3F2-D90D0F274189}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.17807847422255"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.61866038858763"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Farts_Airy_ODC-0048-254.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="96699629"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Farts_Airy_ODC-0048-254" ID="{6105EE34-44F0-4D6D-B3F2-D90D0F274189}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Fart_03" ID="{B976DBCB-3892-4B9A-9038-1A3DBC54361E}" ShortID="485887066">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Farts_Airy_ODC-0048-254" ID="{7F3DED61-94AE-4CC2-80AA-14265632E259}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="1.75553454251949"/>
+										<Property Name="TrimEnd" Type="Real64" Value="2.1748474156163"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Farts_Airy_ODC-0048-254.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="126146982"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Farts_Airy_ODC-0048-254" ID="{7F3DED61-94AE-4CC2-80AA-14265632E259}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Fart_04" ID="{89B40EB3-F22F-49F8-BC3A-31E310FDF749}" ShortID="404460389">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Farts_Airy_ODC-0048-254" ID="{425A9FBA-92C8-43B0-93BE-3A32561A9BB3}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="2.52073059360731"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.27013698630138"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Farts_Airy_ODC-0048-254.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="670298052"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Farts_Airy_ODC-0048-254" ID="{425A9FBA-92C8-43B0-93BE-3A32561A9BB3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

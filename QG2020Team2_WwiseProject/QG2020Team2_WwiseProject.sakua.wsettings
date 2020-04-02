@@ -3,6 +3,8 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{1135038A-FA17-42CF-8BBD-FBFD22433362}">
 			<PropertyList>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\sakua\Documents\GitHub\QG2020Team2 Sound design\Sound library\"/>
+				<Property Name="Event Action List\{B020F771-075D-4E84-AB63-E31208BACB29}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>

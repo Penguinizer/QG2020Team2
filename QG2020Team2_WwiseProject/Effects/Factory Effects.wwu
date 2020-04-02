@@ -1332,8 +1332,9 @@
 							<ChildrenList>
 								<Effect Name="Holy" ID="{CC7B8638-C670-4AD5-B3FB-331EA81037F6}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>
-										<Property Name="DecayTime" Type="Real32" Value="8"/>
+										<Property Name="DecayTime" Type="Real32" Value="5.9"/>
 										<Property Name="Density" Type="Real32" Value="70"/>
+										<Property Name="DryLevel" Type="Real32" Value="-12.3"/>
 										<Property Name="ERLevel" Type="Real32" Value="-24"/>
 										<Property Name="ERPattern" Type="int32" Value="9"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="490"/>
@@ -1776,7 +1777,7 @@
 						</Effect>
 						<Effect Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
 							<PropertyList>
-								<Property Name="DryLevel" Type="Real32" Value="-96"/>
+								<Property Name="DryLevel" Type="Real32" Value="-10"/>
 								<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
 								<Property Name="EnableFeedback" Type="bool" Value="True"/>
 								<Property Name="FilterFrequency" Type="Real32" Value="2507"/>
@@ -1830,17 +1831,17 @@
 						</Effect>
 						<Effect Name="Caught_in_a_loop" ID="{8FC64215-9A75-4BE3-A33A-584C8CA49963}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
 							<PropertyList>
-								<Property Name="DryLevel" Type="Real32" Value="-96"/>
+								<Property Name="DryLevel" Type="Real32" Value="-5"/>
 								<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
 								<Property Name="EnableFeedback" Type="bool" Value="True"/>
 								<Property Name="FilterFrequency" Type="Real32" Value="2364"/>
 								<Property Name="FilterGain" Type="Real32" Value="-24"/>
 								<Property Name="LeftCrossfeed" Type="Real32" Value="-15"/>
 								<Property Name="LeftDelayTime" Type="Real32" Value="0.47"/>
-								<Property Name="LeftFeedback" Type="Real32" Value="-18.5"/>
+								<Property Name="LeftFeedback" Type="Real32" Value="-30.3"/>
 								<Property Name="RightCrossfeed" Type="Real32" Value="-6"/>
 								<Property Name="RightDelayTime" Type="Real32" Value="0.39"/>
-								<Property Name="RightFeedback" Type="Real32" Value="-6"/>
+								<Property Name="RightFeedback" Type="Real32" Value="-48"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Straight_Delay" ID="{00ADE3F8-B4F2-465A-9DC3-9EA55A7B3235}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
@@ -1984,6 +1985,13 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
+				<Effect Name="New_Wwise_Time_Stretch" ID="{B6588F20-EBE3-45C2-82E8-FC146DBC9354}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
+					<PropertyList>
+						<Property Name="TimeStretch" Type="Real32" Value="123"/>
+						<Property Name="TimeStretchRandom" Type="Real32" Value="80"/>
+						<Property Name="WindowSize" Type="int32" Value="2560"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

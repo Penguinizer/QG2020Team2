@@ -12,14 +12,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a21ce654748e2a47b59f75d253bf5d6, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
-  AuxBusWwu: []
-  BankWwu: []
-  EventWwu: []
-  RtpcWwu: []
-  StateWwu: []
-  SwitchWwu: []
-  TriggerWwu: []
-  ExpandedItems: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 036615e9a5b1ba4c9bb3f4ef844b1add
+    GuidInternal: 
+    m_lastTime: -8586158620129387705
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 720ddabdb45a034fa62c5d118b3a22cf
+    GuidInternal: 
+    m_lastTime: -8586158620130137992
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 79d8ae792bd85641a7f745a1908fe8f2
+    GuidInternal: 
+    m_lastTime: -8586157849409542901
+    List:
+    - name: Main
+      guid: 9e12ad08d9bc6f468866eb1efb37bfc8
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      Path: Default Work Unit\Main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: b4c86fa16aad31488415514b00834156
+    GuidInternal: 
+    m_lastTime: -8586157849409542901
+    List:
+    - name: PlusMinBall_Annihilation
+      guid: 71f720b05d07844eab63e31208bacb29
+      id: 1543154663
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlusMinBall_Annihilation
+        ObjectType: 3
+      Path: Default Work Unit\PlusMinBall_Annihilation
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 346a9dc26a3c634fb587d37b031b3c50
+    GuidInternal: 
+    m_lastTime: -8586158620129627556
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: b078fef210fc8541b752fe9d136c5bc5
+    GuidInternal: 
+    m_lastTime: -8586158620129957373
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 62a6585d01678a41b5f48d334a256c1d
+    GuidInternal: 
+    m_lastTime: -8586158620129907407
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 72c32470587f0c42bbbf4ea127e5bb9e
+    GuidInternal: 
+    m_lastTime: -8586158620129787468
+    List: []
+  ExpandedItems:
+  - /QG2020Team2_WwiseProject
+  - /QG2020Team2_WwiseProject/Events
+  - /QG2020Team2_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
