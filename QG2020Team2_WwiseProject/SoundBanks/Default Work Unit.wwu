@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{08AD129E-BCD9-466F-8866-EB1EFB37BFC8}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Ambient" ID="{0E522219-CCF1-49AE-B08D-523F83AC11C0}" WorkUnitID="{A16FC8B4-AD6A-4831-8415-514B00834156}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="PlusMinBall_Annihilation" ID="{B020F771-075D-4E84-AB63-E31208BACB29}" WorkUnitID="{A16FC8B4-AD6A-4831-8415-514B00834156}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

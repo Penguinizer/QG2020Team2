@@ -30,8 +30,12 @@
 							</ModifierList>
 						</Property>
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Attenuation sphere test" ID="{CD67B508-FA2D-4298-8002-D3F701488A88}" WorkUnitID="{8AA3CCEB-764D-4620-8E6F-DF9719D9CB58}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
 						</Reference>
@@ -185,6 +189,9 @@
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{338B751B-7740-418F-A74C-14BB4A0E2C7A}"/>
+					</PositioningInfo>
 				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>

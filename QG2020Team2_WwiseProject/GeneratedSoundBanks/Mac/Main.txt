@@ -7,9 +7,9 @@ Effect plug-ins	ID	Name	Type				Notes
 	3451596814	Hall_Medium	Wwise RoomVerb			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	96699629	Fart_02	C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Mac\SFX\Farts_Airy_ODC-0048-254_F53FE31A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Annihilation\Fart_02		42360
-	106645714	Fart	C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Mac\SFX\Farts_Airy_ODC-0048-254_F656618C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Annihilation\Fart		36036
-	126146982	Fart_03	C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Mac\SFX\Farts_Airy_ODC-0048-254_23C433CE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Annihilation\Fart_03		40318
-	670298052	Fart_04	C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Mac\SFX\Farts_Airy_ODC-0048-254_E49F3A23.wem		\Actor-Mixer Hierarchy\Default Work Unit\Annihilation\Fart_04		72008
-	696736515	Fart_01	C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Mac\SFX\Farts_Airy_ODC-0048-254_8ADD83F3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Annihilation\Fart_01		32132
+	96699629	Fart_02	C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Mac\SFX\Farts_Airy_ODC-0048-254_E1CF476F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Annihilation\Fart_02		42360
+	106645714	Fart	C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Mac\SFX\Farts_Airy_ODC-0048-254_4B4AE105.wem		\Actor-Mixer Hierarchy\Default Work Unit\Annihilation\Fart		36036
+	126146982	Fart_03	C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Mac\SFX\Farts_Airy_ODC-0048-254_8529A4C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Annihilation\Fart_03		40318
+	670298052	Fart_04	C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Mac\SFX\Farts_Airy_ODC-0048-254_E2E9B879.wem		\Actor-Mixer Hierarchy\Default Work Unit\Annihilation\Fart_04		72008
+	696736515	Fart_01	C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Mac\SFX\Farts_Airy_ODC-0048-254_D57F1F5E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Annihilation\Fart_01		32132
 

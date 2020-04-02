@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
 
-    [SerializeField]
+
     bool ffToggle = false;
 
     public AK.Wwise.Event Annihilation;
