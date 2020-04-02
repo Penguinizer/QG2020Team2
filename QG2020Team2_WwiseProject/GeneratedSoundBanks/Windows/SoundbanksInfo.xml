@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\QG2020Team2_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1543154663" Name="PlusMinBall_Annihilation" ObjectPath="\Events\Default Work Unit\PlusMinBall_Annihilation" DurationType="OneShot" DurationMin="0.167019" DurationMax="1.498813">
+					<IncludedMemoryFiles>
+						<File Id="96699629" Language="SFX">
+							<ShortName>Farts_Airy_ODC-0048-254.wav</ShortName>
+							<Path>SFX\Farts_Airy_ODC-0048-254_F53FE31A.wem</Path>
+						</File>
+						<File Id="106645714" Language="SFX">
+							<ShortName>Farts_Airy_ODC-0048-254.wav</ShortName>
+							<Path>SFX\Farts_Airy_ODC-0048-254_F656618C.wem</Path>
+						</File>
+						<File Id="126146982" Language="SFX">
+							<ShortName>Farts_Airy_ODC-0048-254.wav</ShortName>
+							<Path>SFX\Farts_Airy_ODC-0048-254_23C433CE.wem</Path>
+						</File>
+						<File Id="670298052" Language="SFX">
+							<ShortName>Farts_Airy_ODC-0048-254.wav</ShortName>
+							<Path>SFX\Farts_Airy_ODC-0048-254_E49F3A23.wem</Path>
+						</File>
+						<File Id="696736515" Language="SFX">
+							<ShortName>Farts_Airy_ODC-0048-254.wav</ShortName>
+							<Path>SFX\Farts_Airy_ODC-0048-254_8ADD83F3.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

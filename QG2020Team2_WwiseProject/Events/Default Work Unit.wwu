@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A16FC8B4-AD6A-4831-8415-514B00834156}" SchemaVersion="97">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{A16FC8B4-AD6A-4831-8415-514B00834156}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="PlusMinBall_Annihilation" ID="{B020F771-075D-4E84-AB63-E31208BACB29}">
+					<ChildrenList>
+						<Action Name="" ID="{DC15C8E7-FED7-4B64-9BE5-F4C56D45B256}" ShortID="439875423">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Annihilation" ID="{ECD5E730-F98C-4ECF-8192-9EB2EE78FCB6}" WorkUnitID="{E5F8A6DB-2984-4905-830A-475CF7966F56}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{79AED879-D82B-4156-A7F7-45A1908FE8F2}" SchemaVersion="97">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{79AED879-D82B-4156-A7F7-45A1908FE8F2}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{08AD129E-BCD9-466F-8866-EB1EFB37BFC8}">
+					<ObjectInclusionList>
+						<ObjectRef Name="PlusMinBall_Annihilation" ID="{B020F771-075D-4E84-AB63-E31208BACB29}" WorkUnitID="{A16FC8B4-AD6A-4831-8415-514B00834156}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
