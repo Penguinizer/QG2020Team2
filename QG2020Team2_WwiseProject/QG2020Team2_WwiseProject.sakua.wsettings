@@ -3,9 +3,10 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{1135038A-FA17-42CF-8BBD-FBFD22433362}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\sakua\Documents\GitHub\QG2020Team2 Sound design\Sound library\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\sakua\Documents\GitHub\QG2020Team2 Sound design\Sound library\Unit 1 Annihilation and collision\"/>
 				<Property Name="Event Action List\{0E522219-CCF1-49AE-B08D-523F83AC11C0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B020F771-075D-4E84-AB63-E31208BACB29}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{FE57A061-92EF-48B1-A4F1-F9A9472C7008}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>
@@ -27,7 +28,7 @@
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="k1G3BdABlEGHWCp0eGfCJXtvqLTOy5BCtJQcab3nIhg="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="nhKtCNm8b0aIZuse+ze/yA=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}"/>
-				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="YZflNs/hek+wL/5K5HDMBQF8Yd7/////rY5D87ATZEWIlYFR6u1bqwF8Yd7/////"/>
+				<Property Name="HardwareController\{2451DD2E-A7B2-45E6-B93B-6F49B9B887AD}\x64_ActiveGroups" Type="string" Value="YZflNs/hek+wL/5K5HDMBQF8cUn/////rY5D87ATZEWIlYFR6u1bqwF8cUn/////"/>
 				<Property Name="MeterView\LastObject1" Type="string" Value="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"/>
 				<Property Name="MeterView\MeterMode1" Type="int32" Value="1"/>
 				<Property Name="MeterView\MeterMode1Viewpoint0" Type="int32" Value="1"/>
@@ -61,7 +62,7 @@
 				<Property Name="ProjectExplorer\x64_Expanded_1_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_20_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_21_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="26b45YQpBUmDCkdc95ZvVjDn1eyM+c9OgZKesu54/LY="/>
+				<Property Name="ProjectExplorer\x64_Expanded_2_1" Type="string" Value="/UbuTC3jkUGqmFhFPocOktum+OWEKQVJgwpHXPeWb1Yw59XsjPnPToGSnrLuePy2"/>
 				<Property Name="ProjectExplorer\x64_Expanded_3_1" Type="string" Value="tMhvoWqtMUiEFVFLAINBVg=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_4_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_5_1" Type="string" Value=""/>

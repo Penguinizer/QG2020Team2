@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     bool ffToggle = false;
 
     public AK.Wwise.Event Annihilation;
+    public AK.Wwise.Event Collision;
 
     // Start is called before the first frame update
     void Start()
@@ -41,5 +42,7 @@ public class AudioManager : MonoBehaviour
         {
             print("Play black hole sound");
         }
+
+        Collision.Post(gameObject);
     }
 }
