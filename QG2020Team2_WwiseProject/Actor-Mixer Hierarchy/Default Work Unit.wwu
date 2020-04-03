@@ -3,54 +3,20 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{E5F8A6DB-2984-4905-830A-475CF7966F56}" PersistMode="Standalone">
 			<ChildrenList>
-				<RandomSequenceContainer Name="Annihilation" ID="{ECD5E730-F98C-4ECF-8192-9EB2EE78FCB6}" ShortID="120543720">
-					<PropertyList>
-						<Property Name="BypassEffect0" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="BypassEffect1" Type="bool">
-							<ValueList>
-								<Value>True</Value>
-							</ValueList>
-						</Property>
-						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{B3F551B1-5999-4F32-B417-A4289101A38B}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="1200"/>
-											<Property Name="Min" Type="Real64" Value="-1200"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
-						<Property Name="SpeakerPanning" Type="int16" Value="1"/>
-					</PropertyList>
+				<ActorMixer Name="PlusMinUnit" ID="{49A1C54F-DBE1-43A6-8735-11310D9BF4FF}" ShortID="690404074">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
-						</Reference>
-						<Reference Name="Effect0" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3">
-							<ObjectRef Name="New_Wwise_Time_Stretch" ID="{B6588F20-EBE3-45C2-82E8-FC146DBC9354}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-						</Reference>
-						<Reference Name="Effect1" CompanyID="4095" PluginID="65535" PluginType="15">
-							<ObjectRef Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
-						</Reference>
-						<Reference Name="Effect2" CompanyID="4095" PluginID="65535" PluginType="15">
-							<ObjectRef Name="Hall_Medium" ID="{50286348-176A-4235-9E4C-CA5F73D87818}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Fart" ID="{E36CBA4F-A392-44A3-8390-AA17BE6C2A76}" ShortID="787189559">
+						<ActorMixer Name="Annihilation" ID="{95BA7EEA-A272-4295-8C22-72CE5C3E8B6E}" ShortID="10834425">
+							<PropertyList>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
@@ -58,138 +24,596 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
 								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Farts_Airy_ODC-0048-254" ID="{5476D9C0-14EE-437E-A7F3-6AD8389665EC}">
-									<PropertyList>
-										<Property Name="LoopBegin" Type="Real64" Value="0"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.374703196347039"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Farts_Airy_ODC-0048-254.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="106645714"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Farts_Airy_ODC-0048-254" ID="{5476D9C0-14EE-437E-A7F3-6AD8389665EC}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Fart_01" ID="{12238342-56C8-48CF-895F-FEFA9724A1A9}" ShortID="309550332">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="SpaceReverb" ID="{1CFED0FC-2F30-4755-876F-CA0A84A2ACD0}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Farts_Airy_ODC-0048-254" ID="{586A4A77-9A1E-43A0-A1E8-0D0140E7B4F1}">
+								<RandomSequenceContainer Name="AirSwoosh" ID="{0645C29D-3799-40D8-B565-6F764927E03C}" ShortID="789261943">
 									<PropertyList>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.619751859352602"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.953789954337903"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-15</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Farts_Airy_ODC-0048-254.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="696736515"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Farts_Airy_ODC-0048-254" ID="{586A4A77-9A1E-43A0-A1E8-0D0140E7B4F1}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Fart_02" ID="{C6203973-F372-49A9-8C76-3C12BAA403D8}" ShortID="92087607">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Farts_Airy_ODC-0048-254" ID="{6105EE34-44F0-4D6D-B3F2-D90D0F274189}">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Energy_Pass_By_ODY-0442-26" ID="{8422E335-5BE1-4D28-9FB9-20C365D77894}" ShortID="934079543">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Pass_By_ODY-0442-26" ID="{5DCCE675-D9F4-43D3-A817-534CCEAC963C}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Pass_By_ODY-0442-26.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="481434662"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Pass_By_ODY-0442-26" ID="{5DCCE675-D9F4-43D3-A817-534CCEAC963C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Pass_By_ODY-0442-28" ID="{FBCA1C46-6D40-44FE-B350-C1B948359263}" ShortID="745202815">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Pass_By_ODY-0442-28" ID="{9EE3544C-FD32-484E-B34A-CAA61BEEB419}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Pass_By_ODY-0442-28.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="735850283"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Pass_By_ODY-0442-28" ID="{9EE3544C-FD32-484E-B34A-CAA61BEEB419}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Pass_By_ODY-0442-30" ID="{6F12FCE7-B8E8-425B-AE8C-3B62F45C4D72}" ShortID="515009996">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Pass_By_ODY-0442-30" ID="{0E15260E-F67B-4E6C-A890-D0C2FEEC50FA}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Pass_By_ODY-0442-30.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="153172516"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Pass_By_ODY-0442-30" ID="{0E15260E-F67B-4E6C-A890-D0C2FEEC50FA}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Pass_By_ODY-0442-32" ID="{6E0C7440-7AA0-477D-95D1-2A5C06F5B4A1}" ShortID="62096756">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Pass_By_ODY-0442-32" ID="{66200E70-43E8-4D81-AA2E-60CACF22673C}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Pass_By_ODY-0442-32.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="438817613"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Pass_By_ODY-0442-32" ID="{66200E70-43E8-4D81-AA2E-60CACF22673C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Pass_By_ODY-0442-34" ID="{14C624D7-9FB8-470D-A9AD-13C950159657}" ShortID="651633823">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Pass_By_ODY-0442-34" ID="{97B05F90-BC31-471C-9B27-BD1F6DB0CA37}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Pass_By_ODY-0442-34.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="314505710"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Pass_By_ODY-0442-34" ID="{97B05F90-BC31-471C-9B27-BD1F6DB0CA37}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Pass_By_ODY-0442-36" ID="{AF6F5BCB-4B94-4A21-AECB-6F0311AAF32D}" ShortID="755708736">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Pass_By_ODY-0442-36" ID="{B62ECA21-4E81-4945-ACAF-9744C500B9C9}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Pass_By_ODY-0442-36.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="208112911"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Pass_By_ODY-0442-36" ID="{B62ECA21-4E81-4945-ACAF-9744C500B9C9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="EnergyBlast" ID="{C1E9B279-3F11-4BC8-A5AF-3FC4EBFDE826}" ShortID="491167053">
 									<PropertyList>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="1.17807847422255"/>
-										<Property Name="TrimEnd" Type="Real64" Value="1.61866038858763"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{8709A66C-6200-4D33-A36F-A79FB4F74EBC}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="303"/>
+															<Property Name="Min" Type="Real64" Value="-152"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{70123C35-BFF5-4935-8856-3C70579F8547}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Farts_Airy_ODC-0048-254.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="96699629"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Farts_Airy_ODC-0048-254" ID="{6105EE34-44F0-4D6D-B3F2-D90D0F274189}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Fart_03" ID="{B976DBCB-3892-4B9A-9038-1A3DBC54361E}" ShortID="485887066">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Farts_Airy_ODC-0048-254" ID="{7F3DED61-94AE-4CC2-80AA-14265632E259}">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_01-01" ID="{AB822F76-8178-414B-BD47-155F8B044A41}" ShortID="183124716">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_01-01" ID="{B997D600-987C-495D-A4E7-453BEE7FBC2D}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_01-01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="107149069"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_01-01" ID="{B997D600-987C-495D-A4E7-453BEE7FBC2D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_02-01" ID="{AA655C4A-FF4C-49B1-AA54-E28A487E1920}" ShortID="295139123">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_02-01" ID="{1A6D52C8-53E7-404D-8174-5C2B756EE6A9}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_02-01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="2695676"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_02-01" ID="{1A6D52C8-53E7-404D-8174-5C2B756EE6A9}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01" ID="{820A66C8-1CA9-467F-959B-3CF5DE6EF44B}" ShortID="175220947">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01" ID="{D6527A33-F2DC-46D2-A52A-618E576E97BB}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="512301253"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01" ID="{D6527A33-F2DC-46D2-A52A-618E576E97BB}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_04-01" ID="{472B8714-3F89-4C25-8861-7C0DBBC8C7D2}" ShortID="1025532700">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_04-01" ID="{F841DC0E-9092-413F-9841-D227C6999CA0}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_04-01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="862254155"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_04-01" ID="{F841DC0E-9092-413F-9841-D227C6999CA0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01" ID="{16D0FFB3-D08F-4FAB-A5CB-D49AC1069C45}" ShortID="275004118">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01" ID="{3C2FE5E5-7AE6-4137-9E3A-508E8F23090E}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="542034477"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01" ID="{3C2FE5E5-7AE6-4137-9E3A-508E8F23090E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01" ID="{C9E6B180-0D41-43A5-8E8E-30AEC28186E1}" ShortID="352460668">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01" ID="{F6664729-DB27-4273-897B-1862281D55DC}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1010135762"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01" ID="{F6664729-DB27-4273-897B-1862281D55DC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01" ID="{5F8D5831-9F0A-442B-AF66-46083A7B86AB}" ShortID="522912998">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01" ID="{2BE0C0DC-4AAF-49FF-AAE8-F55425ACC43A}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="520998201"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01" ID="{2BE0C0DC-4AAF-49FF-AAE8-F55425ACC43A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_09-01" ID="{50EDB344-0BEC-4B4F-8493-E3E5D0B0CDBD}" ShortID="148162626">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_09-01" ID="{999CDFD3-0F4B-4EAE-A84D-ADBCE309D410}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_09-01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="442956874"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_09-01" ID="{999CDFD3-0F4B-4EAE-A84D-ADBCE309D410}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01" ID="{D0F2B804-F9CF-4967-B5A6-D72C6B7981A0}" ShortID="684449602">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01" ID="{5469C4F8-F9F9-489F-B66B-1318ED030FFD}">
+													<Language>SFX</Language>
+													<AudioFile>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1029173813"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01" ID="{5469C4F8-F9F9-489F-B66B-1318ED030FFD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Pop" ID="{B9DDD81D-3C4F-4524-8897-FFD93A95E9C0}" ShortID="344518622">
 									<PropertyList>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="1.75553454251949"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.1748474156163"/>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-1590</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{CB299006-B019-4DB6-A539-1E94D47C2BB8}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="834"/>
+															<Property Name="Min" Type="Real64" Value="-707"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Farts_Airy_ODC-0048-254.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="126146982"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Pop_Airy_ODY-0299-045-03" ID="{2BC0B728-3460-40FA-98BD-481EF1AA3085}" ShortID="229864208">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Pop_Airy_ODY-0299-045-03" ID="{A253454F-4476-4B00-A322-F1C5D8D6DD93}">
+													<Language>SFX</Language>
+													<AudioFile>Pop_Airy_ODY-0299-045-03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="212901090"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Pop_Airy_ODY-0299-045-03" ID="{A253454F-4476-4B00-A322-F1C5D8D6DD93}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Pop_Airy_ODY-0299-045-05" ID="{46D93315-B048-441A-A767-592325B60FA0}" ShortID="692109135">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Pop_Airy_ODY-0299-045-05" ID="{D61E5BB9-6567-48E7-933C-6403D1A36378}">
+													<Language>SFX</Language>
+													<AudioFile>Pop_Airy_ODY-0299-045-05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1065435695"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Pop_Airy_ODY-0299-045-05" ID="{D61E5BB9-6567-48E7-933C-6403D1A36378}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Pop_Airy_ODY-0299-045-07" ID="{5E5F8649-BA6A-4E94-9A9F-F3AF3CF81E61}" ShortID="849879378">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Pop_Airy_ODY-0299-045-07" ID="{4D7B00F4-6340-44B0-959C-22271BADC0A6}">
+													<Language>SFX</Language>
+													<AudioFile>Pop_Airy_ODY-0299-045-07.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="734049587"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Pop_Airy_ODY-0299-045-07" ID="{4D7B00F4-6340-44B0-959C-22271BADC0A6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Pop_Airy_ODY-0299-045-09" ID="{8DB7FBED-0231-4ABC-B8BF-1149C2C3C63B}" ShortID="885355175">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Pop_Airy_ODY-0299-045-09" ID="{B0B8B1C3-7938-47F5-AD65-78CE50B13225}">
+													<Language>SFX</Language>
+													<AudioFile>Pop_Airy_ODY-0299-045-09.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="594515253"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Pop_Airy_ODY-0299-045-09" ID="{B0B8B1C3-7938-47F5-AD65-78CE50B13225}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Pop_Airy_ODY-0299-045-11" ID="{DB24A6FF-2F0A-4708-AF35-778C4C01B267}" ShortID="793917667">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Pop_Airy_ODY-0299-045-11" ID="{F686117A-ABBC-48D6-B80F-99978FAA577A}">
+													<Language>SFX</Language>
+													<AudioFile>Pop_Airy_ODY-0299-045-11.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1058100332"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Pop_Airy_ODY-0299-045-11" ID="{F686117A-ABBC-48D6-B80F-99978FAA577A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Pop_Airy_ODY-0299-045-16" ID="{50C32A6F-3898-44B2-9ACB-1F29FEDCDC14}" ShortID="1047858185">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Pop_Airy_ODY-0299-045-16" ID="{64C310E0-CFC2-48EC-BF0D-B7C223C1B3FD}">
+													<Language>SFX</Language>
+													<AudioFile>Pop_Airy_ODY-0299-045-16.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1283924"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Pop_Airy_ODY-0299-045-16" ID="{64C310E0-CFC2-48EC-BF0D-B7C223C1B3FD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Pop_Airy_ODY-0299-045-18" ID="{43C24DDD-AAB9-4DD9-A070-467C9A8AA816}" ShortID="656528622">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Pop_Airy_ODY-0299-045-18" ID="{C031B078-F4B9-486F-8210-1313F06DA199}">
+													<Language>SFX</Language>
+													<AudioFile>Pop_Airy_ODY-0299-045-18.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="76535199"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Pop_Airy_ODY-0299-045-18" ID="{C031B078-F4B9-486F-8210-1313F06DA199}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Farts_Airy_ODC-0048-254" ID="{7F3DED61-94AE-4CC2-80AA-14265632E259}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Fart_04" ID="{89B40EB3-F22F-49F8-BC3A-31E310FDF749}" ShortID="404460389">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Farts_Airy_ODC-0048-254" ID="{425A9FBA-92C8-43B0-93BE-3A32561A9BB3}">
-									<PropertyList>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="2.52073059360731"/>
-										<Property Name="TrimEnd" Type="Real64" Value="3.27013698630138"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Farts_Airy_ODC-0048-254.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="670298052"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Farts_Airy_ODC-0048-254" ID="{425A9FBA-92C8-43B0-93BE-3A32561A9BB3}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</ActorMixer>
 					</ChildrenList>
-					<PositioningInfo>
-						<Panner Name="" ID="{338B751B-7740-418F-A74C-14BB4A0E2C7A}"/>
-					</PositioningInfo>
-				</RandomSequenceContainer>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -9,6 +9,15 @@
 							<ObjectRef Name="System" ID="{A6ED08B9-F36C-434A-9B15-ADC0C2BF6C84}" WorkUnitID="{3DA285DD-3E58-4598-9415-084AC4506E5E}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<AuxBus Name="SpaceReverb" ID="{1CFED0FC-2F30-4755-876F-CA0A84A2ACD0}">
+							<ReferenceList>
+								<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+									<ObjectRef Name="Metal_Hangar" ID="{C4A4605C-42EF-476A-B53C-E31C7A442C24}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+							</ReferenceList>
+						</AuxBus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

@@ -8,7 +8,21 @@
 						<Action Name="" ID="{DC15C8E7-FED7-4B64-9BE5-F4C56D45B256}" ShortID="439875423">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Annihilation" ID="{ECD5E730-F98C-4ECF-8192-9EB2EE78FCB6}" WorkUnitID="{E5F8A6DB-2984-4905-830A-475CF7966F56}"/>
+									<ObjectRef Name="EnergyBlast" ID="{C1E9B279-3F11-4BC8-A5AF-3FC4EBFDE826}" WorkUnitID="{E5F8A6DB-2984-4905-830A-475CF7966F56}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FCF10531-DF67-4062-B008-E279347731E3}" ShortID="636372288">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pop" ID="{B9DDD81D-3C4F-4524-8897-FFD93A95E9C0}" WorkUnitID="{E5F8A6DB-2984-4905-830A-475CF7966F56}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{39583000-14FF-40CF-9ADF-7EA57202A190}" ShortID="605365675">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AirSwoosh" ID="{0645C29D-3799-40D8-B565-6F764927E03C}" WorkUnitID="{E5F8A6DB-2984-4905-830A-475CF7966F56}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
