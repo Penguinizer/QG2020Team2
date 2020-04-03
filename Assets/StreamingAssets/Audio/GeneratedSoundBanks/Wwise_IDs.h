@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLUSMINBALL_ANNIHILATION = 1543154663U;
+        static const AkUniqueID PLUSMINBALL_COLLISION = 3640416505U;
+        static const AkUniqueID START_AMBIENCE = 3626999974U;
     } // namespace EVENTS
 
     namespace BANKS
@@ -26,6 +28,11 @@ namespace AK
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID SPACEREVERB = 4041660465U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

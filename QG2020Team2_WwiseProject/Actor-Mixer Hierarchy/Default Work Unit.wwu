@@ -201,7 +201,7 @@
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>5</Value>
 											</ValueList>
 											<ModifierList>
 												<ModifierInfo>
@@ -441,7 +441,7 @@
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>2</Value>
+												<Value>7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -612,6 +612,607 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 						</ActorMixer>
+						<ActorMixer Name="Collision" ID="{C9D714CB-BAD7-4C4A-873A-B9E265EB4DCA}" ShortID="392119228">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>27</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverrideUserAuxSends" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>80</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-14</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="SpaceReverb" ID="{1CFED0FC-2F30-4755-876F-CA0A84A2ACD0}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Sucktion" ID="{40D669F3-69A3-4153-ACFE-7892301DC572}" ShortID="1024656885">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C89E35AB-21D0-40AF-992C-8637E279291B}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="600"/>
+															<Property Name="Min" Type="Real64" Value="-600"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-42</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Stun_Gun_Suck_Ricochets_ODY-1275-101" ID="{22BE46E7-5763-4757-A33F-E6BB4589524E}" ShortID="322660714">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-101" ID="{48D936BF-9DFF-4EF5-A38B-D07139C36B52}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Suck_Ricochets_ODY-1275-101.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="625333904"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-101" ID="{48D936BF-9DFF-4EF5-A38B-D07139C36B52}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Suck_Ricochets_ODY-1275-103" ID="{85BC8029-716D-4380-8873-7283C8AD57AC}" ShortID="1033277794">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-103" ID="{760B9FA4-D5B3-44B8-BC72-B4069ED0B770}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Suck_Ricochets_ODY-1275-103.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="892326844"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-103" ID="{760B9FA4-D5B3-44B8-BC72-B4069ED0B770}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Suck_Ricochets_ODY-1275-105" ID="{3B088FFA-C159-4D02-9519-FE64AE2BF011}" ShortID="3114299">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-105" ID="{D4B7C53E-E9B7-4212-A9BB-16ACCBCFC6B6}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Suck_Ricochets_ODY-1275-105.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="330536732"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-105" ID="{D4B7C53E-E9B7-4212-A9BB-16ACCBCFC6B6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Suck_Ricochets_ODY-1275-107" ID="{48F05B17-ABE9-470D-819D-368C3A09D5A3}" ShortID="593383275">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-107" ID="{58B4BB0C-7875-4599-9E41-5C7A20E37890}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Suck_Ricochets_ODY-1275-107.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="562088654"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-107" ID="{58B4BB0C-7875-4599-9E41-5C7A20E37890}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Suck_Ricochets_ODY-1275-109" ID="{FB73CB19-E836-4F32-A8F3-E0699C57A28B}" ShortID="685087105">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-109" ID="{67EB20F0-D5A4-4B56-98B2-E122A8169A85}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Suck_Ricochets_ODY-1275-109.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1069620099"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-109" ID="{67EB20F0-D5A4-4B56-98B2-E122A8169A85}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Suck_Ricochets_ODY-1275-111" ID="{CAF45A45-65F9-4CA3-A3C0-D71491EC8ADB}" ShortID="29937465">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-111" ID="{55A43B71-ECBE-474A-A268-65E1C97151D0}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Suck_Ricochets_ODY-1275-111.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="851977408"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-111" ID="{55A43B71-ECBE-474A-A268-65E1C97151D0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Suck_Ricochets_ODY-1275-113" ID="{1EC5C3F1-4EAC-4AFB-9556-7DEF622DAF3C}" ShortID="325360737">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-113" ID="{D84AE667-295D-4F58-A47A-308E1C956177}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Suck_Ricochets_ODY-1275-113.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="374623463"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-113" ID="{D84AE667-295D-4F58-A47A-308E1C956177}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Suck_Ricochets_ODY-1275-115" ID="{C60D3115-F03C-423A-A873-2B0B8F074EEE}" ShortID="812094563">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-115" ID="{5DBA28B0-D4D6-4368-AA8F-0D89C57AD786}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Suck_Ricochets_ODY-1275-115.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="20427935"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-115" ID="{5DBA28B0-D4D6-4368-AA8F-0D89C57AD786}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Suck_Ricochets_ODY-1275-117" ID="{901FEE1F-3E98-43A4-B68C-714A7557A362}" ShortID="934196477">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-117" ID="{93CF09A4-2478-41AC-98D9-17EF4EF2A5AF}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Suck_Ricochets_ODY-1275-117.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="807159089"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Suck_Ricochets_ODY-1275-117" ID="{93CF09A4-2478-41AC-98D9-17EF4EF2A5AF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Hit" ID="{E80CBF68-65B8-4A09-BE63-7D1409884EFC}" ShortID="507053427">
+									<PropertyList>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A00D3A37-C7B0-449A-B641-CC765749785A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="600"/>
+															<Property Name="Min" Type="Real64" Value="-600"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Stun_Gun_Ricochets_ODY-1275-98" ID="{3D538098-1E23-419C-8512-C6D6A70CC351}" ShortID="778538842">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Ricochets_ODY-1275-98" ID="{96ED2BC9-FA31-4C2B-84BB-77918D250526}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Ricochets_ODY-1275-98.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="983782232"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Ricochets_ODY-1275-98" ID="{96ED2BC9-FA31-4C2B-84BB-77918D250526}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Ricochets_ODY-1275-101" ID="{F4914AAD-8976-4061-A733-760FBD44A967}" ShortID="512525114">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Ricochets_ODY-1275-101" ID="{EBF7E687-E5E6-4534-BD7C-00B990614A73}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Ricochets_ODY-1275-101.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="858646724"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Ricochets_ODY-1275-101" ID="{EBF7E687-E5E6-4534-BD7C-00B990614A73}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Ricochets_ODY-1275-103" ID="{C3C32F6B-D278-410C-8FF1-BD865EAD5B5B}" ShortID="127450636">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Ricochets_ODY-1275-103" ID="{26B494E6-6BFC-4477-9A2C-68F53CE25FBF}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Ricochets_ODY-1275-103.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="401371678"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Ricochets_ODY-1275-103" ID="{26B494E6-6BFC-4477-9A2C-68F53CE25FBF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Ricochets_ODY-1275-105" ID="{8BA53C0B-40FC-4981-8876-5EAE0063FB21}" ShortID="556035246">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Ricochets_ODY-1275-105" ID="{7B1B400A-0EBB-4264-B4FF-D077385AC658}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Ricochets_ODY-1275-105.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="134945510"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Ricochets_ODY-1275-105" ID="{7B1B400A-0EBB-4264-B4FF-D077385AC658}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Ricochets_ODY-1275-107" ID="{11E72A77-B8EC-4546-B080-2B6A22E06E61}" ShortID="464527263">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Ricochets_ODY-1275-107" ID="{4A91CF3A-ECC1-4FAC-A156-469F1538BAB8}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Ricochets_ODY-1275-107.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="884319563"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Ricochets_ODY-1275-107" ID="{4A91CF3A-ECC1-4FAC-A156-469F1538BAB8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Ricochets_ODY-1275-111" ID="{8791301B-59EF-4FA2-A07E-30B110540FFF}" ShortID="169888168">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Ricochets_ODY-1275-111" ID="{56ED3A41-FB40-4B48-8350-539D2C4D92F6}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Ricochets_ODY-1275-111.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="189961352"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Ricochets_ODY-1275-111" ID="{56ED3A41-FB40-4B48-8350-539D2C4D92F6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Ricochets_ODY-1275-113" ID="{AE275D9E-74B6-4CE1-8545-F8F9F5F8D8D3}" ShortID="581909881">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Ricochets_ODY-1275-113" ID="{3ADBB32E-2FAD-4EBB-9F90-3E21A7F38235}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Ricochets_ODY-1275-113.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="469813482"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Ricochets_ODY-1275-113" ID="{3ADBB32E-2FAD-4EBB-9F90-3E21A7F38235}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Ricochets_ODY-1275-115" ID="{DE6BBA57-AE68-4C70-A26E-7CA5BB1D382C}" ShortID="899721026">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Ricochets_ODY-1275-115" ID="{FFB80648-D9BF-4CDC-858F-C7B694B46656}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Ricochets_ODY-1275-115.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="818157496"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Ricochets_ODY-1275-115" ID="{FFB80648-D9BF-4CDC-858F-C7B694B46656}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Stun_Gun_Ricochets_ODY-1275-116" ID="{F12A2B9F-28B3-4B1B-9F3C-641AF0F4448D}" ShortID="795202215">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Stun_Gun_Ricochets_ODY-1275-116" ID="{59F4EC9B-B036-4CD5-83CE-B7A93620F12E}">
+													<Language>SFX</Language>
+													<AudioFile>Stun_Gun_Ricochets_ODY-1275-116.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="694362315"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Stun_Gun_Ricochets_ODY-1275-116" ID="{59F4EC9B-B036-4CD5-83CE-B7A93620F12E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+				<ActorMixer Name="Ambience" ID="{04D48EDD-7221-4CB4-A2CE-029C532B418A}" ShortID="162429466">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="SpaceDrone" ID="{A912AF77-97C8-439A-9A6B-FF87D23EE440}" ShortID="824263648">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Space_Presence_ODY-0295-025" ID="{79C8CF39-329C-4757-A4A2-4DEAE30D94D1}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="1220.23744292237"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.610118721461187"/>
+										<Property Name="LoopEnd" Type="Real64" Value="49.9425753424658"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Space_Presence_ODY-0295-025.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="526652532"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Space_Presence_ODY-0295-025" ID="{79C8CF39-329C-4757-A4A2-4DEAE30D94D1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Metal_Synthetic_Ambience_Calm_Ominous_Eerie_SC_BM_586" ID="{7B8AB2C1-C8DD-4C7A-BC4C-4D9BAB1418A3}" ShortID="92807463">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{1656501B-B5DA-443B-8EDA-B91BD64843B0}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BDDA0D72-5AB4-4F03-A62C-5D118B3A22CF}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Metal_Synthetic_Ambience_Calm_Ominous_Eerie_SC_BM_586" ID="{53A5ED01-2E62-49A3-AD97-7138F7FD036D}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="2516.07"/>
+										<Property Name="LoopBegin" Type="Real64" Value="2.94690410958904"/>
+										<Property Name="LoopEnd" Type="Real64" Value="181.070885844749"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Metal_Synthetic_Ambience_Calm_Ominous_Eerie_SC_BM.586.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="347985271"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Metal_Synthetic_Ambience_Calm_Ominous_Eerie_SC_BM_586" ID="{53A5ED01-2E62-49A3-AD97-7138F7FD036D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</ActorMixer>
 			</ChildrenList>

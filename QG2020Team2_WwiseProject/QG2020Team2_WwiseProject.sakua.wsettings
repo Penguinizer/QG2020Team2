@@ -3,8 +3,10 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{1135038A-FA17-42CF-8BBD-FBFD22433362}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\sakua\Documents\GitHub\QG2020Team2 Sound design\Finished SoundAssets\Annihilation\"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\sakua\Documents\GitHub\QG2020Team2 Sound design\Finished SoundAssets\Ambience\"/>
 				<Property Name="Event Action List\{0E522219-CCF1-49AE-B08D-523F83AC11C0}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{5D3B8510-84E2-45F2-970C-4EA813AB3F77}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{9BC13ED0-E872-4E78-B046-948DF10A1AF3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B020F771-075D-4E84-AB63-E31208BACB29}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{FE57A061-92EF-48B1-A4F1-F9A9472C7008}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>

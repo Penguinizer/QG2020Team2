@@ -18,6 +18,11 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 4f3ecd2a7cd93d943986800fbdda27cb,
       type: 2}
+  Collision:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 652bf5fea7731a645bef9418cfe93bb7,
+      type: 2}
 --- !u!1001 &7189704584750840496
 PrefabInstance:
   m_ObjectHideFlags: 0
