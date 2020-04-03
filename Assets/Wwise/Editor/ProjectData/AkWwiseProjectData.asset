@@ -40,7 +40,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 79d8ae792bd85641a7f745a1908fe8f2
     GuidInternal: 
-    m_lastTime: -8586157849409542901
+    m_lastTime: -8586157784419471112
     List:
     - name: Main
       guid: 9e12ad08d9bc6f468866eb1efb37bfc8
@@ -56,8 +56,20 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b4c86fa16aad31488415514b00834156
     GuidInternal: 
-    m_lastTime: -8586157849409542901
+    m_lastTime: -8586157784419331280
     List:
+    - name: Ambient
+      guid: 1922520ef1ccae49b08d523f83ac11c0
+      id: 77978275
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Ambient
+        ObjectType: 3
+      Path: Default Work Unit\Ambient
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: PlusMinBall_Annihilation
       guid: 71f720b05d07844eab63e31208bacb29
       id: 1543154663
