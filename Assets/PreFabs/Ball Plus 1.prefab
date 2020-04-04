@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8640773987208136971}
   - component: {fileID: 8640773987208136980}
   - component: {fileID: 8640773987208136981}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ball Plus 1
   m_TagString: PosBall
   m_Icon: {fileID: 0}
@@ -138,6 +138,7 @@ MonoBehaviour:
   attractForce: 1
   powerBase: 2
   pushrepelDistance: 4
+  ffToggle: 0
 --- !u!58 &8640773987208136981
 CircleCollider2D:
   m_ObjectHideFlags: 0

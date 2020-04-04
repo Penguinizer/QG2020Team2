@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5277574075459779586}
   - component: {fileID: 5277574075459779587}
   - component: {fileID: 5277574075459779597}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Blaghoul
   m_TagString: Hole
   m_Icon: {fileID: 0}
