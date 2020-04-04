@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-//Impulse timing based on documentation script reference.
+//Impulse timing based on documentation script reference for arcade firing.
 public class CharacterControl : MonoBehaviour
 {	
+	//Initializing variables
 	[SerializeField]
 	float moveSpeed = 4.0f;
 	[SerializeField]
@@ -29,22 +30,26 @@ public class CharacterControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		//Acquire the character's rigid body for later reference.
         character = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-		//Player Object Movement
+		//Player Object Movement vector
 		if (gameObject.tag == "Player1Owned"){
 			moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 		}
 		if (gameObject.tag == "Player2Owned"){
 			moveDirection = new Vector3(Input.GetAxis("Horizontal2"), Input.GetAxis("Vertical2"), 0.0f);
 		}
+		//Get change in position
 		moveDirection  *= moveSpeed;
 		
+		//Add change in position to present position
 		newPos = new Vector3(character.position.x + moveDirection.x * Time.deltaTime, character.position.y + moveDirection.y * Time.deltaTime, 0);
+		//Update position
 		character.MovePosition(newPos);
 		
 		//Impulse timing
