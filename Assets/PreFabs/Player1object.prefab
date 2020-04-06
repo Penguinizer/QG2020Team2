@@ -92,11 +92,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ac18fff05c4f64086f7ee8a97895b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  powerBase: 2
-  impulseDistance: 5
-  impulseForce: 2
-  impulseCooldown: 0.5
+  moveSpeed: 3
+  powerBase: 1
+  impulseDistance: 2
+  impulseForce: 0.5
+  impulseCooldown: 3
 --- !u!50 &7510372055992168942
 Rigidbody2D:
   serializedVersion: 4
