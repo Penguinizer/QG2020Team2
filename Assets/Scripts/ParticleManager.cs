@@ -37,11 +37,12 @@ public class ParticleManager : MonoBehaviour
         {
 
             print("Play annihilation particles");
-            
+            Instantiate(annihilationParticles, transform.position, transform.rotation);
+
         }
         if (collision.collider.tag == "Hole")
         {
-
+            print("Play blackhole suck particles");
         }
 
 
