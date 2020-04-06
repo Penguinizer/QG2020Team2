@@ -7,9 +7,17 @@ public class ParticleManager : MonoBehaviour
 {
 
    [SerializeField] GameObject annihilationParticles;
+    [SerializeField] ParticleSystem impulseParticles;
+
     public bool ffToggle = true;
+    [SerializeField] bool isUnit = true;
+    [SerializeField] bool isController = false;
+    
 
+    private float myTime = 0.0f;
+    [SerializeField] float impulseCooldown = 3f;
 
+    
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +28,27 @@ public class ParticleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        myTime += Time.deltaTime;
+
+        if (gameObject.tag == "Player1Owned" && Input.GetButton("p1Fire") && myTime > impulseCooldown && isController && !isUnit)
+        {
+
+            impulseParticles.Play();
+        }
+
+        if (gameObject.tag == "Player2Owned" && Input.GetButton("p2Fire") && myTime > impulseCooldown && isController && !isUnit)
+        {
+            {
+
+                impulseParticles.Play();
+            }
+
+        }
 
     }
 
-
-    void OnCollisionEnter2D(Collision2D collision)
+      
+        void OnCollisionEnter2D(Collision2D collision)
     {
         if (gameObject.tag == "MinusBall" && collision.collider.tag == "PosBall" && (gameObject.transform.parent.tag != collision.collider.transform.parent.tag | ffToggle))
         {
@@ -44,8 +68,6 @@ public class ParticleManager : MonoBehaviour
         {
             print("Play blackhole suck particles");
         }
-
-
 
 
     }

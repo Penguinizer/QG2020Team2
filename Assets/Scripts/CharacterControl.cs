@@ -16,7 +16,7 @@ public class CharacterControl : MonoBehaviour
     [SerializeField]
     float impulseForce = 2.0f;
 	[SerializeField]
-	float impulseCooldown = 0.5f;
+	public float impulseCooldown = 0.5f;
 	
 	private float myTime = 0.0f;
 	private float nextImpulse = 0.0f;
