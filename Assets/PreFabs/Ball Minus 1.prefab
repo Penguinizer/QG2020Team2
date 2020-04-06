@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4671985533325232261}
   - component: {fileID: 4671985533325232262}
   - component: {fileID: 4671985533325232258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ball Minus 1
   m_TagString: MinusBall
   m_Icon: {fileID: 0}
@@ -138,6 +138,7 @@ MonoBehaviour:
   attractForce: 1
   powerBase: 2
   pushrepelDistance: 4
+  ffToggle: 0
 --- !u!58 &4671985533325232258
 CircleCollider2D:
   m_ObjectHideFlags: 0
