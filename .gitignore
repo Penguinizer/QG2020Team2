@@ -4,6 +4,7 @@
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
+Assets/GoogleDriveAssets/
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # [Aa]ssets/AssetStoreTools*
@@ -47,4 +48,4 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-QG2020Team2_WwiseProject/*.cache
+
