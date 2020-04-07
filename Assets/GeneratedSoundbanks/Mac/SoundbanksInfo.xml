@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="12" SoundbankVersion="135">
+	<RootPaths>
+		<ProjectRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2\Assets\GeneratedSoundbanks\Mac\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" GUID="{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<IncludedAuxBusses>
+				<AuxBus Id="4041660465" Name="SpaceReverb" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SpaceReverb" GUID="{1CFED0FC-2F30-4755-876F-CA0A84A2ACD0}"/>
+			</IncludedAuxBusses>
+		</SoundBank>
+		<SoundBank Id="3161908922" GUID="{08AD129E-BCD9-466F-8866-EB1EFB37BFC8}" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1543154663" Name="PlusMinBall_Annihilation" ObjectPath="\Events\Default Work Unit\PlusMinBall_Annihilation" GUID="{B020F771-075D-4E84-AB63-E31208BACB29}" DurationType="OneShot" DurationMin="2.293333" DurationMax="4.180745">
+					<IncludedMemoryFiles>
+						<File Id="1283924" Language="SFX">
+							<ShortName>Pop_Airy_ODY-0299-045-16.wav</ShortName>
+							<Path>SFX\Pop_Airy_ODY-0299-045-16_10C4C929.wem</Path>
+						</File>
+						<File Id="2695676" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_02-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_02-01_10C4C929.wem</Path>
+						</File>
+						<File Id="76535199" Language="SFX">
+							<ShortName>Pop_Airy_ODY-0299-045-18.wav</ShortName>
+							<Path>SFX\Pop_Airy_ODY-0299-045-18_10C4C929.wem</Path>
+						</File>
+						<File Id="107149069" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_01-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_01-01_10C4C929.wem</Path>
+						</File>
+						<File Id="153172516" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-30.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-30_10C4C929.wem</Path>
+						</File>
+						<File Id="208112911" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-36.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-36_10C4C929.wem</Path>
+						</File>
+						<File Id="212901090" Language="SFX">
+							<ShortName>Pop_Airy_ODY-0299-045-03.wav</ShortName>
+							<Path>SFX\Pop_Airy_ODY-0299-045-03_10C4C929.wem</Path>
+						</File>
+						<File Id="314505710" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-34.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-34_10C4C929.wem</Path>
+						</File>
+						<File Id="438817613" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-32.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-32_10C4C929.wem</Path>
+						</File>
+						<File Id="442956874" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_09-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_09-01_10C4C929.wem</Path>
+						</File>
+						<File Id="481434662" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-26.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-26_10C4C929.wem</Path>
+						</File>
+						<File Id="512301253" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01_10C4C929.wem</Path>
+						</File>
+						<File Id="520998201" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01_10C4C929.wem</Path>
+						</File>
+						<File Id="542034477" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01_10C4C929.wem</Path>
+						</File>
+						<File Id="594515253" Language="SFX">
+							<ShortName>Pop_Airy_ODY-0299-045-09.wav</ShortName>
+							<Path>SFX\Pop_Airy_ODY-0299-045-09_10C4C929.wem</Path>
+						</File>
+						<File Id="734049587" Language="SFX">
+							<ShortName>Pop_Airy_ODY-0299-045-07.wav</ShortName>
+							<Path>SFX\Pop_Airy_ODY-0299-045-07_10C4C929.wem</Path>
+						</File>
+						<File Id="735850283" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-28.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-28_10C4C929.wem</Path>
+						</File>
+						<File Id="862254155" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_04-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_04-01_10C4C929.wem</Path>
+						</File>
+						<File Id="1010135762" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01_10C4C929.wem</Path>
+						</File>
+						<File Id="1029173813" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01_10C4C929.wem</Path>
+						</File>
+						<File Id="1058100332" Language="SFX">
+							<ShortName>Pop_Airy_ODY-0299-045-11.wav</ShortName>
+							<Path>SFX\Pop_Airy_ODY-0299-045-11_10C4C929.wem</Path>
+						</File>
+						<File Id="1065435695" Language="SFX">
+							<ShortName>Pop_Airy_ODY-0299-045-05.wav</ShortName>
+							<Path>SFX\Pop_Airy_ODY-0299-045-05_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3640416505" Name="PlusMinBall_Collision" ObjectPath="\Events\Default Work Unit\PlusMinBall_Collision" GUID="{9BC13ED0-E872-4E78-B046-948DF10A1AF3}" DurationType="OneShot" DurationMin="0.386875" DurationMax="2.115998">
+					<IncludedMemoryFiles>
+						<File Id="20427935" Language="SFX">
+							<ShortName>Stun_Gun_Suck_Ricochets_ODY-1275-115.wav</ShortName>
+							<Path>SFX\Stun_Gun_Suck_Ricochets_ODY-1275-115_10C4C929.wem</Path>
+						</File>
+						<File Id="134945510" Language="SFX">
+							<ShortName>Stun_Gun_Ricochets_ODY-1275-105.wav</ShortName>
+							<Path>SFX\Stun_Gun_Ricochets_ODY-1275-105_10C4C929.wem</Path>
+						</File>
+						<File Id="189961352" Language="SFX">
+							<ShortName>Stun_Gun_Ricochets_ODY-1275-111.wav</ShortName>
+							<Path>SFX\Stun_Gun_Ricochets_ODY-1275-111_10C4C929.wem</Path>
+						</File>
+						<File Id="330536732" Language="SFX">
+							<ShortName>Stun_Gun_Suck_Ricochets_ODY-1275-105.wav</ShortName>
+							<Path>SFX\Stun_Gun_Suck_Ricochets_ODY-1275-105_10C4C929.wem</Path>
+						</File>
+						<File Id="374623463" Language="SFX">
+							<ShortName>Stun_Gun_Suck_Ricochets_ODY-1275-113.wav</ShortName>
+							<Path>SFX\Stun_Gun_Suck_Ricochets_ODY-1275-113_10C4C929.wem</Path>
+						</File>
+						<File Id="401371678" Language="SFX">
+							<ShortName>Stun_Gun_Ricochets_ODY-1275-103.wav</ShortName>
+							<Path>SFX\Stun_Gun_Ricochets_ODY-1275-103_10C4C929.wem</Path>
+						</File>
+						<File Id="469813482" Language="SFX">
+							<ShortName>Stun_Gun_Ricochets_ODY-1275-113.wav</ShortName>
+							<Path>SFX\Stun_Gun_Ricochets_ODY-1275-113_10C4C929.wem</Path>
+						</File>
+						<File Id="562088654" Language="SFX">
+							<ShortName>Stun_Gun_Suck_Ricochets_ODY-1275-107.wav</ShortName>
+							<Path>SFX\Stun_Gun_Suck_Ricochets_ODY-1275-107_10C4C929.wem</Path>
+						</File>
+						<File Id="625333904" Language="SFX">
+							<ShortName>Stun_Gun_Suck_Ricochets_ODY-1275-101.wav</ShortName>
+							<Path>SFX\Stun_Gun_Suck_Ricochets_ODY-1275-101_10C4C929.wem</Path>
+						</File>
+						<File Id="807159089" Language="SFX">
+							<ShortName>Stun_Gun_Suck_Ricochets_ODY-1275-117.wav</ShortName>
+							<Path>SFX\Stun_Gun_Suck_Ricochets_ODY-1275-117_10C4C929.wem</Path>
+						</File>
+						<File Id="851977408" Language="SFX">
+							<ShortName>Stun_Gun_Suck_Ricochets_ODY-1275-111.wav</ShortName>
+							<Path>SFX\Stun_Gun_Suck_Ricochets_ODY-1275-111_10C4C929.wem</Path>
+						</File>
+						<File Id="858646724" Language="SFX">
+							<ShortName>Stun_Gun_Ricochets_ODY-1275-101.wav</ShortName>
+							<Path>SFX\Stun_Gun_Ricochets_ODY-1275-101_10C4C929.wem</Path>
+						</File>
+						<File Id="884319563" Language="SFX">
+							<ShortName>Stun_Gun_Ricochets_ODY-1275-107.wav</ShortName>
+							<Path>SFX\Stun_Gun_Ricochets_ODY-1275-107_10C4C929.wem</Path>
+						</File>
+						<File Id="892326844" Language="SFX">
+							<ShortName>Stun_Gun_Suck_Ricochets_ODY-1275-103.wav</ShortName>
+							<Path>SFX\Stun_Gun_Suck_Ricochets_ODY-1275-103_10C4C929.wem</Path>
+						</File>
+						<File Id="983782232" Language="SFX">
+							<ShortName>Stun_Gun_Ricochets_ODY-1275-98.wav</ShortName>
+							<Path>SFX\Stun_Gun_Ricochets_ODY-1275-98_10C4C929.wem</Path>
+						</File>
+						<File Id="1069620099" Language="SFX">
+							<ShortName>Stun_Gun_Suck_Ricochets_ODY-1275-109.wav</ShortName>
+							<Path>SFX\Stun_Gun_Suck_Ricochets_ODY-1275-109_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3626999974" Name="Start_Ambience" ObjectPath="\Events\Default Work Unit\Start_Ambience" GUID="{5D3B8510-84E2-45F2-970C-4EA813AB3F77}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="201257056" Language="SFX">
+							<ShortName>QGTeam2_Music.wav</ShortName>
+							<Path>SFX\QGTeam2_Music_D79FB2B7.wem</Path>
+						</File>
+						<File Id="347985271" Language="SFX">
+							<ShortName>Metal_Synthetic_Ambience_Calm_Ominous_Eerie_SC_BM.586.wav</ShortName>
+							<Path>SFX\Metal_Synthetic_Ambience_Calm_Ominous_Eerie_SC_BM.586_10C4C929.wem</Path>
+						</File>
+						<File Id="526652532" Language="SFX">
+							<ShortName>Space_Presence_ODY-0295-025.wav</ShortName>
+							<Path>SFX\Space_Presence_ODY-0295-025_FFF2AC34.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

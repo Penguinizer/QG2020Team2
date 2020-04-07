@@ -117,7 +117,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   annihilationParticles: {fileID: 566110300831042067, guid: 909c3c647e8557a4faa8b2bb9fdc8e27,
     type: 3}
+  impulseParticles: {fileID: 7414019889134642028, guid: 9f3887d6974e45347869c3913a2f2db9,
+    type: 3}
   ffToggle: 1
+  isUnit: 1
+  isController: 0
+  impulseCooldown: 3
 --- !u!1001 &1832467493190850321
 PrefabInstance:
   m_ObjectHideFlags: 0
