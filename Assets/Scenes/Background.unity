@@ -184,6 +184,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PosBall
       objectReference: {fileID: 0}
+    - target: {fileID: 3407862113248705085, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addb2a9a6f42f1044bb5c06726847f70, type: 3}
 --- !u!4 &325580145 stripped
@@ -309,6 +314,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277574075459779586, guid: 5081192d6f93fc74d87e1aea94914838,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 036af4c045ef2c2448a6513d4dc8fb8d,
+        type: 3}
+    - target: {fileID: 5277574075459779586, guid: 5081192d6f93fc74d87e1aea94914838,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5081192d6f93fc74d87e1aea94914838, type: 3}
@@ -542,7 +558,7 @@ SpriteRenderer:
   m_SortingLayerID: -1355483017
   m_SortingLayer: -3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 86542808f3670064e97eccec36e357e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 036af4c045ef2c2448a6513d4dc8fb8d, type: 3}
   m_Color: {r: 0.03773582, g: 0.03755782, b: 0.03755782, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -655,7 +671,7 @@ SpriteRenderer:
   m_Size: {x: 20, y: 10}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &664138960
@@ -824,7 +840,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1014729592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: player 2 owned
   m_TagString: Player2Owned
   m_Icon: {fileID: 0}
@@ -903,7 +919,7 @@ SpriteRenderer:
   m_SortingLayerID: -1355483017
   m_SortingLayer: -3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 86542808f3670064e97eccec36e357e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 036af4c045ef2c2448a6513d4dc8fb8d, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1009,7 +1025,7 @@ SpriteRenderer:
   m_SortingLayerID: -1355483017
   m_SortingLayer: -3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 86542808f3670064e97eccec36e357e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 036af4c045ef2c2448a6513d4dc8fb8d, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1132,6 +1148,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MinusBall
       objectReference: {fileID: 0}
+    - target: {fileID: 3407862113248705085, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addb2a9a6f42f1044bb5c06726847f70, type: 3}
 --- !u!4 &1187228521 stripped
@@ -1211,6 +1232,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: MinusBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407862113248705085, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addb2a9a6f42f1044bb5c06726847f70, type: 3}
@@ -1324,6 +1350,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MinusBall
       objectReference: {fileID: 0}
+    - target: {fileID: 3407862113248705085, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addb2a9a6f42f1044bb5c06726847f70, type: 3}
 --- !u!4 &1506158608 stripped
@@ -1387,7 +1418,7 @@ SpriteRenderer:
   m_SortingLayerID: -1355483017
   m_SortingLayer: -3
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 86542808f3670064e97eccec36e357e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 036af4c045ef2c2448a6513d4dc8fb8d, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1510,6 +1541,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PosBall
       objectReference: {fileID: 0}
+    - target: {fileID: 3407862113248705085, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addb2a9a6f42f1044bb5c06726847f70, type: 3}
 --- !u!4 &2038657812 stripped
@@ -1527,7 +1563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2090698602}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: player 1 owned
   m_TagString: Player1Owned
   m_Icon: {fileID: 0}
@@ -1623,6 +1659,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MinusBall
       objectReference: {fileID: 0}
+    - target: {fileID: 3407862113248705085, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: addb2a9a6f42f1044bb5c06726847f70, type: 3}
 --- !u!1001 &5277574074131342245
@@ -1696,6 +1737,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5277574075459779586, guid: 5081192d6f93fc74d87e1aea94914838,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 036af4c045ef2c2448a6513d4dc8fb8d,
+        type: 3}
+    - target: {fileID: 5277574075459779586, guid: 5081192d6f93fc74d87e1aea94914838,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5081192d6f93fc74d87e1aea94914838, type: 3}

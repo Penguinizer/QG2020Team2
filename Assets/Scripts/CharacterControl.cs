@@ -52,6 +52,10 @@ public class CharacterControl : MonoBehaviour
 		//Update position
 		character.MovePosition(newPos);
 		
+		if(Input.GetButton("p1Fire")){
+			print("test");
+		}
+		
 		//Impulse timing
 		myTime += Time.deltaTime;
 		//Impulse things
