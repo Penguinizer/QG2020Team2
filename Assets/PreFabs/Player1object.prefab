@@ -119,6 +119,11 @@ MonoBehaviour:
   impulseDistance: 5
   impulseForce: 3
   impulseCooldown: 3
+  createCooldown: 0.5
+  PosPartPrefab: {fileID: 896089112370921734, guid: 35aefca6cad0cc2458682461b1ab8e20,
+    type: 3}
+  MinPartPrefab: {fileID: 5516309980751413389, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+    type: 3}
 --- !u!114 &114240461790014140
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,10 +16,17 @@ public class CharacterControl : MonoBehaviour
     [SerializeField]
     float impulseForce = 2.0f;
 	[SerializeField]
-	public float impulseCooldown = 0.5f;
+	float impulseCooldown = 0.5f;
+	[SerializeField]
+	float createCooldown = 1.0f;
+	[SerializeField]
+	GameObject PosPartPrefab;
+	[SerializeField]
+	GameObject MinPartPrefab;
 	
 	private float myTime = 0.0f;
 	private float nextImpulse = 0.0f;
+	private float nextCreate = 0.0f;
 	private Vector3 impForce;
 	private Vector3 impForceDir;
 	private Rigidbody2D character;
@@ -27,6 +34,7 @@ public class CharacterControl : MonoBehaviour
 	private Vector3 moveDirection = Vector3.zero;
 	private Vector3 playerPos = Vector3.zero;
 	private Vector3 newPos = Vector3.zero;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,10 +59,6 @@ public class CharacterControl : MonoBehaviour
 		newPos = new Vector3(character.position.x + moveDirection.x * Time.deltaTime, character.position.y + moveDirection.y * Time.deltaTime, 0);
 		//Update position
 		character.MovePosition(newPos);
-		
-		if(Input.GetButton("p1Fire")){
-			print("test");
-		}
 		
 		//Impulse timing
 		myTime += Time.deltaTime;
@@ -140,6 +144,34 @@ public class CharacterControl : MonoBehaviour
 			}
 			//More impulse cooldown matters
 			nextImpulse = nextImpulse - myTime;
+			myTime = 0.0f;
+		}
+		
+		//Code for creating particles.
+		//Create a new prefab object with the playerobject as its parent.
+		//After creating resets the cooldown
+		if(gameObject.tag == "Player1Owned" && Input.GetButton("p1CreatePosBall") && myTime > createCooldown){
+			nextCreate = myTime + createCooldown;
+			Instantiate(PosPartPrefab,gameObject.transform);
+			nextCreate = nextCreate - myTime;
+			myTime = 0.0f;
+		}
+		if(gameObject.tag == "Player1Owned" && Input.GetButton("p1CreateMinBall") && myTime > createCooldown){
+			nextCreate = myTime + createCooldown;
+			Instantiate(MinPartPrefab,gameObject.transform);
+			nextCreate = nextCreate - myTime;
+			myTime = 0.0f;
+		}
+		if(gameObject.tag == "Player2Owned" && Input.GetButton("p2CreatePosBall") && myTime > createCooldown){
+			nextCreate = myTime + createCooldown;
+			Instantiate(PosPartPrefab,gameObject.transform);
+			nextCreate = nextCreate - myTime;
+			myTime = 0.0f;
+		}
+		if(gameObject.tag == "Player2Owned" && Input.GetButton("p2CreateMinBall") && myTime > createCooldown){
+			nextCreate = myTime + createCooldown;
+			Instantiate(MinPartPrefab,gameObject.transform);
+			nextCreate = nextCreate - myTime;
 			myTime = 0.0f;
 		}
     }
