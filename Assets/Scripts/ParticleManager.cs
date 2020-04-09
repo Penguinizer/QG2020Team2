@@ -28,27 +28,17 @@ public class ParticleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myTime += Time.deltaTime;
 
-        if (gameObject.tag == "Player1Owned" && Input.GetButton("p1Fire") && myTime > impulseCooldown && isController && !isUnit)
-        {
-
-            impulseParticles.Play();
-        }
-
-        if (gameObject.tag == "Player2Owned" && Input.GetButton("p2Fire") && myTime > impulseCooldown && isController && !isUnit)
-        {
-            {
-
-                impulseParticles.Play();
-            }
-
-        }
 
     }
 
-      
-        void OnCollisionEnter2D(Collision2D collision)
+    public void PlayImpulseParticles()
+    {
+        impulseParticles.Play();
+    }
+
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (gameObject.tag == "MinusBall" && collision.collider.tag == "PosBall" && (gameObject.transform.parent.tag != collision.collider.transform.parent.tag | ffToggle))
         {

@@ -603,12 +603,12 @@ PrefabInstance:
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: impulseDistance
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: impulseForce
-      value: 0.09
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}

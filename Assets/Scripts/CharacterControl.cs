@@ -62,6 +62,10 @@ public class CharacterControl : MonoBehaviour
 		if (gameObject.tag == "Player1Owned" && Input.GetButton("p1Fire") && myTime > impulseCooldown){
 			//Set impulse cooldown
 			nextImpulse = myTime + impulseCooldown;
+            //call method from ParticleManager script
+            gameObject.GetComponent<ParticleManager>().PlayImpulseParticles();
+            //call method from AudioManager script
+            gameObject.GetComponent<AudioManager>().PostImpulseWwiseEvent();
 			//Apply impulse to balls
 			foreach (GameObject ball in GameObject.FindGameObjectsWithTag("PosBall")){
                 //Get mouse position, use to calculation vector from mouse to sphere.
@@ -76,6 +80,8 @@ public class CharacterControl : MonoBehaviour
                 if (Vector3.Distance(playerPos, ballPos) < impulseDistance){
                     ball.GetComponent<Rigidbody2D>().AddForce(impForce, ForceMode2D.Impulse);
                 }
+
+
 			}
 			foreach (GameObject ball in GameObject.FindGameObjectsWithTag("MinusBall")){
                 //Get mouse position, use to calculation vector from mouse to sphere.
@@ -99,8 +105,12 @@ public class CharacterControl : MonoBehaviour
 		if (gameObject.tag == "Player2Owned" && Input.GetButton("p2Fire") && myTime > impulseCooldown){
 			//Set impulse cooldown
 			nextImpulse = myTime + impulseCooldown;
-			//Apply impulse to balls
-			foreach (GameObject ball in GameObject.FindGameObjectsWithTag("PosBall")){
+            //access method from ParticleManager script
+            gameObject.GetComponent<ParticleManager>().PlayImpulseParticles();
+            //call method from AudioManager script
+            gameObject.GetComponent<AudioManager>().PostImpulseWwiseEvent();
+            //Apply impulse to balls
+            foreach (GameObject ball in GameObject.FindGameObjectsWithTag("PosBall")){
                 //Get mouse position, use to calculation vector from mouse to sphere.
 				playerPos = new Vector3(gameObject.GetComponent<Rigidbody2D>().position.x, gameObject.GetComponent<Rigidbody2D>().position.y,0);
                 ballPos = new Vector3(ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y, 0);

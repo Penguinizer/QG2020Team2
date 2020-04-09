@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
 
     public AK.Wwise.Event Annihilation;
     public AK.Wwise.Event Collision;
+    public AK.Wwise.Event Impulse;
   
 
     // Start is called before the first frame update
@@ -24,6 +25,12 @@ public class AudioManager : MonoBehaviour
         
     }
 
+
+    public void PostImpulseWwiseEvent()
+    {
+        Impulse.Post(gameObject);
+        print("play Impulse sound");
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
