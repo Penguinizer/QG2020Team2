@@ -32,6 +32,8 @@ public class BallFunctionality : MonoBehaviour
     float pushrepelDistance = 4;
 	[SerializeField]
 	bool ffToggle = false;
+	[SerializeField]
+	bool BlackHoleDestroyBasedOnMaterial = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -147,13 +149,18 @@ public class BallFunctionality : MonoBehaviour
             //print("Colliding");
             Destroy(gameObject);
         }
-        if (collision.collider.tag == "Hole")
-        {
-
-            if (destroyedByHole)
-            {
-                Destroy(gameObject);
-            }
-        }
+		if(BlackHoleDestroyBasedOnMaterial){
+			if (collision.collider.sharedMaterial){
+				if (collision.collider.sharedMaterial.name == "blaghoulmatter")
+				{
+					Destroy(gameObject);
+				}
+			}
+		}
+		else{
+			if(collision.collider.tag=="Hole"){
+				Destroy(gameObject);
+			}
+		}
     }
 }

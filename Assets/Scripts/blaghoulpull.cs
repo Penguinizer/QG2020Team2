@@ -24,9 +24,9 @@ public class blaghoulpull : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		holePos = new Vector3 (gameObject.transform.position.x, gameObject.transform.position.y,0);
         foreach(GameObject ball in GameObject.FindGameObjectsWithTag("MinusBall")){
 			ballPos = new Vector3 (ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y,0);
-			holePos = new Vector3 (gameObject.transform.position.x, gameObject.transform.position.y,0);
 			if (Vector3.Distance(ballPos,holePos)<5.0){
 				forceDir=(holePos - ballPos);
 				forceDir.Normalize();
