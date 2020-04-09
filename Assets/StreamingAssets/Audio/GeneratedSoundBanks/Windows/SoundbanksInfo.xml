@@ -24,7 +24,71 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1543154663" Name="PlusMinBall_Annihilation" ObjectPath="\Events\Default Work Unit\PlusMinBall_Annihilation" GUID="{B020F771-075D-4E84-AB63-E31208BACB29}" DurationType="OneShot" DurationMin="2.293333" DurationMax="4.180745">
+				<Event Id="1548417789" Name="CharacterControl_Impulse" ObjectPath="\Events\Default Work Unit\CharacterControl_Impulse" GUID="{7006030B-42BD-4A67-888D-7B5C8D0AF13E}" DurationType="OneShot" DurationMin="2.472172" DurationMax="4.438412">
+					<IncludedMemoryFiles>
+						<File Id="1061179" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_01-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_01-01_312E7F62.wem</Path>
+						</File>
+						<File Id="89313807" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-36.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-36_10C4C929.wem</Path>
+						</File>
+						<File Id="182183034" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01_552A3175.wem</Path>
+						</File>
+						<File Id="314138969" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01_7F7EA4B2.wem</Path>
+						</File>
+						<File Id="495318243" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_04-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_04-01_05A059A5.wem</Path>
+						</File>
+						<File Id="591453772" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-30.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-30_10C4C929.wem</Path>
+						</File>
+						<File Id="607096714" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_02-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_02-01_7F7EA4B2.wem</Path>
+						</File>
+						<File Id="638392327" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-32.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-32_10C4C929.wem</Path>
+						</File>
+						<File Id="796009033" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-26.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-26_10C4C929.wem</Path>
+						</File>
+						<File Id="887689139" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-34.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-34_10C4C929.wem</Path>
+						</File>
+						<File Id="896306815" Language="SFX">
+							<ShortName>Energy_Pass_By_ODY-0442-28.wav</ShortName>
+							<Path>SFX\Energy_Pass_By_ODY-0442-28_10C4C929.wem</Path>
+						</File>
+						<File Id="931838338" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_09-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_09-01_D71FD1A6.wem</Path>
+						</File>
+						<File Id="1001098509" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01_29F8DC8E.wem</Path>
+						</File>
+						<File Id="1002703809" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01_7F7EA4B2.wem</Path>
+						</File>
+						<File Id="1026217877" Language="SFX">
+							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01.wav</ShortName>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01_7326CB9C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1543154663" Name="PlusMinBall_Annihilation" ObjectPath="\Events\Default Work Unit\PlusMinBall_Annihilation" GUID="{B020F771-075D-4E84-AB63-E31208BACB29}" DurationType="OneShot" DurationMin="2.472172" DurationMax="4.438412">
 					<IncludedMemoryFiles>
 						<File Id="1283924" Language="SFX">
 							<ShortName>Pop_Airy_ODY-0299-045-16.wav</ShortName>
@@ -32,7 +96,7 @@
 						</File>
 						<File Id="2695676" Language="SFX">
 							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_02-01.wav</ShortName>
-							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_02-01_C347298D.wem</Path>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_02-01_51128C6E.wem</Path>
 						</File>
 						<File Id="76535199" Language="SFX">
 							<ShortName>Pop_Airy_ODY-0299-045-18.wav</ShortName>
@@ -40,7 +104,7 @@
 						</File>
 						<File Id="107149069" Language="SFX">
 							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_01-01.wav</ShortName>
-							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_01-01_C347298D.wem</Path>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_01-01_EA507C7E.wem</Path>
 						</File>
 						<File Id="153172516" Language="SFX">
 							<ShortName>Energy_Pass_By_ODY-0442-30.wav</ShortName>
@@ -64,7 +128,7 @@
 						</File>
 						<File Id="442956874" Language="SFX">
 							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_09-01.wav</ShortName>
-							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_09-01_C347298D.wem</Path>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_09-01_871C6712.wem</Path>
 						</File>
 						<File Id="481434662" Language="SFX">
 							<ShortName>Energy_Pass_By_ODY-0442-26.wav</ShortName>
@@ -72,15 +136,15 @@
 						</File>
 						<File Id="512301253" Language="SFX">
 							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01.wav</ShortName>
-							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01_C347298D.wem</Path>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01_51128C6E.wem</Path>
 						</File>
 						<File Id="520998201" Language="SFX">
 							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01.wav</ShortName>
-							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01_C347298D.wem</Path>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01_68A14520.wem</Path>
 						</File>
 						<File Id="542034477" Language="SFX">
 							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01.wav</ShortName>
-							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01_C347298D.wem</Path>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01_51128C6E.wem</Path>
 						</File>
 						<File Id="594515253" Language="SFX">
 							<ShortName>Pop_Airy_ODY-0299-045-09.wav</ShortName>
@@ -96,15 +160,15 @@
 						</File>
 						<File Id="862254155" Language="SFX">
 							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_04-01.wav</ShortName>
-							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_04-01_C347298D.wem</Path>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_04-01_9DF29EE1.wem</Path>
 						</File>
 						<File Id="1010135762" Language="SFX">
 							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01.wav</ShortName>
-							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01_C347298D.wem</Path>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01_C4353891.wem</Path>
 						</File>
 						<File Id="1029173813" Language="SFX">
 							<ShortName>Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01.wav</ShortName>
-							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01_C347298D.wem</Path>
+							<Path>SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01_09110C2A.wem</Path>
 						</File>
 						<File Id="1058100332" Language="SFX">
 							<ShortName>Pop_Airy_ODY-0299-045-11.wav</ShortName>

@@ -146,7 +146,8 @@ MonoBehaviour:
   Impulse:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 4e2adc2577f6c6545ba6a5b0e893cb79,
+      type: 2}
 --- !u!50 &7510372055992168942
 Rigidbody2D:
   serializedVersion: 4
