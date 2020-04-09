@@ -14,8 +14,7 @@ public class ParticleManager : MonoBehaviour
     [SerializeField] bool isController = false;
     
 
-    private float myTime = 0.0f;
-    [SerializeField] float impulseCooldown = 3f;
+
 
     
 

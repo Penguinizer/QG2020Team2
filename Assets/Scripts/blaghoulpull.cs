@@ -5,7 +5,7 @@ using System;
 
 public class blaghoulpull : MonoBehaviour
 {
-	
+
 	Vector3 pullForce;
 	Vector3 forceDir;
 	Vector3 holePos;

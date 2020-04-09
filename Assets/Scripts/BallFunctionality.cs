@@ -6,6 +6,8 @@ using System;
 //Script based on unity documentation example.
 public class BallFunctionality : MonoBehaviour
 {
+
+    public bool destroyedByHole = false;
     //Rigidbody2D rb;
     Vector3 attRepForce;
     Vector3 impForce;
@@ -147,7 +149,11 @@ public class BallFunctionality : MonoBehaviour
         }
         if (collision.collider.tag == "Hole")
         {
-            Destroy(gameObject);
+
+            if (destroyedByHole)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

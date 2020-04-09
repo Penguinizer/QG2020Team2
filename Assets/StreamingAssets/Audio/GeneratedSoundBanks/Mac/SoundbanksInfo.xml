@@ -265,6 +265,9 @@
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="1641608847" Name="Particle_Speed" ObjectPath="\Game Parameters\Default Work Unit\Particle_Speed" GUID="{19A55A2D-B851-4B6B-8257-9A0EFA10A019}"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

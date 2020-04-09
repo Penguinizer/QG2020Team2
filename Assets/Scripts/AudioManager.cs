@@ -5,13 +5,14 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
 
-
-  public bool ffToggle = true;
+    public float speed;
+    public bool ffToggle = true;
 
     public AK.Wwise.Event Annihilation;
     public AK.Wwise.Event Collision;
     public AK.Wwise.Event Impulse;
-  
+
+    public AK.Wwise.RTPC particleSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,12 @@ public class AudioManager : MonoBehaviour
         
     }
 
+    Vector3 lastPosition = Vector3.zero;
+    void FixedUpdate()
+    {
+        speed = (transform.position - lastPosition).magnitude / Time.fixedDeltaTime;
+        lastPosition = transform.position;
+    }
 
     public void PostImpulseWwiseEvent()
     {
@@ -53,6 +60,7 @@ public class AudioManager : MonoBehaviour
 
        else if(collision.collider.tag == "PosBall" || collision.collider.tag == "MinusBall")
         {
+            particleSpeed.SetValue(gameObject, speed);
             Collision.Post(gameObject);
         }
 

@@ -4,6 +4,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	3626999974	Start_Ambience			\Default Work Unit\Start_Ambience	
 	3640416505	PlusMinBall_Collision			\Default Work Unit\PlusMinBall_Collision	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1641608847	Particle_Speed			\Default Work Unit\Particle_Speed	
+
 Effect plug-ins	ID	Name	Type				Notes
 	1198215643	Boomerang	Wwise Tremolo			
 	4202347640	Repeat_after_me	Wwise Harmonizer			
