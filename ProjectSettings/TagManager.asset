@@ -11,6 +11,9 @@ TagManager:
   - PosBall
   - Player1Owned
   - Player2Owned
+  - FxTemporaire
+  - Energyball
+  - AreaBall
   layers:
   - Default
   - TransparentFX

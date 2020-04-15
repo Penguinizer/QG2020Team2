@@ -4,8 +4,7 @@ using UnityEngine;
 using System;
 
 //Impulse timing based on documentation script reference for arcade firing.
-public class CharacterControl : MonoBehaviour
-{	
+public class CharacterControl : MonoBehaviour{	
 	//Initializing variables
 	[SerializeField]
 	float moveSpeed = 4.0f;
@@ -23,6 +22,16 @@ public class CharacterControl : MonoBehaviour
 	GameObject PosPartPrefab;
 	[SerializeField]
 	GameObject MinPartPrefab;
+	[SerializeField]
+	float energyOnPickup = 1.0f;
+	[SerializeField]
+	float startingEnergy = 0.0f;
+	[SerializeField]
+	float areaBallCost = 1.0f;
+	[SerializeField]
+	GameObject AreaBallPrefab;
+	[SerializeField]
+	float posMinBallCost = 0.0f;
 	
 	private float myTime = 0.0f;
 	private float nextImpulse = 0.0f;
@@ -34,24 +43,54 @@ public class CharacterControl : MonoBehaviour
 	private Vector3 moveDirection = Vector3.zero;
 	private Vector3 playerPos = Vector3.zero;
 	private Vector3 newPos = Vector3.zero;
+	private float currentEnergy;
+	private string impulseControlString;
+	private string areaControlString;
+	private string minControlString;
+	private string posControlString;
+	private string horControlString;
+	private string vertControlString;
+	private string[] thingsToImpulse = new string[] {"PosBall", "MinusBall"};
+	
+	//Handles adding energy
+	public void addEnergy(){
+		currentEnergy += energyOnPickup;
+		print(gameObject.tag + " Energy: " + currentEnergy);
+	}
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
 		//Acquire the character's rigid body for later reference.
         character = gameObject.GetComponent<Rigidbody2D>();
+		currentEnergy = startingEnergy;
+		
+		if (gameObject.tag == "Player1Owned"){
+			horControlString = "Horizontal";
+			vertControlString = "Vertical";
+			impulseControlString = "p1Fire";
+			areaControlString = "p1CreateAreaBall";
+			minControlString = "p1CreateMinBall";
+			posControlString = "p1CreatePosBall";
+		}
+		else if (gameObject.tag == "Player2Owned"){
+			horControlString = "Horizontal2";
+			vertControlString = "Vertical2";
+			impulseControlString = "p2Fire";
+			areaControlString = "p2CreateAreaBall";
+			minControlString = "p2CreateMinBall";
+			posControlString = "p2CreatePosBall";
+		}
+		else{
+			//Destroy untagged player gameobjects because they will fuck everything
+			print ("Player Object Is Untagged and Fucked");
+			Destroy(gameObject);
+		}
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
 		//Player Object Movement vector
-		if (gameObject.tag == "Player1Owned"){
-			moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
-		}
-		if (gameObject.tag == "Player2Owned"){
-			moveDirection = new Vector3(Input.GetAxis("Horizontal2"), Input.GetAxis("Vertical2"), 0.0f);
-		}
+		moveDirection = new Vector3(Input.GetAxis(horControlString), Input.GetAxis(vertControlString), 0.0f);
 		//Get change in position
 		moveDirection  *= moveSpeed;
 		
@@ -63,84 +102,29 @@ public class CharacterControl : MonoBehaviour
 		//Impulse timing
 		myTime += Time.deltaTime;
 		//Impulse things
-		if (gameObject.tag == "Player1Owned" && Input.GetButton("p1Fire") && myTime > impulseCooldown){
+		if (Input.GetButton(impulseControlString) && myTime > impulseCooldown){
 			//Set impulse cooldown
 			nextImpulse = myTime + impulseCooldown;
             //call method from ParticleManager script
             gameObject.GetComponent<ParticleManager>().PlayImpulseParticles();
             //call method from AudioManager script
             gameObject.GetComponent<AudioManager>().PostImpulseWwiseEvent();
-			//Apply impulse to balls
-			foreach (GameObject ball in GameObject.FindGameObjectsWithTag("PosBall")){
-                //Get mouse position, use to calculation vector from mouse to sphere.
-				playerPos = new Vector3(gameObject.GetComponent<Rigidbody2D>().position.x, gameObject.GetComponent<Rigidbody2D>().position.y,0);
-                ballPos = new Vector3(ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y, 0);
-                impForceDir = ballPos - playerPos;
-                //Normalize vector to avoid fuckery
-                impForceDir.Normalize();
-                //Multiply direction with force to get force vector
-                impForce = impForceDir * (float)(impulseForce / Math.Pow(powerBase, Vector3.Distance(playerPos, ballPos)));
-                //Apply impulse to sphere
-                if (Vector3.Distance(playerPos, ballPos) < impulseDistance){
-                    ball.GetComponent<Rigidbody2D>().AddForce(impForce, ForceMode2D.Impulse);
-                }
-
-
-			}
-			foreach (GameObject ball in GameObject.FindGameObjectsWithTag("MinusBall")){
-                //Get mouse position, use to calculation vector from mouse to sphere.
-				playerPos = new Vector3(gameObject.GetComponent<Rigidbody2D>().position.x, gameObject.GetComponent<Rigidbody2D>().position.y,0);
-                ballPos = new Vector3(ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y, 0);
-                impForceDir = ballPos - playerPos;
-                //Normalize vector to avoid fuckery
-                impForceDir.Normalize();
-                //Multiply direction with force to get force vector
-                impForce = impForceDir * (float)(impulseForce / Math.Pow(powerBase, Vector3.Distance(playerPos, ballPos)));
-                //Apply impulse to sphere
-                if (Vector3.Distance(playerPos, ballPos) < impulseDistance){
-                    ball.GetComponent<Rigidbody2D>().AddForce(impForce, ForceMode2D.Impulse);
-                }
-			}
-			
-			//More impulse cooldown matters
-			nextImpulse = nextImpulse - myTime;
-			myTime = 0.0f;
-		}
-		if (gameObject.tag == "Player2Owned" && Input.GetButton("p2Fire") && myTime > impulseCooldown){
-			//Set impulse cooldown
-			nextImpulse = myTime + impulseCooldown;
-            //access method from ParticleManager script
-            gameObject.GetComponent<ParticleManager>().PlayImpulseParticles();
-            //call method from AudioManager script
-            gameObject.GetComponent<AudioManager>().PostImpulseWwiseEvent();
-            //Apply impulse to balls
-            foreach (GameObject ball in GameObject.FindGameObjectsWithTag("PosBall")){
-                //Get mouse position, use to calculation vector from mouse to sphere.
-				playerPos = new Vector3(gameObject.GetComponent<Rigidbody2D>().position.x, gameObject.GetComponent<Rigidbody2D>().position.y,0);
-                ballPos = new Vector3(ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y, 0);
-                impForceDir = ballPos - playerPos;
-                //Normalize vector to avoid fuckery
-                impForceDir.Normalize();
-                //Multiply direction with force to get force vector
-                impForce = impForceDir * (float)(impulseForce / Math.Pow(powerBase, Vector3.Distance(playerPos, ballPos)));
-                //Apply impulse to sphere
-                if (Vector3.Distance(playerPos, ballPos) < impulseDistance){
-                    ball.GetComponent<Rigidbody2D>().AddForce(impForce, ForceMode2D.Impulse);
-                }
-			}
-			foreach (GameObject ball in GameObject.FindGameObjectsWithTag("MinusBall")){
-                //Get mouse position, use to calculation vector from mouse to sphere.
-				playerPos = new Vector3(gameObject.GetComponent<Rigidbody2D>().position.x, gameObject.GetComponent<Rigidbody2D>().position.y,0);
-                ballPos = new Vector3(ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y, 0);
-                impForceDir = ballPos - playerPos;
-                //Normalize vector to avoid fuckery
-                impForceDir.Normalize();
-                //Multiply direction with force to get force vector
-                impForce = impForceDir * (float)(impulseForce / Math.Pow(powerBase, Vector3.Distance(playerPos, ballPos)));
-                //Apply impulse to sphere
-                if (Vector3.Distance(playerPos, ballPos) < impulseDistance){
-                    ball.GetComponent<Rigidbody2D>().AddForce(impForce, ForceMode2D.Impulse);
-                }
+			//Apply impulse to balls using nested foreach loops
+			foreach (string inputString in thingsToImpulse) {
+				foreach (GameObject ball in GameObject.FindGameObjectsWithTag(inputString)){
+					//Get mouse position, use to calculation vector from mouse to sphere.
+					playerPos = new Vector3(gameObject.GetComponent<Rigidbody2D>().position.x, gameObject.GetComponent<Rigidbody2D>().position.y,0);
+					ballPos = new Vector3(ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y, 0);
+					impForceDir = ballPos - playerPos;
+					//Normalize vector to avoid fuckery
+					impForceDir.Normalize();
+					//Multiply direction with force to get force vector
+					impForce = impForceDir * (float)(impulseForce / Math.Pow(powerBase, Vector3.Distance(playerPos, ballPos)));
+					//Apply impulse to sphere
+					if (Vector3.Distance(playerPos, ballPos) < impulseDistance){
+						ball.GetComponent<Rigidbody2D>().AddForce(impForce, ForceMode2D.Impulse);
+					}
+				}
 			}
 			//More impulse cooldown matters
 			nextImpulse = nextImpulse - myTime;
@@ -148,31 +132,33 @@ public class CharacterControl : MonoBehaviour
 		}
 		
 		//Code for creating particles.
+		//Handles creating area control particles:
+		if (Input.GetButton(areaControlString) && myTime > createCooldown && currentEnergy >= areaBallCost){
+			nextCreate = myTime + createCooldown;
+			Instantiate(AreaBallPrefab,gameObject.transform);
+			nextCreate = nextCreate - myTime;
+			myTime = 0.0f;
+			currentEnergy -= areaBallCost;
+			print (gameObject.tag + " Area Ball Created, Current Energy: " + currentEnergy);
+		}
+		//Handles creating pos and min particles
 		//Create a new prefab object with the playerobject as its parent.
 		//After creating resets the cooldown
-		if(gameObject.tag == "Player1Owned" && Input.GetButton("p1CreatePosBall") && myTime > createCooldown){
+		else if(Input.GetButton(posControlString)  && myTime > createCooldown && currentEnergy >= posMinBallCost){
 			nextCreate = myTime + createCooldown;
 			Instantiate(PosPartPrefab,gameObject.transform);
 			nextCreate = nextCreate - myTime;
 			myTime = 0.0f;
+			currentEnergy -= posMinBallCost;
+			print (gameObject.tag + " Positive Particle Created, Current Energy: " + currentEnergy);
 		}
-		if(gameObject.tag == "Player1Owned" && Input.GetButton("p1CreateMinBall") && myTime > createCooldown){
+		else if(Input.GetButton(minControlString) && myTime > createCooldown && currentEnergy >= posMinBallCost){
 			nextCreate = myTime + createCooldown;
 			Instantiate(MinPartPrefab,gameObject.transform);
 			nextCreate = nextCreate - myTime;
 			myTime = 0.0f;
-		}
-		if(gameObject.tag == "Player2Owned" && Input.GetButton("p2CreatePosBall") && myTime > createCooldown){
-			nextCreate = myTime + createCooldown;
-			Instantiate(PosPartPrefab,gameObject.transform);
-			nextCreate = nextCreate - myTime;
-			myTime = 0.0f;
-		}
-		if(gameObject.tag == "Player2Owned" && Input.GetButton("p2CreateMinBall") && myTime > createCooldown){
-			nextCreate = myTime + createCooldown;
-			Instantiate(MinPartPrefab,gameObject.transform);
-			nextCreate = nextCreate - myTime;
-			myTime = 0.0f;
+			currentEnergy -= posMinBallCost;
+			print (gameObject.tag + " Minus Particle Created, Current Energy: " + currentEnergy);
 		}
     }
 }

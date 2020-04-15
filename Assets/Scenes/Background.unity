@@ -119,6 +119,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 932552724}
     m_Modifications:
+    - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: EnergyBallPrefab
+      value: 
+      objectReference: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
+        type: 3}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -157,7 +163,7 @@ PrefabInstance:
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
@@ -769,6 +775,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7510372055992168943, guid: b03a5c6abbb59a546a2ca2c6cb431371,
+        type: 3}
+      propertyPath: AreaBallPrefab
+      value: 
+      objectReference: {fileID: 6141130091478619759, guid: 0d184c65417bb174ebc5531b6c3c979f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b03a5c6abbb59a546a2ca2c6cb431371, type: 3}
 --- !u!4 &932552724 stripped
@@ -1065,6 +1077,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 479575821}
     m_Modifications:
+    - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: EnergyBallPrefab
+      value: 
+      objectReference: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
+        type: 3}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1159,6 +1177,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 932552724}
     m_Modifications:
+    - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: EnergyBallPrefab
+      value: 
+      objectReference: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
+        type: 3}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1197,7 +1221,7 @@ PrefabInstance:
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
@@ -1285,6 +1309,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 479575821}
     m_Modifications:
+    - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: EnergyBallPrefab
+      value: 
+      objectReference: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
+        type: 3}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1485,6 +1515,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 479575821}
     m_Modifications:
+    - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: EnergyBallPrefab
+      value: 
+      objectReference: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
+        type: 3}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1579,6 +1615,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 932552724}
     m_Modifications:
+    - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: EnergyBallPrefab
+      value: 
+      objectReference: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
+        type: 3}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1617,7 +1659,7 @@ PrefabInstance:
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
@@ -1823,5 +1865,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7510372055992168943, guid: b03a5c6abbb59a546a2ca2c6cb431371,
+        type: 3}
+      propertyPath: AreaBallPrefab
+      value: 
+      objectReference: {fileID: 6141130091478619759, guid: 0d184c65417bb174ebc5531b6c3c979f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b03a5c6abbb59a546a2ca2c6cb431371, type: 3}
