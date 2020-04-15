@@ -7,6 +7,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3423475008941741431, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3533474689194576167, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: m_Name
+      value: PosParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732194199113993393, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732194199113993393, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3732194199113993393, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5516309980751413384, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,6 +96,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: PosBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712584332452053341, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: m_SpotAngle
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712584332452053341, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: m_Range
+      value: 2.56
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f, type: 3}
