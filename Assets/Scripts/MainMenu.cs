@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -25,10 +26,10 @@ public class MainMenu : MonoBehaviour
      
 	 void OnMouseUp(){
 		 if (sakuSandbox){
-			 Application.LoadLevel("Saku_Sandbox");
+			 SceneManager.LoadScene("Saku_Sandbox");
 		 }
 		 if (background){
-			 Application.LoadLevel("Background");
+			 SceneManager.LoadScene("Background");
 		 }
 	 }
 }
