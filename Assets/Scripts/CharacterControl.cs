@@ -145,7 +145,7 @@ public class CharacterControl : MonoBehaviour{
 			//Check for win, if not reset temp variable.
 			if(tempArea >= areaToCoverToWin){
 				isWinner = true;
-				print(gameObject.tag + " WINS");
+				//print(gameObject.tag + " WINS");
 				
 				if (gameObject.tag == "Player1Owned"){
 					winText.text = "Player 1 Wins";
@@ -228,7 +228,7 @@ public class CharacterControl : MonoBehaviour{
 			nextCreate = nextCreate - myTime;
 			myTime = 0.0f;
 			currentEnergy -= areaBallCost;
-			print (gameObject.tag + " Area Ball Created, Current Energy: " + currentEnergy);
+			//print (gameObject.tag + " Area Ball Created, Current Energy: " + currentEnergy);
 		}
 		//Handles creating pos and min particles
 		//Create a new prefab object with the playerobject as its parent.
@@ -244,7 +244,7 @@ public class CharacterControl : MonoBehaviour{
 			nextCreate = nextCreate - myTime;
 			myTime = 0.0f;
 			currentEnergy -= posMinBallCost;
-			print (gameObject.tag + " Positive Particle Created, Current Energy: " + currentEnergy);
+			//print (gameObject.tag + " Positive Particle Created, Current Energy: " + currentEnergy);
 		}
 		else if(Input.GetButton(minControlString) && myTime > createCooldown && currentEnergy >= posMinBallCost){
 			nextCreate = myTime + createCooldown;
@@ -257,7 +257,7 @@ public class CharacterControl : MonoBehaviour{
 			nextCreate = nextCreate - myTime;
 			myTime = 0.0f;
 			currentEnergy -= posMinBallCost;
-			print (gameObject.tag + " Minus Particle Created, Current Energy: " + currentEnergy);
+			//print (gameObject.tag + " Minus Particle Created, Current Energy: " + currentEnergy);
 		}
     }
 }

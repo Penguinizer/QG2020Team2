@@ -6,7 +6,7 @@ using UnityEngine;
 public class ParticleManager : MonoBehaviour
 {
 
-   [SerializeField] GameObject annihilationParticles;
+    [SerializeField] GameObject annihilationParticles;
     [SerializeField] ParticleSystem impulseParticles;
 
     public bool ffToggle = true;
