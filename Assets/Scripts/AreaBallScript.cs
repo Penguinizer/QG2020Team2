@@ -48,6 +48,13 @@ public class AreaBallScript : MonoBehaviour
 		//controlMesh.vertices = new Vector3[] {new Vector3(0, 0, 0), new Vector3(0, 1, 0), new Vector3(1, 1, 0)};
 		//controlMesh.uv = new Vector2[] {new Vector2(0, 0), new Vector2(0, 1), new Vector2(1, 1)};
         //controlMesh.triangles =  new int[] {0, 1, 2};
+		
+		if (gameObject.transform.parent.tag == "Player1Owned"){
+			 gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
+		}
+		else{
+			 gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+		}
     }
 
     // Update is called once per frame
@@ -94,11 +101,18 @@ public class AreaBallScript : MonoBehaviour
 		//Set the new mesh to be the gameobject mesh.
 		GetComponent<MeshFilter>().mesh = msh;
 		
+		//calculateArea();
+		
+		//Clear the list after it has been used so it's empty for the next update.
+		//hitList.Clear();
+    }
+	
+	public float calculateArea(){
 		//Calculate the area covered.
 		//Implementation of formula for irregular polygons from Wikipedia.
 		//Written by fafase
 		//Available at: https://answers.unity.com/questions/684909/how-to-calculate-the-surface-area-of-a-irregular-p.html
-		aTemp = 0;
+		float aTemp = 0;
 		for (int i=0; i<hitList.Length;i++){
 			if (i != hitList.Length-1){
              float mulA = hitList[i].x * hitList[i+1].y;
@@ -112,8 +126,6 @@ public class AreaBallScript : MonoBehaviour
 		}
 		aTemp *= 0.5f;
 		//print(aTemp);
-		
-		//Clear the list after it has been used so it's empty for the next update.
-		//hitList.Clear();
-    }
+		return aTemp;
+	}
 }
