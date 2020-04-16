@@ -50,10 +50,10 @@ public class AreaBallScript : MonoBehaviour
         //controlMesh.triangles =  new int[] {0, 1, 2};
 		
 		if (gameObject.transform.parent.tag == "Player1Owned"){
-			 gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
+			 gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
 		}
 		else{
-			 gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+			 gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
 		}
     }
 

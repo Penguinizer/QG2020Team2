@@ -32,6 +32,10 @@ public class CharacterControl : MonoBehaviour{
 	GameObject AreaBallPrefab;
 	[SerializeField]
 	float posMinBallCost = 0.0f;
+	[SerializeField]
+	float areaToCoverToWin = 120.0f;
+	[SerializeField]
+	float passiveEnergyPerSecond = 1.0f;
 	
 	private float myTime = 0.0f;
 	private float nextImpulse = 0.0f;
@@ -51,11 +55,26 @@ public class CharacterControl : MonoBehaviour{
 	private string horControlString;
 	private string vertControlString;
 	private string[] thingsToImpulse = new string[] {"PosBall", "MinusBall"};
+	private bool isWinner = false;
+	private float tempArea = 0.0f;
+	private float currentArea = 0.0f;
 	
 	//Handles adding energy
 	public void addEnergy(){
 		currentEnergy += energyOnPickup;
 		print(gameObject.tag + " Energy: " + currentEnergy);
+	}
+	
+	public float returnEnergy(){
+		return currentEnergy;
+	}
+	
+	public float returnArea(){
+		return (float)System.Math.Round(currentArea,1);
+	}
+	
+	public bool hasWon(){
+		return isWinner;
 	}
 
     // Start is called before the first frame update
@@ -85,7 +104,47 @@ public class CharacterControl : MonoBehaviour{
 			print ("Player Object Is Untagged and Fucked");
 			Destroy(gameObject);
 		}
+		
+		//Start the win check coroutine
+		StartCoroutine("WinCheck");
+		
+		//Start the energy regen routine
+		StartCoroutine("EnergyPerSecond");
     }
+	
+	//Coroutine for checking the winner
+	private IEnumerator WinCheck(){
+		while(true){
+			yield return new WaitForSeconds(1.0f);
+			//Sum up area
+			foreach (Transform child in transform){
+				if(child.tag == "AreaBall"){
+					tempArea += child.GetComponent<AreaBallScript>().calculateArea();
+				}
+			}
+			
+			//Set currently controlled area for ui
+			currentArea = tempArea;
+			
+			//Check for win, if not reset temp variable.
+			if(tempArea >= areaToCoverToWin){
+				isWinner = true;
+				print(gameObject.tag + " WINS");
+				tempArea = 0;
+			}
+			else{
+				//print(tempArea);
+				tempArea = 0;
+			}
+		}
+	}
+	
+	private IEnumerator EnergyPerSecond(){
+		while(true){
+			yield return new WaitForSeconds(1.0f);
+			currentEnergy += passiveEnergyPerSecond;
+		}
+	}
 
     // Update is called once per frame
     void Update(){
