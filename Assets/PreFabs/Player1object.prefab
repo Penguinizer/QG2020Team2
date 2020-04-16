@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7510372055992168914}
   - component: {fileID: 114096120029276896}
   - component: {fileID: 7510372055992168943}
-  - component: {fileID: 114240461790014140}
+  - component: {fileID: 114988371929937800}
   - component: {fileID: 7510372055992168942}
   - component: {fileID: 7510372055992168937}
   m_Layer: 10
@@ -114,12 +114,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ac18fff05c4f64086f7ee8a97895b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  powerBase: 3
+  moveSpeed: 7
+  powerBase: 4
   impulseDistance: 5
-  impulseForce: 3
-  impulseCooldown: 3
-  createCooldown: 0.5
+  impulseForce: 7
+  impulseCooldown: 1
+  createCooldown: 0.1
   P1PosPrefab: {fileID: 7625452397344959228, guid: 13b093eecfb56b84ab47a14fae31a14b,
     type: 3}
   P1MinPrefab: {fileID: 2511316111756870789, guid: 376b73b218c4c744c9fb33862de50d70,
@@ -134,9 +134,9 @@ MonoBehaviour:
   AreaBallPrefab: {fileID: 6141130091478619759, guid: 0d184c65417bb174ebc5531b6c3c979f,
     type: 3}
   posMinBallCost: 10
-  areaToCoverToWin: 120
-  passiveEnergyPerSecond: 1
---- !u!114 &114240461790014140
+  areaToCoverToWin: 200
+  passiveEnergyPerSecond: 0.5
+--- !u!114 &114988371929937800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,18 +153,15 @@ MonoBehaviour:
   Annihilation:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 4f3ecd2a7cd93d943986800fbdda27cb,
-      type: 2}
+    WwiseObjectReference: {fileID: 0}
   Collision:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 652bf5fea7731a645bef9418cfe93bb7,
-      type: 2}
+    WwiseObjectReference: {fileID: 0}
   Impulse:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 4e2adc2577f6c6545ba6a5b0e893cb79,
-      type: 2}
+    WwiseObjectReference: {fileID: 0}
   particleSpeed:
     idInternal: 0
     valueGuidInternal: 

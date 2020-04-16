@@ -9667,7 +9667,7 @@ MonoBehaviour:
   attractForce: 0
   powerBase: 2
   pushrepelDistance: 2
-  ffToggle: 1
+  ffToggle: 0
   BlackHoleDestroyBasedOnMaterial: 1
   EnergyBallPrefab: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
     type: 3}
@@ -9785,7 +9785,7 @@ MonoBehaviour:
     type: 3}
   impulseParticles: {fileID: 7414019889134642028, guid: 9f3887d6974e45347869c3913a2f2db9,
     type: 3}
-  ffToggle: 1
+  ffToggle: 0
   isUnit: 1
   isController: 0
 --- !u!60 &1861308922770977851

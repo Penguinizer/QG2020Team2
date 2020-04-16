@@ -183,7 +183,7 @@ MonoBehaviour:
     type: 3}
   impulseParticles: {fileID: 7414019889134642028, guid: 9f3887d6974e45347869c3913a2f2db9,
     type: 3}
-  ffToggle: 1
+  ffToggle: 0
   isUnit: 1
   isController: 0
 --- !u!1001 &3533867068291386479
@@ -484,7 +484,7 @@ PrefabInstance:
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: ffToggle
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}

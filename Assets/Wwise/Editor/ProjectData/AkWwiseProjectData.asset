@@ -51,7 +51,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 79d8ae792bd85641a7f745a1908fe8f2
     GuidInternal: 
-    m_lastTime: -8586156957744413288
+    m_lastTime: -8586151845995233200
     List:
     - name: Main
       guid: 9e12ad08d9bc6f468866eb1efb37bfc8
@@ -67,8 +67,20 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b4c86fa16aad31488415514b00834156
     GuidInternal: 
-    m_lastTime: -8586153511495047042
+    m_lastTime: -8586151838388984477
     List:
+    - name: CharacterControl_Impulse
+      guid: 0b030670bd42674a888d7b5c8d0af13e
+      id: 1548417789
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CharacterControl_Impulse
+        ObjectType: 3
+      Path: Default Work Unit\CharacterControl_Impulse
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: PlusMinBall_Annihilation
       guid: 71f720b05d07844eab63e31208bacb29
       id: 1543154663
@@ -110,8 +122,17 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 346a9dc26a3c634fb587d37b031b3c50
     GuidInternal: 
-    m_lastTime: -8586158620129627556
-    List: []
+    m_lastTime: -8586151743497138705
+    List:
+    - name: Particle_Speed
+      guid: 2d5aa51951b86b4b82579a0efa10a019
+      id: 1641608847
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Particle_Speed
+        ObjectType: 13
+      Path: Default Work Unit\Particle_Speed
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPath: Default Work Unit
@@ -135,7 +156,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /QG2020Team2_WwiseProject
-  - /QG2020Team2_WwiseProject/Events
-  - /QG2020Team2_WwiseProject/Events/Default Work Unit
+  - /QG2020Team2_WwiseProject/Banks
+  - /QG2020Team2_WwiseProject/Banks/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
