@@ -19,9 +19,13 @@ public class CharacterControl : MonoBehaviour{
 	[SerializeField]
 	float createCooldown = 1.0f;
 	[SerializeField]
-	GameObject PosPartPrefab;
+	GameObject P1PosPrefab;
 	[SerializeField]
-	GameObject MinPartPrefab;
+	GameObject P1MinPrefab;
+	[SerializeField]
+	GameObject P2PosPrefab;
+	[SerializeField]
+	GameObject P2MinPrefab;
 	[SerializeField]
 	float energyOnPickup = 1.0f;
 	[SerializeField]
@@ -205,7 +209,12 @@ public class CharacterControl : MonoBehaviour{
 		//After creating resets the cooldown
 		else if(Input.GetButton(posControlString)  && myTime > createCooldown && currentEnergy >= posMinBallCost){
 			nextCreate = myTime + createCooldown;
-			Instantiate(PosPartPrefab,gameObject.transform);
+			if(gameObject.tag == "Player1Owned"){
+				Instantiate(P1PosPrefab,gameObject.transform);
+			}
+			else if (gameObject.tag == "Player2Owned"){
+				Instantiate(P2PosPrefab,gameObject.transform);
+			}
 			nextCreate = nextCreate - myTime;
 			myTime = 0.0f;
 			currentEnergy -= posMinBallCost;
@@ -213,7 +222,12 @@ public class CharacterControl : MonoBehaviour{
 		}
 		else if(Input.GetButton(minControlString) && myTime > createCooldown && currentEnergy >= posMinBallCost){
 			nextCreate = myTime + createCooldown;
-			Instantiate(MinPartPrefab,gameObject.transform);
+			if(gameObject.tag == "Player1Owned"){
+				Instantiate(P1MinPrefab,gameObject.transform);
+			}
+			else if (gameObject.tag == "Player2Owned"){
+				Instantiate(P2MinPrefab,gameObject.transform);
+			}
 			nextCreate = nextCreate - myTime;
 			myTime = 0.0f;
 			currentEnergy -= posMinBallCost;
