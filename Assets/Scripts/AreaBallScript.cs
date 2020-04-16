@@ -16,11 +16,13 @@ public class AreaBallScript : MonoBehaviour
 	
 	//A temporary variable for Raycast Hits and a list for containing the distances them.
 	private RaycastHit2D tmpHit;
-	private IList<float> hitDistanceList = new List<float>();
+	//private IList<Vector2> hitList = new List<Vector2>();
+	private Vector2[] hitList;
 	
 	//Other assorted variables
 	private int raycastAngle;
 	private Vector2 tmpLoc;
+	private Vector2 vec2Angle;
 	
 	//Mesh stuff
 	private Mesh controlMesh;
@@ -30,11 +32,12 @@ public class AreaBallScript : MonoBehaviour
     {
 		//Calculate the angle per spoke so that the raycasts make a full rotation.
         raycastAngle = 360 / (amountOfRaycastSpokes+1);
+		hitList = new Vector2[amountOfRaycastSpokes+1];
 		
 		//Set the startup hitDistanceList
-		for (int index = 0; index <= amountOfRaycastSpokes; index++){
-			hitDistanceList.Add(controlRadius);
-		}
+		//for (int index = 0; index <= amountOfRaycastSpokes; index++){
+			//hitDistanceList.Add(controlRadius);
+		//}
 		
 		//Create the control area mesh?
 		//controlMesh = new Mesh();
@@ -53,20 +56,46 @@ public class AreaBallScript : MonoBehaviour
         for (int index = 0; index <= amountOfRaycastSpokes; index++){
 			//Get a location and the Raycast hit
 			tmpLoc = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y);
-			tmpHit = Physics2D.Raycast(tmpLoc, (Vector2)(Quaternion.Euler(0,0,raycastAngle*index) * Vector2.right), controlRadius);
+			vec2Angle = (Vector2)(Quaternion.Euler(0,0,raycastAngle*index) * Vector2.right);
+			tmpHit = Physics2D.Raycast(tmpLoc, vec2Angle, controlRadius);
 			//Check if the raycast hit anything. If it did get the distance. If not save controlradius.
 			if (tmpHit.collider != null){
 				//print (tmpHit.collider);
-				hitDistanceList.Add(Vector2.Distance(tmpHit.point,tmpLoc));
+				//hitList.Add(tmpHit.point);
+				hitList[index]=tmpHit.point;
 			}
 			else{
 				//print ("pong");
-				hitDistanceList.Add(controlRadius);
+				//hitList.Add(tmpLoc+vec2Angle);
+				hitList[index]=tmpLoc+vec2Angle;
 			}
 		}
-		//print(hitDistanceList[7]);
+		//print(hitList[7]);
+		
+		//Creating triangles for mesh using Triangulator
+		//Created by runevision
+		//Available at http://wiki.unity3d.com/index.php?title=Triangulator
+		//Usage based on example on wiki.
+		Triangulator tr = new Triangulator(hitList);
+		int[] indices = tr.Triangulate();
+		Vector3[] vertices = new Vector3[hitList.Length];
+		for (int i=0; i<vertices.Length;i++){
+			vertices[i]=new Vector3(hitList[i].x,hitList[i].y,0);
+		}
+		
+		foreach (Vector2 thing in hitList){
+			print(thing);
+		}
+		
+		Mesh msh = new Mesh();
+		msh.vertices = vertices;
+		msh.triangles = indices;
+		msh.RecalculateNormals();
+		msh.RecalculateBounds();
+		
+		GetComponent<MeshFilter>().mesh = msh;
 		
 		//Clear the list after it has been used so it's empty for the next update.
-		hitDistanceList.Clear();
+		//hitList.Clear();
     }
 }
