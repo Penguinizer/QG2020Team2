@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7510372055992168914}
   - component: {fileID: 114096120029276896}
   - component: {fileID: 7510372055992168943}
-  - component: {fileID: 114988371929937800}
   - component: {fileID: 7510372055992168942}
   - component: {fileID: 7510372055992168937}
   m_Layer: 10
@@ -136,36 +135,6 @@ MonoBehaviour:
   posMinBallCost: 10
   areaToCoverToWin: 200
   passiveEnergyPerSecond: 0.5
---- !u!114 &114988371929937800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7510372055992168915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04d6cf1fb56d4b47b230a0de3dfd29d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  ffToggle: 1
-  Annihilation:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  Collision:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  Impulse:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
-  particleSpeed:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
 --- !u!50 &7510372055992168942
 Rigidbody2D:
   serializedVersion: 4

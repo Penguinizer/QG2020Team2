@@ -171,7 +171,7 @@ public class CharacterControl : MonoBehaviour{
             //call method from ParticleManager script
             gameObject.GetComponent<ParticleManager>().PlayImpulseParticles();
             //call method from AudioManager script
-            gameObject.GetComponent<AudioManager>().PostImpulseWwiseEvent();
+            //gameObject.GetComponent<AudioManager>().PostImpulseWwiseEvent();
 			//Apply impulse to balls using nested foreach loops
 			foreach (string inputString in thingsToImpulse) {
 				foreach (GameObject ball in GameObject.FindGameObjectsWithTag(inputString)){
