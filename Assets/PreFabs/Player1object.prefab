@@ -124,12 +124,14 @@ MonoBehaviour:
     type: 3}
   MinPartPrefab: {fileID: 5516309980751413389, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
     type: 3}
-  energyOnPickup: 1
-  startingEnergy: 10
-  areaBallCost: 1
+  energyOnPickup: 20
+  startingEnergy: 0
+  areaBallCost: 50
   AreaBallPrefab: {fileID: 6141130091478619759, guid: 0d184c65417bb174ebc5531b6c3c979f,
     type: 3}
-  posMinBallCost: 0
+  posMinBallCost: 10
+  areaToCoverToWin: 120
+  passiveEnergyPerSecond: 1
 --- !u!114 &114240461790014140
 MonoBehaviour:
   m_ObjectHideFlags: 0
