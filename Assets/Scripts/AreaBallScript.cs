@@ -32,6 +32,7 @@ public class AreaBallScript : MonoBehaviour
     {
 		//Calculate the angle per spoke so that the raycasts make a full rotation.
         raycastAngle = 360 / (amountOfRaycastSpokes+1);
+		//Initialize the array for the mesh creation.
 		hitList = new Vector2[amountOfRaycastSpokes+1];
 		
 		//Set the startup hitDistanceList
@@ -57,20 +58,18 @@ public class AreaBallScript : MonoBehaviour
 			//Get a location and the Raycast hit
 			tmpLoc = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y);
 			vec2Angle = (Vector2)(Quaternion.Euler(0,0,raycastAngle*index) * Vector2.right);
+			vec2Angle.Normalize();
 			tmpHit = Physics2D.Raycast(tmpLoc, vec2Angle, controlRadius);
 			//Check if the raycast hit anything. If it did get the distance. If not save controlradius.
 			if (tmpHit.collider != null){
-				//print (tmpHit.collider);
 				//hitList.Add(tmpHit.point);
-				hitList[index]=tmpHit.point;
+				hitList[index]=vec2Angle*(Vector2.Distance(tmpHit.point,tmpLoc));
 			}
 			else{
-				//print ("pong");
 				//hitList.Add(tmpLoc+vec2Angle);
-				hitList[index]=tmpLoc+vec2Angle;
+				hitList[index]=vec2Angle*controlRadius;
 			}
 		}
-		//print(hitList[7]);
 		
 		//Creating triangles for mesh using Triangulator
 		//Created by runevision
@@ -83,16 +82,13 @@ public class AreaBallScript : MonoBehaviour
 			vertices[i]=new Vector3(hitList[i].x,hitList[i].y,0);
 		}
 		
-		foreach (Vector2 thing in hitList){
-			print(thing);
-		}
-		
+		//Create the new mesh
 		Mesh msh = new Mesh();
 		msh.vertices = vertices;
 		msh.triangles = indices;
 		msh.RecalculateNormals();
 		msh.RecalculateBounds();
-		
+		//Set the new mesh to be the gameobject mesh.
 		GetComponent<MeshFilter>().mesh = msh;
 		
 		//Clear the list after it has been used so it's empty for the next update.

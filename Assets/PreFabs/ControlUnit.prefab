@@ -92,10 +92,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0.1
   m_AngularDrag: 0.1
-  m_GravityScale: 0.1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -129,5 +129,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de43ab87ecfe42f428dc6835c76c7428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlRadius: 3
+  controlRadius: 2
   amountOfRaycastSpokes: 11
