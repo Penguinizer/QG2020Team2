@@ -64,40 +64,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.06
---- !u!114 &114317244606768736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511316111756870789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04d6cf1fb56d4b47b230a0de3dfd29d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  ffToggle: 1
-  Annihilation:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 4f3ecd2a7cd93d943986800fbdda27cb,
-      type: 2}
-  Collision:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 652bf5fea7731a645bef9418cfe93bb7,
-      type: 2}
-  Impulse:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 4e2adc2577f6c6545ba6a5b0e893cb79,
-      type: 2}
-  particleSpeed:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 7afff043d7f63424bb3398a3d6a178fc,
-      type: 2}
 --- !u!114 &1285487787694497620
 MonoBehaviour:
   m_ObjectHideFlags: 0

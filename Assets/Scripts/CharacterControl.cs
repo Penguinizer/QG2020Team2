@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 
 //Impulse timing based on documentation script reference for arcade firing.
@@ -40,6 +41,12 @@ public class CharacterControl : MonoBehaviour{
 	float areaToCoverToWin = 120.0f;
 	[SerializeField]
 	float passiveEnergyPerSecond = 1.0f;
+	[SerializeField]
+	Text energyText;
+	[SerializeField]
+	Text areaText;
+	[SerializeField]
+	Text winText;
 	
 	private float myTime = 0.0f;
 	private float nextImpulse = 0.0f;
@@ -61,20 +68,20 @@ public class CharacterControl : MonoBehaviour{
 	private string[] thingsToImpulse = new string[] {"PosBall", "MinusBall"};
 	private bool isWinner = false;
 	private float tempArea = 0.0f;
-	private float currentArea = 0.0f;
 	
 	//Handles adding energy
 	public void addEnergy(){
 		currentEnergy += energyOnPickup;
-		print(gameObject.tag + " Energy: " + currentEnergy);
+		if (gameObject.tag == "Player1Owned"){
+			energyText.text = "Player 1 Energy: " + currentEnergy;
+		}
+		else{
+			energyText.text = "Player 2 Energy: " + currentEnergy;
+		}
 	}
 	
 	public float returnEnergy(){
 		return currentEnergy;
-	}
-	
-	public float returnArea(){
-		return (float)System.Math.Round(currentArea,1);
 	}
 	
 	public bool hasWon(){
@@ -127,13 +134,26 @@ public class CharacterControl : MonoBehaviour{
 				}
 			}
 			
-			//Set currently controlled area for ui
-			currentArea = tempArea;
+			//Set currently controlled area in ui
+			if (gameObject.tag == "Player1Owned"){
+				areaText.text = "Player 1 Area: " + (float)System.Math.Round(tempArea,1);
+			}
+			else{
+				areaText.text = "Player 2 Area: " + (float)System.Math.Round(tempArea,1);
+			}
 			
 			//Check for win, if not reset temp variable.
 			if(tempArea >= areaToCoverToWin){
 				isWinner = true;
 				print(gameObject.tag + " WINS");
+				
+				if (gameObject.tag == "Player1Owned"){
+					winText.text = "Player 1 Wins";
+				}
+				else{
+					winText.text = "Player 2 Wins";
+				}
+				
 				tempArea = 0;
 			}
 			else{
@@ -147,6 +167,12 @@ public class CharacterControl : MonoBehaviour{
 		while(true){
 			yield return new WaitForSeconds(1.0f);
 			currentEnergy += passiveEnergyPerSecond;
+			if (gameObject.tag == "Player1Owned"){
+				energyText.text = "Player 1 Energy: " + currentEnergy;
+			}
+			else{
+				energyText.text = "Player 2 Energy: " + currentEnergy;
+			}
 		}
 	}
 
