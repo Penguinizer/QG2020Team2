@@ -27,6 +27,9 @@ public class AreaBallScript : MonoBehaviour
 	//Mesh stuff
 	private Mesh controlMesh;
 	
+	//Area stuff
+	private float aTemp;
+	
     // Start is called before the first frame update
     void Start()
     {
@@ -63,11 +66,11 @@ public class AreaBallScript : MonoBehaviour
 			//Check if the raycast hit anything. If it did get the distance. If not save controlradius.
 			if (tmpHit.collider != null){
 				//hitList.Add(tmpHit.point);
-				hitList[index]=vec2Angle*(Vector2.Distance(tmpHit.point,tmpLoc));
+				hitList[index]=vec2Angle*(Vector2.Distance(tmpHit.point,tmpLoc))*2;
 			}
 			else{
 				//hitList.Add(tmpLoc+vec2Angle);
-				hitList[index]=vec2Angle*controlRadius;
+				hitList[index]=vec2Angle*controlRadius*2;
 			}
 		}
 		
@@ -90,6 +93,25 @@ public class AreaBallScript : MonoBehaviour
 		msh.RecalculateBounds();
 		//Set the new mesh to be the gameobject mesh.
 		GetComponent<MeshFilter>().mesh = msh;
+		
+		//Calculate the area covered.
+		//Implementation of formula for irregular polygons from Wikipedia.
+		//Written by fafase
+		//Available at: https://answers.unity.com/questions/684909/how-to-calculate-the-surface-area-of-a-irregular-p.html
+		aTemp = 0;
+		for (int i=0; i<hitList.Length;i++){
+			if (i != hitList.Length-1){
+             float mulA = hitList[i].x * hitList[i+1].y;
+             float mulB = hitList[i+1].x * hitList[i].y;
+             aTemp = aTemp + ( mulA - mulB );
+         }else{
+             float mulA = hitList[i].x * hitList[0].y;
+             float mulB = hitList[0].x* hitList[i].y;
+             aTemp = aTemp + ( mulA - mulB );
+			}
+		}
+		aTemp *= 0.5f;
+		//print(aTemp);
 		
 		//Clear the list after it has been used so it's empty for the next update.
 		//hitList.Clear();
