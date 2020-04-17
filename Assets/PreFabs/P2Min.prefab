@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3423475008941741431}
   - component: {fileID: 6712584332452053341}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,6 +162,14 @@ PrefabInstance:
     - target: {fileID: 1053203839010120, guid: a9f3cc968bdb1cd4d800ee747b078afc, type: 3}
       propertyPath: m_Name
       value: MinusParticle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1053203839010120, guid: a9f3cc968bdb1cd4d800ee747b078afc, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1623226520601082, guid: a9f3cc968bdb1cd4d800ee747b078afc, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4422034244011964, guid: a9f3cc968bdb1cd4d800ee747b078afc, type: 3}
       propertyPath: m_LocalRotation.x
@@ -362,6 +370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Unit1_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6a8bd1ad75247c24883c919ce190d7cd, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a8bd1ad75247c24883c919ce190d7cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -557,6 +569,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: MinusBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407862113248705085, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3407862113248705082, guid: addb2a9a6f42f1044bb5c06726847f70, type: 3}

@@ -87,6 +87,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: PosParticle
       objectReference: {fileID: 0}
+    - target: {fileID: 3533474689194576167, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3535067532586323349, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3732194199113993393, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
@@ -106,6 +116,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4070381972405864731, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208408060736864068, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5516309980751413384, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
@@ -192,6 +212,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: PosBall
       objectReference: {fileID: 0}
+    - target: {fileID: 5516309980751413389, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 6712584332452053341, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
       propertyPath: m_Range
@@ -227,6 +252,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 773ea36386852634e85c86f222adb7d9, type: 3}
       propertyPath: m_Name
       value: Unit2_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 773ea36386852634e85c86f222adb7d9, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 773ea36386852634e85c86f222adb7d9, type: 3}
       propertyPath: m_LocalPosition.x

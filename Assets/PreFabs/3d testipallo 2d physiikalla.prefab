@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3407862113248705084}
   - component: {fileID: 3407862113248705083}
   - component: {fileID: 1776699464532422534}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: 3d testipallo 2d physiikalla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3407862113248705085}
   m_LocalRotation: {x: -0.4441505, y: 0, z: 0, w: 0.8959522}
-  m_LocalPosition: {x: 5.95, y: 2.54, z: -5.56}
+  m_LocalPosition: {x: 5.95, y: 2.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -129,10 +129,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3060ede1b4c3bf244a359d38733ae627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyedByHole: 0
   impulseDistance: 5
   impulseForce: 2
-  repelForce: 1
   attractForce: 1
   powerBase: 2
   pushrepelDistance: 4
   ffToggle: 0
+  BlackHoleDestroyBasedOnMaterial: 1
+  EnergyBallPrefab: {fileID: 0}

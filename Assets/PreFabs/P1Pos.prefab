@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7625452396050951652}
   - component: {fileID: 7625452396050951654}
   - component: {fileID: 7625452396050951653}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Unit1_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7625452396063647227}
   - component: {fileID: 7625452396063647229}
   - component: {fileID: 7625452396063647228}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PosParticle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4751,7 +4751,7 @@ GameObject:
   - component: {fileID: 7625452396494707485}
   - component: {fileID: 7625452396494707487}
   - component: {fileID: 7625452396494707486}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Unit2_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4828,7 +4828,7 @@ GameObject:
   - component: {fileID: 7625452396497697023}
   - component: {fileID: 7625452396497697009}
   - component: {fileID: 7625452396497697008}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9525,7 +9525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7625452397093972933}
   - component: {fileID: 7625452397093972934}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9601,7 +9601,7 @@ GameObject:
   - component: {fileID: 7625452397344959217}
   - component: {fileID: 7625452397344959231}
   - component: {fileID: 1861308922770977851}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: P1Pos
   m_TagString: PosBall
   m_Icon: {fileID: 0}
@@ -9662,7 +9662,6 @@ MonoBehaviour:
   destroyedByHole: 0
   impulseDistance: 5
   impulseForce: 0.3
-  repelForce: 0
   attractForce: 0
   powerBase: 2
   pushrepelDistance: 2

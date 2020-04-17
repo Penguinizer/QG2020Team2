@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8640773987208136971}
   - component: {fileID: 8640773987208136980}
   - component: {fileID: 8640773987208136981}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: Ball Plus 1
   m_TagString: PosBall
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &8640773987208136968
@@ -132,13 +132,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3060ede1b4c3bf244a359d38733ae627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyedByHole: 0
   impulseDistance: 5
   impulseForce: 2
-  repelForce: 1
   attractForce: 1
   powerBase: 2
   pushrepelDistance: 4
   ffToggle: 0
+  BlackHoleDestroyBasedOnMaterial: 1
+  EnergyBallPrefab: {fileID: 0}
 --- !u!58 &8640773987208136981
 CircleCollider2D:
   m_ObjectHideFlags: 0

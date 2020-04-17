@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 563422590179810485}
   - component: {fileID: 369124145931128453}
   - component: {fileID: 368465246736577967}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Subpuff
   m_TagString: FxTemporaire
   m_Icon: {fileID: 0}
@@ -4668,7 +4668,7 @@ GameObject:
   - component: {fileID: 562507905122985285}
   - component: {fileID: 368340157908984845}
   - component: {fileID: 368553293735606735}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: AnnihilationParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

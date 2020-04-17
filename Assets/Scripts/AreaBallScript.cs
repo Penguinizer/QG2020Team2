@@ -17,6 +17,15 @@ public class AreaBallScript : MonoBehaviour
 	//Or leave an empty void between them.
 	[SerializeField]
 	bool allowOverlapBetweenControlAreas = true;
+	//Make the balls collidable by other particles.
+	//Sets the layer to AreaControl or GameObjects
+	[SerializeField]
+	bool isCollidable = false;
+	//Make the object static.
+	//If true area and mesh don't change after the object is placed.
+	[SerializeField]
+	bool isStatic = false;
+	
 	
 	//A temporary variable for Raycast Hits and a list for containing the distances them.
 	private RaycastHit2D tmpHit;
@@ -54,6 +63,14 @@ public class AreaBallScript : MonoBehaviour
 			//hitDistanceList.Add(controlRadius);
 		//}
 		
+		if (isCollidable){
+			gameObject.layer = 12;
+		}
+		else{
+			gameObject.layer = 11;
+			gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+		}
+		
 		//Create the control area mesh?
 		//controlMesh = new Mesh();
 		//controlMesh.vertices = new Vector3[] {new Vector3(0, 0, 0), new Vector3(0, 1, 0), new Vector3(1, 1, 0)};
@@ -66,56 +83,105 @@ public class AreaBallScript : MonoBehaviour
 		else{
 			 gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
 		}
+		
+		//If object is static the mesh and area only have to be checked once.
+		if (isStatic){
+			//Radiate spokes out from the center of the control unit.
+			//Check if they don't go through anything within the control radius.
+			//If they do write down the distance at which they collide, if not write down the radius.
+			//This way the control area won't go through walls.
+			for (int index = 0; index <= amountOfRaycastSpokes; index++){
+				//Get a location and the Raycast hit
+				tmpLoc = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y);
+				vec2Angle = (Vector2)(Quaternion.Euler(0,0,raycastAngle*index) * Vector2.right);
+				vec2Angle.Normalize();
+				tmpHit = Physics2D.Raycast(tmpLoc, vec2Angle, controlRadius);
+				//Check if the raycast hit anything. If it did get the distance. If not save controlradius.
+				if (tmpHit.collider != null){
+					//hitList.Add(tmpHit.point);
+					hitList[index]=vec2Angle*(Vector2.Distance(tmpHit.point,tmpLoc))*2;
+				}
+				else{
+					//hitList.Add(tmpLoc+vec2Angle);
+					hitList[index]=vec2Angle*controlRadius*2;
+				}
+			}
+		
+			//Creating triangles for mesh using Triangulator
+			//Created by runevision
+			//Available at http://wiki.unity3d.com/index.php?title=Triangulator
+			//Usage based on example on wiki.
+			Triangulator tr = new Triangulator(hitList);
+			int[] indices = tr.Triangulate();
+			Vector3[] vertices = new Vector3[hitList.Length];
+			for (int i=0; i<vertices.Length;i++){
+				vertices[i]=new Vector3(hitList[i].x,hitList[i].y,0);
+			}
+		
+			//Create the new mesh
+			Mesh msh = new Mesh();
+			msh.vertices = vertices;
+			msh.triangles = indices;
+			msh.RecalculateNormals();
+			msh.RecalculateBounds();
+			//Set the new mesh to be the gameobject mesh.
+			GetComponent<MeshFilter>().mesh = msh;
+		}
     }
 
     // Update is called once per frame
     void Update()
     {
-		//Radiate spokes out from the center of the control unit.
-		//Check if they don't go through anything within the control radius.
-		//If they do write down the distance at which they collide, if not write down the radius.
-		//This way the control area won't go through walls.
-        for (int index = 0; index <= amountOfRaycastSpokes; index++){
-			//Get a location and the Raycast hit
-			tmpLoc = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y);
-			vec2Angle = (Vector2)(Quaternion.Euler(0,0,raycastAngle*index) * Vector2.right);
-			vec2Angle.Normalize();
-			tmpHit = Physics2D.Raycast(tmpLoc, vec2Angle, controlRadius);
-			//Check if the raycast hit anything. If it did get the distance. If not save controlradius.
-			if (tmpHit.collider != null){
-				//hitList.Add(tmpHit.point);
-				hitList[index]=vec2Angle*(Vector2.Distance(tmpHit.point,tmpLoc))*2;
+		//If object is not static re-form the mesh and recalculate the area in the update loop
+		//Expensive in terms of performance but allows for particlse to block the area.
+		//NEcessary if object is collidable and can be moved.
+		if(!isStatic){
+			//Radiate spokes out from the center of the control unit.
+			//Check if they don't go through anything within the control radius.
+			//If they do write down the distance at which they collide, if not write down the radius.
+			//This way the control area won't go through walls.
+			for (int index = 0; index <= amountOfRaycastSpokes; index++){
+				//Get a location and the Raycast hit
+				tmpLoc = new Vector2(gameObject.transform.position.x,gameObject.transform.position.y);
+				vec2Angle = (Vector2)(Quaternion.Euler(0,0,raycastAngle*index) * Vector2.right);
+				vec2Angle.Normalize();
+				tmpHit = Physics2D.Raycast(tmpLoc, vec2Angle, controlRadius);
+				//Check if the raycast hit anything. If it did get the distance. If not save controlradius.
+				if (tmpHit.collider != null){
+					//hitList.Add(tmpHit.point);
+					hitList[index]=vec2Angle*(Vector2.Distance(tmpHit.point,tmpLoc))*2;
+				}
+				else{
+					//hitList.Add(tmpLoc+vec2Angle);
+					hitList[index]=vec2Angle*controlRadius*2;
+				}
 			}
-			else{
-				//hitList.Add(tmpLoc+vec2Angle);
-				hitList[index]=vec2Angle*controlRadius*2;
+		
+			//Creating triangles for mesh using Triangulator
+			//Created by runevision
+			//Available at http://wiki.unity3d.com/index.php?title=Triangulator
+			//Usage based on example on wiki.
+			Triangulator tr = new Triangulator(hitList);
+			int[] indices = tr.Triangulate();
+			Vector3[] vertices = new Vector3[hitList.Length];
+			for (int i=0; i<vertices.Length;i++){
+				vertices[i]=new Vector3(hitList[i].x,hitList[i].y,0);
 			}
+		
+			//Create the new mesh
+			Mesh msh = new Mesh();
+			msh.vertices = vertices;
+			msh.triangles = indices;
+			msh.RecalculateNormals();
+			msh.RecalculateBounds();
+			//Set the new mesh to be the gameobject mesh.
+			GetComponent<MeshFilter>().mesh = msh;
+		
+			//calculateArea();
+			
+			//Clear the list after it has been used so it's empty for the next update.
+			//hitList.Clear();
 		}
-		
-		//Creating triangles for mesh using Triangulator
-		//Created by runevision
-		//Available at http://wiki.unity3d.com/index.php?title=Triangulator
-		//Usage based on example on wiki.
-		Triangulator tr = new Triangulator(hitList);
-		int[] indices = tr.Triangulate();
-		Vector3[] vertices = new Vector3[hitList.Length];
-		for (int i=0; i<vertices.Length;i++){
-			vertices[i]=new Vector3(hitList[i].x,hitList[i].y,0);
-		}
-		
-		//Create the new mesh
-		Mesh msh = new Mesh();
-		msh.vertices = vertices;
-		msh.triangles = indices;
-		msh.RecalculateNormals();
-		msh.RecalculateBounds();
-		//Set the new mesh to be the gameobject mesh.
-		GetComponent<MeshFilter>().mesh = msh;
-		
-		//calculateArea();
-		
-		//Clear the list after it has been used so it's empty for the next update.
-		//hitList.Clear();
     }
 	
 	public float calculateArea(){
@@ -129,7 +195,8 @@ public class AreaBallScript : MonoBehaviour
              float mulA = hitList[i].x * hitList[i+1].y;
              float mulB = hitList[i+1].x * hitList[i].y;
              aTemp = aTemp + ( mulA - mulB );
-         }else{
+        }
+		else{
              float mulA = hitList[i].x * hitList[0].y;
              float mulB = hitList[0].x* hitList[i].y;
              aTemp = aTemp + ( mulA - mulB );
