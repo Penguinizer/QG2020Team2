@@ -134,3 +134,5 @@ MonoBehaviour:
   allowOverlapBetweenControlAreas: 1
   isCollidable: 1
   isStatic: 0
+  p1Material: {fileID: 2100000, guid: ab26d265fe9c7b542add197adb7754df, type: 2}
+  p2Material: {fileID: 2100000, guid: f1369f1ac4528ee4b8a82369d3b6aa33, type: 2}

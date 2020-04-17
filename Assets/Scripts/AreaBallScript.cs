@@ -26,6 +26,12 @@ public class AreaBallScript : MonoBehaviour
 	[SerializeField]
 	bool isStatic = false;
 	
+	//Inputs for the player1 and player2 materials
+	[SerializeField]
+	Material p1Material;
+	[SerializeField]
+	Material p2Material;
+	
 	
 	//A temporary variable for Raycast Hits and a list for containing the distances them.
 	private RaycastHit2D tmpHit;
@@ -77,11 +83,12 @@ public class AreaBallScript : MonoBehaviour
 		//controlMesh.uv = new Vector2[] {new Vector2(0, 0), new Vector2(0, 1), new Vector2(1, 1)};
         //controlMesh.triangles =  new int[] {0, 1, 2};
 		
+		//Set the material of the mesh based on the player so it matches the material of the units
 		if (gameObject.transform.parent.tag == "Player1Owned"){
-			 gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+			 gameObject.GetComponent<MeshRenderer>().material = p1Material;
 		}
 		else{
-			 gameObject.GetComponent<MeshRenderer>().material.color = Color.blue;
+			 gameObject.GetComponent<MeshRenderer>().material = p2Material;
 		}
 		
 		//If object is static the mesh and area only have to be checked once.
