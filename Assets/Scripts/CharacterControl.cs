@@ -68,6 +68,7 @@ public class CharacterControl : MonoBehaviour{
 	private string[] thingsToImpulse = new string[] {"PosBall", "MinusBall"};
 	private bool isWinner = false;
 	private float tempArea = 0.0f;
+	private bool tooClose;
 	
 	//Handles adding energy
 	public void addEnergy(){
@@ -101,6 +102,7 @@ public class CharacterControl : MonoBehaviour{
 			areaControlString = "p1CreateAreaBall";
 			minControlString = "p1CreateMinBall";
 			posControlString = "p1CreatePosBall";
+			energyText.text = "Player 1 Energy: " + currentEnergy;
 		}
 		else if (gameObject.tag == "Player2Owned"){
 			horControlString = "Horizontal2";
@@ -109,6 +111,7 @@ public class CharacterControl : MonoBehaviour{
 			areaControlString = "p2CreateAreaBall";
 			minControlString = "p2CreateMinBall";
 			posControlString = "p2CreatePosBall";
+			energyText.text = "Player 2 Energy: " + currentEnergy;
 		}
 		else{
 			//Destroy untagged player gameobjects because they will fuck everything
@@ -191,7 +194,7 @@ public class CharacterControl : MonoBehaviour{
 		//Impulse timing
 		myTime += Time.deltaTime;
 		//Impulse things
-		if (Input.GetButton(impulseControlString) && myTime > impulseCooldown){
+		if (Input.GetButtonDown(impulseControlString) && myTime > impulseCooldown){
 			//Set impulse cooldown
 			nextImpulse = myTime + impulseCooldown;
             //call method from ParticleManager script
@@ -222,18 +225,29 @@ public class CharacterControl : MonoBehaviour{
 		
 		//Code for creating particles.
 		//Handles creating area control particles:
-		if (Input.GetButton(areaControlString) && myTime > createCooldown && currentEnergy >= areaBallCost){
-			nextCreate = myTime + createCooldown;
-			Instantiate(AreaBallPrefab,gameObject.transform);
-			nextCreate = nextCreate - myTime;
-			myTime = 0.0f;
-			currentEnergy -= areaBallCost;
-			//print (gameObject.tag + " Area Ball Created, Current Energy: " + currentEnergy);
+		if (Input.GetButtonDown(areaControlString) && myTime > createCooldown && currentEnergy >= areaBallCost){
+			//Check if any area control orbs are too close.
+			foreach (GameObject child in GameObject.FindGameObjectsWithTag("AreaBall")){
+				if ((Vector3.Distance(child.transform.position, gameObject.transform.position) < child.GetComponent<AreaBallScript>().controlRadius)){
+					tooClose = true;
+				}
+			}
+			//If there are no area orbs too close create new one
+			if(!tooClose){
+				nextCreate = myTime + createCooldown;
+				Instantiate(AreaBallPrefab,gameObject.transform);
+				nextCreate = nextCreate - myTime;
+				myTime = 0.0f;
+				currentEnergy -= areaBallCost;
+				//print (gameObject.tag + " Area Ball Created, Current Energy: " + currentEnergy);
+			}
+			//Reset tooClose variable to false state.
+			tooClose = false;
 		}
 		//Handles creating pos and min particles
 		//Create a new prefab object with the playerobject as its parent.
 		//After creating resets the cooldown
-		else if(Input.GetButton(posControlString)  && myTime > createCooldown && currentEnergy >= posMinBallCost){
+		else if(Input.GetButtonDown(posControlString)  && myTime > createCooldown && currentEnergy >= posMinBallCost){
 			nextCreate = myTime + createCooldown;
 			if(gameObject.tag == "Player1Owned"){
 				Instantiate(P1PosPrefab,gameObject.transform);
@@ -246,7 +260,7 @@ public class CharacterControl : MonoBehaviour{
 			currentEnergy -= posMinBallCost;
 			//print (gameObject.tag + " Positive Particle Created, Current Energy: " + currentEnergy);
 		}
-		else if(Input.GetButton(minControlString) && myTime > createCooldown && currentEnergy >= posMinBallCost){
+		else if(Input.GetButtonDown(minControlString) && myTime > createCooldown && currentEnergy >= posMinBallCost){
 			nextCreate = myTime + createCooldown;
 			if(gameObject.tag == "Player1Owned"){
 				Instantiate(P1MinPrefab,gameObject.transform);

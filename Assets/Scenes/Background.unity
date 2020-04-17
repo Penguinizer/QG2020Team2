@@ -782,6 +782,11 @@ PrefabInstance:
       propertyPath: energyText
       value: 
       objectReference: {fileID: 1702016650}
+    - target: {fileID: 7510372055992168943, guid: b03a5c6abbb59a546a2ca2c6cb431371,
+        type: 3}
+      propertyPath: startingEnergy
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b03a5c6abbb59a546a2ca2c6cb431371, type: 3}
 --- !u!4 &932552724 stripped
@@ -2373,6 +2378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: areaToCoverToWin
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7510372055992168943, guid: b03a5c6abbb59a546a2ca2c6cb431371,
+        type: 3}
+      propertyPath: startingEnergy
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b03a5c6abbb59a546a2ca2c6cb431371, type: 3}

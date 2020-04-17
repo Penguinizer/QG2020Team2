@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 	[SerializeField]
-	bool sakuSandbox;
+	bool sakuSandbox=false;
 	[SerializeField]
-	bool background;
+	bool background=false;
 	
     // Start is called before the first frame update
     void Start()

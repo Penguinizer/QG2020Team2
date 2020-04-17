@@ -7,12 +7,16 @@ public class AreaBallScript : MonoBehaviour
 	//Stuff for editoring
 	//Radius of control area
 	[SerializeField]
-	float controlRadius = 2.0f;
+	public float controlRadius = 2.0f;
 	//The amount of raycast spokes for doing collision checks for control area.
 	//Note, raycasts are expensive in terms of performance so having this be a low amount is preferred even if it reduces resolution.
 	//Also make 1 less than the amount as there is also one pointing straight up that isn't counted for this variable.
 	[SerializeField]
 	int amountOfRaycastSpokes = 11;
+	//Either make it so there can be partial overlapbetween area control orbs
+	//Or leave an empty void between them.
+	[SerializeField]
+	bool allowOverlapBetweenControlAreas = true;
 	
 	//A temporary variable for Raycast Hits and a list for containing the distances them.
 	private RaycastHit2D tmpHit;
@@ -37,6 +41,13 @@ public class AreaBallScript : MonoBehaviour
         raycastAngle = 360 / (amountOfRaycastSpokes+1);
 		//Initialize the array for the mesh creation.
 		hitList = new Vector2[amountOfRaycastSpokes+1];
+		//Set the circle collider radius to the control radius to potentially do a thing
+		if (allowOverlapBetweenControlAreas){
+			gameObject.GetComponent<CircleCollider2D>().radius = controlRadius;
+		}
+		else{
+			gameObject.GetComponent<CircleCollider2D>().radius = controlRadius*1.5f;
+		}
 		
 		//Set the startup hitDistanceList
 		//for (int index = 0; index <= amountOfRaycastSpokes; index++){

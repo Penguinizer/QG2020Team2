@@ -25,8 +25,6 @@ public class BallFunctionality : MonoBehaviour{
     [SerializeField]
     float impulseForce = 2;
     [SerializeField]
-    float repelForce = 1;
-    [SerializeField]
     float attractForce = 1;
     [SerializeField]
     float powerBase = 2;
