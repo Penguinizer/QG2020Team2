@@ -67,5 +67,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire01
       objectReference: {fileID: 0}
+    - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
+        type: 3}
+      propertyPath: TrailModule.mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
+        type: 3}
+      propertyPath: TrailModule.widthOverTrail.scalar
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
+        type: 3}
+      propertyPath: TrailModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d908fdf1eec172649b3cd58aa0764384, type: 3}

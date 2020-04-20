@@ -542,7 +542,7 @@ PrefabInstance:
     - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
+      value: 0.41844082
       objectReference: {fileID: 0}
     - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
         type: 3}
@@ -556,13 +556,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
         type: 3}
-      propertyPath: TrailModule.mode
-      value: 1
+      propertyPath: TrailModule.generateLightingData
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
         type: 3}
-      propertyPath: TrailModule.widthOverTrail.scalar
-      value: 0.002
+      propertyPath: TrailModule.sizeAffectsWidth
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198680998364678852, guid: a9f3cc968bdb1cd4d800ee747b078afc,
         type: 3}
