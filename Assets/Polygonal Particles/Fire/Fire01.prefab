@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire01
       objectReference: {fileID: 0}
+    - target: {fileID: 3893856694594522661, guid: d908fdf1eec172649b3cd58aa0764384,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e7143b4290d8d1469ee03e7e0b14eb4, type: 2}
     - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
         type: 3}
       propertyPath: TrailModule.mode
@@ -75,12 +80,42 @@ PrefabInstance:
     - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
         type: 3}
       propertyPath: TrailModule.widthOverTrail.scalar
-      value: 0.002
+      value: 0.009
       objectReference: {fileID: 0}
     - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
         type: 3}
       propertyPath: TrailModule.enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 44.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 8.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.41844082
+      objectReference: {fileID: 0}
+    - target: {fileID: 3894971375497344271, guid: d908fdf1eec172649b3cd58aa0764384,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d908fdf1eec172649b3cd58aa0764384, type: 3}

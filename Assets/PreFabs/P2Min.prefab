@@ -264,16 +264,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
         type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 44.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
-        type: 3}
-      propertyPath: lengthInSec
-      value: 8.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
-        type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 30
       objectReference: {fileID: 0}
@@ -284,37 +274,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
         type: 3}
-      propertyPath: InitialModule.startLifetime.minScalar
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
-        type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
-        type: 3}
       propertyPath: autoRandomSeed
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 1
+      value: 0.9339623
       objectReference: {fileID: 0}
     - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
+      value: 0.38231137
       objectReference: {fileID: 0}
     - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
+      value: 0.19824673
       objectReference: {fileID: 0}
     - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
         type: 3}
       propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
+        type: 3}
+      propertyPath: TrailModule.widthOverTrail.scalar
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198646264072700126, guid: a9f3cc968bdb1cd4d800ee747b078afc,
+        type: 3}
+      propertyPath: looping
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 198680998364678852, guid: a9f3cc968bdb1cd4d800ee747b078afc,
