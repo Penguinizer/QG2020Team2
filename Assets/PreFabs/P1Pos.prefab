@@ -103,7 +103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7625452396063647226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.79, y: 1.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7625452396497697023}
@@ -673,7 +673,7 @@ ParticleSystem:
     donutRadius: 1.87
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Scale: {x: 1.6, y: 1.6, z: 0.69}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -871,7 +871,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 12
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -3865,8 +3865,8 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 4
   TrailModule:
-    enabled: 0
-    mode: 0
+    enabled: 1
+    mode: 1
     ratio: 1
     lifetime:
       serializedVersion: 2
@@ -3999,7 +3999,7 @@ ParticleSystem:
     widthOverTrail:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.02
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4697,7 +4697,7 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 1a754ee911c021f408022516e8bd4d01, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 376153f3bc577c84ead7c2bc8df9c990, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
