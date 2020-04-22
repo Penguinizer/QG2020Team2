@@ -1645,6 +1645,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: P1Min (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6746190860459444409, guid: 376b73b218c4c744c9fb33862de50d70,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.38341936
+      objectReference: {fileID: 0}
+    - target: {fileID: 6746190860459444409, guid: 376b73b218c4c744c9fb33862de50d70,
+        type: 3}
+      propertyPath: TrailModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 376b73b218c4c744c9fb33862de50d70, type: 3}
 --- !u!1001 &1135353456
