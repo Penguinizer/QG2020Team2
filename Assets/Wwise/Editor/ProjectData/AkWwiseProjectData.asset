@@ -1,0 +1,162 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb6090d5e29d9c0438088055a871febc, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 036615e9a5b1ba4c9bb3f4ef844b1add
+    GuidInternal: 
+    m_lastTime: -8586158620129387705
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 720ddabdb45a034fa62c5d118b3a22cf
+    GuidInternal: 
+    m_lastTime: -8586156987892955801
+    List:
+    - name: Master Audio Bus
+      guid: d8a41415a61d2a41a17e75ca0c2149f3
+      id: 3803692087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      Path: Default Work Unit\Master Audio Bus
+    - name: SpaceReverb
+      guid: fcd0fe1c302f5547876fca0a84a2acd0
+      id: 4041660465
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: SpaceReverb
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\SpaceReverb
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 79d8ae792bd85641a7f745a1908fe8f2
+    GuidInternal: 
+    m_lastTime: -8586151845995233200
+    List:
+    - name: Main
+      guid: 9e12ad08d9bc6f468866eb1efb37bfc8
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      Path: Default Work Unit\Main
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: b4c86fa16aad31488415514b00834156
+    GuidInternal: 
+    m_lastTime: -8586151838388984477
+    List:
+    - name: CharacterControl_Impulse
+      guid: 0b030670bd42674a888d7b5c8d0af13e
+      id: 1548417789
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CharacterControl_Impulse
+        ObjectType: 3
+      Path: Default Work Unit\CharacterControl_Impulse
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: PlusMinBall_Annihilation
+      guid: 71f720b05d07844eab63e31208bacb29
+      id: 1543154663
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlusMinBall_Annihilation
+        ObjectType: 3
+      Path: Default Work Unit\PlusMinBall_Annihilation
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: PlusMinBall_Collision
+      guid: d03ec19b72e8784eb046948df10a1af3
+      id: 3640416505
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PlusMinBall_Collision
+        ObjectType: 3
+      Path: Default Work Unit\PlusMinBall_Collision
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Start_Ambience
+      guid: 10853b5de284f245970c4ea813ab3f77
+      id: 3626999974
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Start_Ambience
+        ObjectType: 3
+      Path: Default Work Unit\Start_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 346a9dc26a3c634fb587d37b031b3c50
+    GuidInternal: 
+    m_lastTime: -8586151743497138705
+    List:
+    - name: Particle_Speed
+      guid: 2d5aa51951b86b4b82579a0efa10a019
+      id: 1641608847
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Particle_Speed
+        ObjectType: 13
+      Path: Default Work Unit\Particle_Speed
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: b078fef210fc8541b752fe9d136c5bc5
+    GuidInternal: 
+    m_lastTime: -8586158620129957373
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 62a6585d01678a41b5f48d334a256c1d
+    GuidInternal: 
+    m_lastTime: -8586158620129907407
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPath: Default Work Unit
+    guid: 72c32470587f0c42bbbf4ea127e5bb9e
+    GuidInternal: 
+    m_lastTime: -8586158620129787468
+    List: []
+  ExpandedItems:
+  - /QG2020Team2_WwiseProject
+  - /QG2020Team2_WwiseProject/SoundBanks
+  - /QG2020Team2_WwiseProject/SoundBanks/Default Work Unit
+  autoPopulateEnabled: 1
+  CurrentPluginConfig: 
