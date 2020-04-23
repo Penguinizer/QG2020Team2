@@ -50,6 +50,10 @@ public class CharacterControl : MonoBehaviour{
 	Text winText;
 	[SerializeField]
 	float timeBeforeReset = 5.0f;
+	[SerializeField]
+	bool startGamePaused = false;
+	
+	private bool gameIsUnpaused;
 	
 	private float myTime = 0.0f;
 	private float nextImpulse = 0.0f;
@@ -92,8 +96,22 @@ public class CharacterControl : MonoBehaviour{
 		return isWinner;
 	}
 
+	public void unpausePlayer(){
+		//print ("DING DING DING DING");
+		//print(gameObject.tag);
+		//print (gameIsUnpaused);
+		gameIsUnpaused = true;
+		//print (gameIsUnpaused);
+	}
+	public void pausePlayer(){
+		gameIsUnpaused = false;
+	}
+	
     // Start is called before the first frame update
     void Start(){
+		//Set paused state according to if game is starting paused or not.
+		gameIsUnpaused = !startGamePaused;
+		
 		//Acquire the character's rigid body for later reference.
         character = gameObject.GetComponent<Rigidbody2D>();
 		currentEnergy = startingEnergy;
@@ -133,40 +151,42 @@ public class CharacterControl : MonoBehaviour{
 	private IEnumerator WinCheck(){
 		while(true){
 			yield return new WaitForSeconds(1.0f);
-			//Sum up area
-			foreach (Transform child in transform){
-				if(child.tag == "AreaBall"){
-					tempArea += child.GetComponent<AreaBallScript>().calculateArea();
+			if (gameIsUnpaused){
+				//Sum up area
+				foreach (Transform child in transform){
+					if(child.tag == "AreaBall"){
+						tempArea += child.GetComponent<AreaBallScript>().calculateArea();
+					}
 				}
-			}
 			
-			//Set currently controlled area in ui
-			if (gameObject.tag == "Player1Owned"){
-				areaText.text = "Player 1 Area: " + (float)System.Math.Round(tempArea,1);
-			}
-			else{
-				areaText.text = "Player 2 Area: " + (float)System.Math.Round(tempArea,1);
-			}
-			
-			//Check for win, if not reset temp variable.
-			if(tempArea >= areaToCoverToWin){
-				isWinner = true;
-				//print(gameObject.tag + " WINS");
-				
+				//Set currently controlled area in ui
 				if (gameObject.tag == "Player1Owned"){
-					//Set win text, wait for 2 seconds and reload scene.
-					winText.text = "Player 1 Wins";
+					areaText.text = "Player 1 Area: " + (float)System.Math.Round(tempArea,1);
 				}
 				else{
-					winText.text = "Player 2 Wins";
+					areaText.text = "Player 2 Area: " + (float)System.Math.Round(tempArea,1);
 				}
-				tempArea = 0;
-				yield return new WaitForSeconds(timeBeforeReset);
-				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-			}
-			else{
-				//print(tempArea);
-				tempArea = 0;
+			
+				//Check for win, if not reset temp variable.
+				if(tempArea >= areaToCoverToWin){
+					isWinner = true;
+					//print(gameObject.tag + " WINS");
+				
+					if (gameObject.tag == "Player1Owned"){
+						//Set win text, wait for 2 seconds and reload scene.
+						winText.text = "Player 1 Wins";
+					}
+					else{
+						winText.text = "Player 2 Wins";
+					}
+					tempArea = 0;
+					yield return new WaitForSeconds(timeBeforeReset);
+					SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+				}
+				else{
+					//print(tempArea);
+					tempArea = 0;
+				}
 			}
 		}
 	}
@@ -174,109 +194,113 @@ public class CharacterControl : MonoBehaviour{
 	private IEnumerator EnergyPerSecond(){
 		while(true){
 			yield return new WaitForSeconds(1.0f);
-			currentEnergy += passiveEnergyPerSecond;
-			if (gameObject.tag == "Player1Owned"){
-				energyText.text = "Player 1 Energy: " + currentEnergy;
-			}
-			else{
-				energyText.text = "Player 2 Energy: " + currentEnergy;
+			if (gameIsUnpaused){
+				currentEnergy += passiveEnergyPerSecond;
+				if (gameObject.tag == "Player1Owned"){
+					energyText.text = "Player 1 Energy: " + currentEnergy;
+				}
+				else{
+					energyText.text = "Player 2 Energy: " + currentEnergy;
+				}
 			}
 		}
 	}
 
     // Update is called once per frame
     void Update(){
-		//Player Object Movement vector
-		moveDirection = new Vector3(Input.GetAxis(horControlString), Input.GetAxis(vertControlString), 0.0f);
-		//Get change in position
-		moveDirection  *= moveSpeed;
+		if (gameIsUnpaused){
+			//Player Object Movement vector
+			moveDirection = new Vector3(Input.GetAxis(horControlString), Input.GetAxis(vertControlString), 0.0f);
+			//Get change in position
+			moveDirection  *= moveSpeed;
 		
-		//Add change in position to present position
-		newPos = new Vector3(character.position.x + moveDirection.x * Time.deltaTime, character.position.y + moveDirection.y * Time.deltaTime, 0);
-		//Update position
-		character.MovePosition(newPos);
+			//Add change in position to present position
+			newPos = new Vector3(character.position.x + moveDirection.x * Time.deltaTime, character.position.y + moveDirection.y * Time.deltaTime, 0);
+			//Update position
+			character.MovePosition(newPos);
 		
-		//Impulse timing
-		myTime += Time.deltaTime;
-		//Impulse things
-		if (Input.GetButtonDown(impulseControlString) && myTime > impulseCooldown){
-			//Set impulse cooldown
-			nextImpulse = myTime + impulseCooldown;
-            //call method from ParticleManager script
-            gameObject.GetComponent<ParticleManager>().PlayImpulseParticles();
-            //call method from AudioManager script
-            gameObject.GetComponent<AudioManager>().PostImpulseWwiseEvent();
-			//Apply impulse to balls using nested foreach loops
-			foreach (string inputString in thingsToImpulse) {
-				foreach (GameObject ball in GameObject.FindGameObjectsWithTag(inputString)){
-					//Get mouse position, use to calculation vector from mouse to sphere.
-					playerPos = new Vector3(gameObject.GetComponent<Rigidbody2D>().position.x, gameObject.GetComponent<Rigidbody2D>().position.y,0);
-					ballPos = new Vector3(ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y, 0);
-					impForceDir = ballPos - playerPos;
-					//Normalize vector to avoid fuckery
-					impForceDir.Normalize();
-					//Multiply direction with force to get force vector
-					impForce = impForceDir * (float)(impulseForce / Math.Pow(powerBase, Vector3.Distance(playerPos, ballPos)));
-					//Apply impulse to sphere
-					if (Vector3.Distance(playerPos, ballPos) < impulseDistance){
-						ball.GetComponent<Rigidbody2D>().AddForce(impForce, ForceMode2D.Impulse);
+			//Impulse timing
+			myTime += Time.deltaTime;
+			//Impulse things
+			if (Input.GetButtonDown(impulseControlString) && myTime > impulseCooldown){
+				//Set impulse cooldown
+				nextImpulse = myTime + impulseCooldown;
+				//call method from ParticleManager script
+				gameObject.GetComponent<ParticleManager>().PlayImpulseParticles();
+				//call method from AudioManager script
+				gameObject.GetComponent<AudioManager>().PostImpulseWwiseEvent();
+				//Apply impulse to balls using nested foreach loops
+				foreach (string inputString in thingsToImpulse) {
+					foreach (GameObject ball in GameObject.FindGameObjectsWithTag(inputString)){
+						//Get mouse position, use to calculation vector from mouse to sphere.
+						playerPos = new Vector3(gameObject.GetComponent<Rigidbody2D>().position.x, gameObject.GetComponent<Rigidbody2D>().position.y,0);
+						ballPos = new Vector3(ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y, 0);
+						impForceDir = ballPos - playerPos;
+						//Normalize vector to avoid fuckery
+						impForceDir.Normalize();
+						//Multiply direction with force to get force vector
+						impForce = impForceDir * (float)(impulseForce / Math.Pow(powerBase, Vector3.Distance(playerPos, ballPos)));
+						//Apply impulse to sphere
+						if (Vector3.Distance(playerPos, ballPos) < impulseDistance){
+							ball.GetComponent<Rigidbody2D>().AddForce(impForce, ForceMode2D.Impulse);
+						}
 					}
 				}
-			}
-			//More impulse cooldown matters
-			nextImpulse = nextImpulse - myTime;
-			myTime = 0.0f;
-		}
+				//More impulse cooldown matters
+				nextImpulse = nextImpulse - myTime;
+				myTime = 0.0f;
+			}	
 		
-		//Code for creating particles.
-		//Handles creating area control particles:
-		if (Input.GetButtonDown(areaControlString) && myTime > createCooldown && currentEnergy >= areaBallCost){
-			//Check if any area control orbs are too close.
-			foreach (GameObject child in GameObject.FindGameObjectsWithTag("AreaBall")){
-				if ((Vector3.Distance(child.transform.position, gameObject.transform.position) < child.GetComponent<AreaBallScript>().controlRadius)){
-					tooClose = true;
+			//Code for creating particles.
+			//Handles creating area control particles:
+			if (Input.GetButtonDown(areaControlString) && myTime > createCooldown && currentEnergy >= areaBallCost){
+				//Check if any area control orbs are too close.
+				foreach (GameObject child in GameObject.FindGameObjectsWithTag("AreaBall")){
+					if ((Vector3.Distance(child.transform.position, gameObject.transform.position) < child.GetComponent<AreaBallScript>().controlRadius)){
+						tooClose = true;
+					}
 				}
+				//If there are no area orbs too close create new one
+				if(!tooClose){
+					nextCreate = myTime + createCooldown;
+					Instantiate(AreaBallPrefab,gameObject.transform);
+					nextCreate = nextCreate - myTime;
+					myTime = 0.0f;
+					currentEnergy -= areaBallCost;
+					//print (gameObject.tag + " Area Ball Created, Current Energy: " + currentEnergy);
+				}
+				//Reset tooClose variable to false state.
+				tooClose = false;
 			}
-			//If there are no area orbs too close create new one
-			if(!tooClose){
+			//Handles creating pos and min particles
+			//Create a new prefab object with the playerobject as its parent.
+			//After creating resets the cooldown
+			else if(Input.GetButtonDown(posControlString)  && myTime > createCooldown && currentEnergy >= posMinBallCost){
 				nextCreate = myTime + createCooldown;
-				Instantiate(AreaBallPrefab,gameObject.transform);
+				if(gameObject.tag == "Player1Owned"){
+					Instantiate(P1PosPrefab,gameObject.transform);
+				}
+				else if (gameObject.tag == "Player2Owned"){
+					Instantiate(P2PosPrefab,gameObject.transform);
+				}
 				nextCreate = nextCreate - myTime;
 				myTime = 0.0f;
-				currentEnergy -= areaBallCost;
-				//print (gameObject.tag + " Area Ball Created, Current Energy: " + currentEnergy);
+				currentEnergy -= posMinBallCost;
+				//print (gameObject.tag + " Positive Particle Created, Current Energy: " + currentEnergy);
 			}
-			//Reset tooClose variable to false state.
-			tooClose = false;
-		}
-		//Handles creating pos and min particles
-		//Create a new prefab object with the playerobject as its parent.
-		//After creating resets the cooldown
-		else if(Input.GetButtonDown(posControlString)  && myTime > createCooldown && currentEnergy >= posMinBallCost){
-			nextCreate = myTime + createCooldown;
-			if(gameObject.tag == "Player1Owned"){
-				Instantiate(P1PosPrefab,gameObject.transform);
+			else if(Input.GetButtonDown(minControlString) && myTime > createCooldown && currentEnergy >= posMinBallCost){
+				nextCreate = myTime + createCooldown;
+				if(gameObject.tag == "Player1Owned"){
+					Instantiate(P1MinPrefab,gameObject.transform);
+				}
+				else if (gameObject.tag == "Player2Owned"){
+					Instantiate(P2MinPrefab,gameObject.transform);
+				}
+				nextCreate = nextCreate - myTime;
+				myTime = 0.0f;
+				currentEnergy -= posMinBallCost;
+				//print (gameObject.tag + " Minus Particle Created, Current Energy: " + currentEnergy);
 			}
-			else if (gameObject.tag == "Player2Owned"){
-				Instantiate(P2PosPrefab,gameObject.transform);
-			}
-			nextCreate = nextCreate - myTime;
-			myTime = 0.0f;
-			currentEnergy -= posMinBallCost;
-			//print (gameObject.tag + " Positive Particle Created, Current Energy: " + currentEnergy);
-		}
-		else if(Input.GetButtonDown(minControlString) && myTime > createCooldown && currentEnergy >= posMinBallCost){
-			nextCreate = myTime + createCooldown;
-			if(gameObject.tag == "Player1Owned"){
-				Instantiate(P1MinPrefab,gameObject.transform);
-			}
-			else if (gameObject.tag == "Player2Owned"){
-				Instantiate(P2MinPrefab,gameObject.transform);
-			}
-			nextCreate = nextCreate - myTime;
-			myTime = 0.0f;
-			currentEnergy -= posMinBallCost;
-			//print (gameObject.tag + " Minus Particle Created, Current Energy: " + currentEnergy);
 		}
     }
 }
