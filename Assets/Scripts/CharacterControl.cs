@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System;
 
 //Impulse timing based on documentation script reference for arcade firing.
@@ -47,6 +48,8 @@ public class CharacterControl : MonoBehaviour{
 	Text areaText;
 	[SerializeField]
 	Text winText;
+	[SerializeField]
+	float timeBeforeReset = 5.0f;
 	
 	private float myTime = 0.0f;
 	private float nextImpulse = 0.0f;
@@ -151,13 +154,15 @@ public class CharacterControl : MonoBehaviour{
 				//print(gameObject.tag + " WINS");
 				
 				if (gameObject.tag == "Player1Owned"){
+					//Set win text, wait for 2 seconds and reload scene.
 					winText.text = "Player 1 Wins";
 				}
 				else{
 					winText.text = "Player 2 Wins";
 				}
-				
 				tempArea = 0;
+				yield return new WaitForSeconds(timeBeforeReset);
+				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 			}
 			else{
 				//print(tempArea);
