@@ -212,6 +212,9 @@ public class CharacterControl : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
+		if (Input.GetButtonDown("Escape")){
+			Application.Quit();
+		}
 		if (gameIsUnpaused){
 			//Player Object Movement vector
 			moveDirection = new Vector3(Input.GetAxis(horControlString), Input.GetAxis(vertControlString), 0.0f);
