@@ -13,6 +13,10 @@ public class PhotonScript : MonoBehaviour{
 	private float photonMaxDistance = 10.0f;
 	[SerializeField]
 	private GameObject energyBall;
+	[SerializeField]
+	private float initialPhotonDistance = 1.0f;
+	[SerializeField]
+	private float initialPhotonPush = 1.0f;
 	//[SerializeField]
 	//private Material photonMaterial;
 	
@@ -45,7 +49,7 @@ public class PhotonScript : MonoBehaviour{
 	private IEnumerator expandPhotonDistance(){
 		while(true){
 			yield return new WaitForSeconds(0.5f);
-			if (photonDistance < photonMaxDistance){
+			if (photonDistance <= photonMaxDistance){
 				photonDistance += photonSpeed;
 			}
 			for (int index = 0; index <= photonRaycastTrajectorySpokes; index++){
@@ -113,7 +117,7 @@ public class PhotonScript : MonoBehaviour{
 		GetComponent<MeshFilter>().mesh = msh;
 		
 		//Set photon distance
-		photonDistance = photonSpeed;
+		photonDistance = initialPhotonDistance;
 		//Start the subroutines
 		StartCoroutine("photonRandomizer");
 		StartCoroutine("expandPhotonDistance");
@@ -132,7 +136,8 @@ public class PhotonScript : MonoBehaviour{
 				//Give energy
 				tmpHit.collider.GetComponent<CharacterControl>().addEnergy();
 				//Reveal entangled particle opposite of gathered particle
-				Instantiate(energyBall, tmpLoc + vec2Angle*photonDistance*-1, Quaternion.identity);
+				GameObject obj = (GameObject) Instantiate(energyBall, tmpLoc + vec2Angle*photonDistance*-0.6f, Quaternion.identity);
+				obj.GetComponent<Rigidbody2D>().AddForce(vec2Angle*initialPhotonPush*-1, ForceMode2D.Impulse);
 				Destroy(gameObject);
 			}
 		}

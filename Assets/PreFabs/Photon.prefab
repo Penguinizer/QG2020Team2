@@ -95,3 +95,4 @@ MonoBehaviour:
   photonMaxDistance: 5
   energyBall: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
     type: 3}
+  initialPhotonDistance: 1

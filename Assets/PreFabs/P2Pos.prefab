@@ -261,6 +261,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8894306373534668086, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: spawnPhotonOnAnnihilate
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114317244293589798, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f, type: 3}

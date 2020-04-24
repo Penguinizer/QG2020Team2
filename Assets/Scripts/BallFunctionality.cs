@@ -36,6 +36,9 @@ public class BallFunctionality : MonoBehaviour{
 	bool BlackHoleDestroyBasedOnMaterial = true;
 	[SerializeField]
 	GameObject Photon;
+	//To prevent doublespawning. True for minus, false for positive.
+	[SerializeField]
+	bool spawnPhotonOnAnnihilate;
 	
     // Start is called before the first frame update
     void Start(){
@@ -104,8 +107,10 @@ public class BallFunctionality : MonoBehaviour{
             Destroy(gameObject);
 			//eBPos = new Vector3 (gameObject.GetComponent<Rigidbody2D>().position.x, gameObject.GetComponent<Rigidbody2D>().position.y, 0);
 			//Create energyball where the collision happened
-			eBPos = collision.contacts[0].point;
-			Instantiate(Photon, eBPos, new Quaternion(0,0,0,0));
+			if (spawnPhotonOnAnnihilate){
+				eBPos = collision.contacts[0].point;
+				Instantiate(Photon, eBPos, new Quaternion(0,0,0,0));
+			}
         }
 		//For collisions with black hole. Includes an if for two ways of handling black holes (either via tag or material)
 		if(BlackHoleDestroyBasedOnMaterial){
