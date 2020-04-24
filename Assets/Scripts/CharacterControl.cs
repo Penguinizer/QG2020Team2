@@ -52,7 +52,13 @@ public class CharacterControl : MonoBehaviour{
 	float timeBeforeReset = 5.0f;
 	[SerializeField]
 	bool startGamePaused = false;
-	
+	[SerializeField]
+	float maxEnergy = 200.0f;
+	[SerializeField]
+	Slider fillBar;
+	[SerializeField]
+	Slider areaBar;
+
 	private bool gameIsUnpaused;
 	
 	private float myTime = 0.0f;
@@ -79,13 +85,14 @@ public class CharacterControl : MonoBehaviour{
 	
 	//Handles adding energy
 	public void addEnergy(){
-		currentEnergy += energyOnPickup;
-		if (gameObject.tag == "Player1Owned"){
-			energyText.text = "Player 1 Energy: " + currentEnergy;
+		//print("BOOSH");
+		if (currentEnergy+energyOnPickup<= maxEnergy){
+			currentEnergy += energyOnPickup;
 		}
 		else{
-			energyText.text = "Player 2 Energy: " + currentEnergy;
+			currentEnergy = maxEnergy;
 		}
+		fillBar.value = currentEnergy/maxEnergy;
 	}
 	
 	public float returnEnergy(){
@@ -123,7 +130,8 @@ public class CharacterControl : MonoBehaviour{
 			areaControlString = "p1CreateAreaBall";
 			minControlString = "p1CreateMinBall";
 			posControlString = "p1CreatePosBall";
-			energyText.text = "Player 1 Energy: " + currentEnergy;
+			energyText.text = "Player 1 Energy:";
+			areaText.text = "Player 1 Area:";
 		}
 		else if (gameObject.tag == "Player2Owned"){
 			horControlString = "Horizontal2";
@@ -132,7 +140,8 @@ public class CharacterControl : MonoBehaviour{
 			areaControlString = "p2CreateAreaBall";
 			minControlString = "p2CreateMinBall";
 			posControlString = "p2CreatePosBall";
-			energyText.text = "Player 2 Energy: " + currentEnergy;
+			energyText.text = "Player 2 Energy:";
+			areaText.text = "Player 2 Area:";
 		}
 		else{
 			//Destroy untagged player gameobjects because they will fuck everything
@@ -160,12 +169,7 @@ public class CharacterControl : MonoBehaviour{
 				}
 			
 				//Set currently controlled area in ui
-				if (gameObject.tag == "Player1Owned"){
-					areaText.text = "Player 1 Area: " + (float)System.Math.Round(tempArea,1);
-				}
-				else{
-					areaText.text = "Player 2 Area: " + (float)System.Math.Round(tempArea,1);
-				}
+				areaBar.value = tempArea/areaToCoverToWin;
 			
 				//Check for win, if not reset temp variable.
 				if(tempArea >= areaToCoverToWin){
@@ -195,13 +199,13 @@ public class CharacterControl : MonoBehaviour{
 		while(true){
 			yield return new WaitForSeconds(1.0f);
 			if (gameIsUnpaused){
-				currentEnergy += passiveEnergyPerSecond;
-				if (gameObject.tag == "Player1Owned"){
-					energyText.text = "Player 1 Energy: " + currentEnergy;
+				if (currentEnergy+passiveEnergyPerSecond <= maxEnergy){
+					currentEnergy += passiveEnergyPerSecond;
 				}
 				else{
-					energyText.text = "Player 2 Energy: " + currentEnergy;
+					currentEnergy = maxEnergy;
 				}
+				fillBar.value = currentEnergy/maxEnergy;
 			}
 		}
 	}

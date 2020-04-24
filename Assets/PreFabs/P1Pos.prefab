@@ -9670,6 +9670,7 @@ MonoBehaviour:
   BlackHoleDestroyBasedOnMaterial: 1
   EnergyBallPrefab: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
     type: 3}
+  Photon: {fileID: 2964756052765546252, guid: fb07dd313ad56a84895631fafda95db9, type: 3}
 --- !u!58 &7625452397344959220
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -234,6 +234,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
         type: 3}
+    - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: Photon
+      value: 
+      objectReference: {fileID: 2964756052765546252, guid: fb07dd313ad56a84895631fafda95db9,
+        type: 3}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_LocalPosition.x
