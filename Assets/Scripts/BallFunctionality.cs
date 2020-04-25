@@ -104,6 +104,7 @@ public class BallFunctionality : MonoBehaviour{
 		//Includes spawning energy ball on annihilation
         if (((gameObject.tag == "PosBall" && collision.collider.tag == "MinusBall")|(gameObject.tag == "MinusBall" && collision.collider.tag == "PosBall")) && ((gameObject.transform.parent.tag != collision.collider.transform.parent.tag) | ffToggle)){
             //print("Colliding");
+            gameObject.GetComponent<AudioManager>().PostAnnihilationWwiseEvent();
             Destroy(gameObject);
 			//eBPos = new Vector3 (gameObject.GetComponent<Rigidbody2D>().position.x, gameObject.GetComponent<Rigidbody2D>().position.y, 0);
 			//Create energyball where the collision happened

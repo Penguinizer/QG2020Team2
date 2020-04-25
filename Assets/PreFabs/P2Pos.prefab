@@ -64,6 +64,16 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6dc7af694f5b4a847ae78e423fa1116c,
       type: 2}
+  ParticleMove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 80293fa06d5fdf34eb3b0cfb755a2a72,
+      type: 2}
+  WallCollision:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 167bf724b68c8044389b23311342203e,
+      type: 2}
   particleSpeed:
     idInternal: 0
     valueGuidInternal: 

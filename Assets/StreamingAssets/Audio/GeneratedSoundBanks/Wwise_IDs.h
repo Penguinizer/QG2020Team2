@@ -14,9 +14,11 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CHARACTERCONTROL_IMPULSE = 1548417789U;
+        static const AkUniqueID PARTICLEMOVE = 1819005792U;
         static const AkUniqueID PLUSMINBALL_ANNIHILATION = 1543154663U;
         static const AkUniqueID PLUSMINBALL_COLLISION = 3640416505U;
         static const AkUniqueID START_AMBIENCE = 3626999974U;
+        static const AkUniqueID WALLHIT = 3961855540U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

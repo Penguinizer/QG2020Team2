@@ -88,6 +88,30 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1819005792" Name="ParticleMove" ObjectPath="\Events\Default Work Unit\ParticleMove" GUID="{24EC55FC-6CA3-4ABC-B2F9-70576111A558}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="115779775" Language="SFX">
+							<ShortName>ParticleMove_ModularV3Mono.wav</ShortName>
+							<Path>SFX\ParticleMove_ModularV3Mono_B7E955FA.wem</Path>
+						</File>
+						<File Id="418772786" Language="SFX">
+							<ShortName>ParticleMove_ModularV3Mono.wav</ShortName>
+							<Path>SFX\ParticleMove_ModularV3Mono_7D61BF8A.wem</Path>
+						</File>
+						<File Id="430868510" Language="SFX">
+							<ShortName>ParticleMove_ModularV3Mono.wav</ShortName>
+							<Path>SFX\ParticleMove_ModularV3Mono_065810DE.wem</Path>
+						</File>
+						<File Id="989765014" Language="SFX">
+							<ShortName>ParticleMove_ModularV3Mono.wav</ShortName>
+							<Path>SFX\ParticleMove_ModularV3Mono_10B84BD8.wem</Path>
+						</File>
+						<File Id="999587089" Language="SFX">
+							<ShortName>ParticleMove_ModularV3Mono.wav</ShortName>
+							<Path>SFX\ParticleMove_ModularV3Mono_38F00CF1.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1543154663" Name="PlusMinBall_Annihilation" ObjectPath="\Events\Default Work Unit\PlusMinBall_Annihilation" GUID="{B020F771-075D-4E84-AB63-E31208BACB29}" DurationType="OneShot" DurationMin="2.472172" DurationMax="4.438412">
 					<IncludedMemoryFiles>
 						<File Id="1283924" Language="SFX">
@@ -261,6 +285,62 @@
 						<File Id="526652532" Language="SFX">
 							<ShortName>Space_Presence_ODY-0295-025.wav</ShortName>
 							<Path>SFX\Space_Presence_ODY-0295-025_C757FAC8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3961855540" Name="WallHit" ObjectPath="\Events\Default Work Unit\WallHit" GUID="{92D06A67-F021-4373-98A8-C18174852B6D}" DurationType="OneShot" DurationMin="4.081998" DurationMax="7.027456">
+					<IncludedMemoryFiles>
+						<File Id="156361855" Language="SFX">
+							<ShortName>Rubber_Ball_ODC-0032-137.L.wav</ShortName>
+							<Path>SFX\Rubber_Ball_ODC-0032-137.L_C046D706.wem</Path>
+						</File>
+						<File Id="160542972" Language="SFX">
+							<ShortName>Rubber_Ball_ODC-0032-123.L.wav</ShortName>
+							<Path>SFX\Rubber_Ball_ODC-0032-123.L_83D0226D.wem</Path>
+						</File>
+						<File Id="186403411" Language="SFX">
+							<ShortName>Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_05-01.L.wav</ShortName>
+							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_05-01.L_DB69A837.wem</Path>
+						</File>
+						<File Id="312158753" Language="SFX">
+							<ShortName>wallhit_space.wav</ShortName>
+							<Path>SFX\wallhit_space_18E1DBD0.wem</Path>
+						</File>
+						<File Id="477433340" Language="SFX">
+							<ShortName>wallhit_space.wav</ShortName>
+							<Path>SFX\wallhit_space_2C907AB4.wem</Path>
+						</File>
+						<File Id="494296337" Language="SFX">
+							<ShortName>Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_03-01.L.wav</ShortName>
+							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_03-01.L_8D6707A0.wem</Path>
+						</File>
+						<File Id="575074549" Language="SFX">
+							<ShortName>Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_01-01.L.wav</ShortName>
+							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_01-01.L_06873FA5.wem</Path>
+						</File>
+						<File Id="629711301" Language="SFX">
+							<ShortName>Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_02-01.L.wav</ShortName>
+							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_02-01.L_555F5F8A.wem</Path>
+						</File>
+						<File Id="665519226" Language="SFX">
+							<ShortName>wallhit_space.wav</ShortName>
+							<Path>SFX\wallhit_space_88A3AA9A.wem</Path>
+						</File>
+						<File Id="733038419" Language="SFX">
+							<ShortName>Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_04-01.L.wav</ShortName>
+							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_04-01.L_F7F2B03F.wem</Path>
+						</File>
+						<File Id="832301906" Language="SFX">
+							<ShortName>Rubber_Ball_ODC-0032-127.L.wav</ShortName>
+							<Path>SFX\Rubber_Ball_ODC-0032-127.L_BB91F169.wem</Path>
+						</File>
+						<File Id="860855702" Language="SFX">
+							<ShortName>Rubber_Ball_ODC-0032-125.L.wav</ShortName>
+							<Path>SFX\Rubber_Ball_ODC-0032-125.L_9151A402.wem</Path>
+						</File>
+						<File Id="1050436904" Language="SFX">
+							<ShortName>wallhit_space.wav</ShortName>
+							<Path>SFX\wallhit_space_618AB6AC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

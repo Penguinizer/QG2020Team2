@@ -9668,9 +9668,8 @@ MonoBehaviour:
   pushrepelDistance: 2
   ffToggle: 0
   BlackHoleDestroyBasedOnMaterial: 1
-  EnergyBallPrefab: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
-    type: 3}
   Photon: {fileID: 2964756052765546252, guid: fb07dd313ad56a84895631fafda95db9, type: 3}
+  spawnPhotonOnAnnihilate: 0
 --- !u!58 &7625452397344959220
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9780,14 +9779,9 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 1.4013941, y: -0.9734734}
-      - {x: 2.4507985, y: 1.8727311}
-      - {x: -1.4047228, y: 1.0817367}
-      - {x: -2.6985884, y: -0.7169961}
-      - {x: -3.7710667, y: -1.1828688}
-      - {x: -3.9391623, y: -2.2508075}
-      - {x: -3.004438, y: -2.760118}
-      - {x: -2.1688695, y: -2.343845}
-      - {x: -2.044742, y: -1.9217113}
+      - {x: 2.9505138, y: 3.535122}
+      - {x: -1.780739, y: 5.366869}
+      - {x: -4.505147, y: 0.775005}
       - {x: 0.66238475, y: -1.5818176}
 --- !u!114 &1082512860562457579
 MonoBehaviour:
@@ -9817,6 +9811,16 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6dc7af694f5b4a847ae78e423fa1116c,
+      type: 2}
+  ParticleMove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 80293fa06d5fdf34eb3b0cfb755a2a72,
+      type: 2}
+  WallCollision:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 167bf724b68c8044389b23311342203e,
       type: 2}
   particleSpeed:
     idInternal: 0
