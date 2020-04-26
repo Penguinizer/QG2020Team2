@@ -31,10 +31,10 @@ public class AreaBallScript : MonoBehaviour
 	Material p2Material;
 	
 	//Textures
-	[SerializeField]
-	Texture p1Texture;
-	[SerializeField]
-	Texture p2Texture;
+	//[SerializeField]
+	//Texture p1Texture;
+	//[SerializeField]
+	//Texture p2Texture;
 	
 	
 	//A temporary variable for Raycast Hits and a list for containing the distances them.
@@ -52,6 +52,9 @@ public class AreaBallScript : MonoBehaviour
 	
 	//Area stuff
 	private float aTemp;
+	
+	//stuff
+	//private Color tempColor;
 	
     // Start is called before the first frame update
     void Start()
@@ -82,14 +85,18 @@ public class AreaBallScript : MonoBehaviour
 		//Set the material of the mesh based on the player so it matches the material of the units
 		if (gameObject.transform.parent.tag == "Player1Owned"){
 			gameObject.GetComponent<MeshRenderer>().material = p1Material;
-			gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", p1Texture);
-			gameObject.GetComponent<MeshRenderer>().material.SetTexture("_BumpMap", p1Texture);
+			//gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", p1Texture);
+			//gameObject.GetComponent<MeshRenderer>().material.SetTexture("_BumpMap", p1Texture);
+			//tempColor = gameObject.GetComponent<MeshRenderer>().material.color;
+			//gameObject.GetComponent<MeshRenderer>().material.color = new Color (tempColor.r, tempColor.g, tempColor.b, 0);
 			gameObject.layer = 14;
 		}
 		else{
 			gameObject.GetComponent<MeshRenderer>().material = p2Material;
-			gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", p2Texture);
-			gameObject.GetComponent<MeshRenderer>().material.SetTexture("_BumpMap", p2Texture);
+			//gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", p2Texture);
+			//gameObject.GetComponent<MeshRenderer>().material.SetTexture("_BumpMap", p2Texture);
+			//tempColor = gameObject.GetComponent<MeshRenderer>().material.color;
+			//gameObject.GetComponent<MeshRenderer>().material.color = new Color (tempColor.r, tempColor.g, tempColor.b, 0);
 			gameObject.layer = 15;
 		}
 		

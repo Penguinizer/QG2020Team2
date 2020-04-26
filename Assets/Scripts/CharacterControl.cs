@@ -169,6 +169,7 @@ public class CharacterControl : MonoBehaviour{
 				}
 			
 				//Set currently controlled area in ui
+				//print(tempArea);
 				areaBar.value = tempArea/areaToCoverToWin;
 			
 				//Check for win, if not reset temp variable.
