@@ -22,7 +22,7 @@ public class StartMenuScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		content = new GUIContent("Player 1 Controls:\n Movement: Arrow Keys.\n Impulse: Numpad 1. Minus Particle Numpad 2. Positive Particle: Numpad 3.\n Area Control Particle: Numpad 0. \n\nPlayer 2 Controls:\n Movement: WASD. Impulse: Z. Minus Particle: X. Positive Particle: X.\n Area Control Particle V.\n\n ESC quits the game \n\n\n\n The goal of the game is to gather photons created by annihilating particles to gain energy.\n This energy is used to create area control particles. Create enough area control particles to win.");
+		content = new GUIContent("Player 1 Controls:\n Movement: Arrow Keys.\n Impulse: Numpad 1. Minus Particle Numpad 2. Positive Particle: Numpad 3.\n Area Control Particle: Numpad 0. \n\nPlayer 2 Controls:\n Movement: WASD. Impulse: Z. Minus Particle: X. Positive Particle: X.\n Area Control Particle V.\n\n ESC quits the game \n\n\n\n The goal of the game is to gather photons created by annihilating particles to gain energy.\n This energy is used to create area control particles. Create enough area control particles to win.\n\n Annihilations create two entangled photons which we do not know the location of.\n Your particles can gather these photons by colliding into them in the area.\n When you collide with a photon the entangled photon's location is also revealed.");
     }
 	
 	void OnGUI(){
