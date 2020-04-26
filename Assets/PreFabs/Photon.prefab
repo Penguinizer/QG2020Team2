@@ -91,8 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonRaycastTrajectorySpokes: 11
-  photonSpeed: 0.1
-  photonMaxDistance: 5
+  photonSpeed: 0.2
+  photonMaxDistance: 3
   energyBall: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
     type: 3}
   initialPhotonDistance: 1
