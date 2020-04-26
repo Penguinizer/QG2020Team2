@@ -38,6 +38,8 @@ public class PhotonScript : MonoBehaviour{
 	
 	private float photonDistance;
 	
+	private LayerMask wallMask;
+	
 	private IEnumerator photonRandomizer(){
 		while(true){
 			yield return new WaitForSeconds(0.5f);
@@ -58,8 +60,7 @@ public class PhotonScript : MonoBehaviour{
 				vec2Angle = (Vector2)(Quaternion.Euler(0,0,raycastAngle*index) * Vector2.right);
 				vec2Angle.Normalize();
 				//Make a wall layer mask
-				LayerMask mask = LayerMask.GetMask("Walls");
-				tmpHit = Physics2D.Raycast(tmpLoc, vec2Angle, photonDistance,mask);
+				tmpHit = Physics2D.Raycast(tmpLoc, vec2Angle, photonDistance, wallMask);
 				//Check if the raycast hit anything. If it did get the distance. If not save controlradius.
 				if (tmpHit.collider != null){
 					hitList[index]=vec2Angle*(Vector2.Distance(tmpHit.point,tmpLoc));
@@ -116,11 +117,15 @@ public class PhotonScript : MonoBehaviour{
 		//Set the new mesh to be the gameobject mesh.
 		GetComponent<MeshFilter>().mesh = msh;
 		
+		//Create layermasks
+		wallMask = LayerMask.GetMask("Walls");
+		
 		//Set photon distance
 		photonDistance = initialPhotonDistance;
 		//Start the subroutines
 		StartCoroutine("photonRandomizer");
 		StartCoroutine("expandPhotonDistance");
+		
     }
 
     // Update is called once per frame
@@ -132,9 +137,9 @@ public class PhotonScript : MonoBehaviour{
 		vec2Angle.Normalize();
 		tmpHit = Physics2D.Raycast(tmpLoc, vec2Angle, photonDistance);
 		if (tmpHit.collider != null){
-			if(tmpHit.collider.tag=="Player1Owned" | tmpHit.collider.tag=="Player2Owned"){
+			if(tmpHit.collider.tag=="PosBall" | tmpHit.collider.tag=="MinusBall"){
 				//Give energy
-				tmpHit.collider.GetComponent<CharacterControl>().addEnergy();
+				tmpHit.collider.transform.parent.GetComponent<CharacterControl>().addEnergy();
 				//Reveal entangled particle opposite of gathered particle
 				GameObject obj = (GameObject) Instantiate(energyBall, tmpLoc + vec2Angle*photonDistance*-0.6f, Quaternion.identity);
 				obj.GetComponent<Rigidbody2D>().AddForce(vec2Angle*initialPhotonPush*-1, ForceMode2D.Impulse);

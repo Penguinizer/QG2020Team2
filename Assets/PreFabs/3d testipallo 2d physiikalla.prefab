@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3407862113248705084}
   - component: {fileID: 3407862113248705083}
   - component: {fileID: 1776699464532422534}
-  m_Layer: 12
+  m_Layer: 17
   m_Name: 3d testipallo 2d physiikalla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,4 +137,5 @@ MonoBehaviour:
   pushrepelDistance: 4
   ffToggle: 0
   BlackHoleDestroyBasedOnMaterial: 1
-  EnergyBallPrefab: {fileID: 0}
+  Photon: {fileID: 0}
+  spawnPhotonOnAnnihilate: 0

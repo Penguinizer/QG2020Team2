@@ -19,8 +19,6 @@ public class AreaBallScript : MonoBehaviour
 	bool allowOverlapBetweenControlAreas = true;
 	//Make the balls collidable by other particles.
 	//Sets the layer to AreaControl or GameObjects
-	[SerializeField]
-	bool isCollidable = false;
 	//Make the object static.
 	//If true area and mesh don't change after the object is placed.
 	[SerializeField]
@@ -58,7 +56,7 @@ public class AreaBallScript : MonoBehaviour
 		hitList = new Vector2[amountOfRaycastSpokes+1];
 		//Set the circle collider radius to the control radius to potentially do a thing
 		if (allowOverlapBetweenControlAreas){
-			gameObject.GetComponent<CircleCollider2D>().radius = controlRadius;
+			gameObject.GetComponent<CircleCollider2D>().radius = controlRadius*1.5f;
 		}
 		else{
 			gameObject.GetComponent<CircleCollider2D>().radius = controlRadius*1.5f;
@@ -69,14 +67,6 @@ public class AreaBallScript : MonoBehaviour
 			//hitDistanceList.Add(controlRadius);
 		//}
 		
-		if (isCollidable){
-			gameObject.layer = 12;
-		}
-		else{
-			gameObject.layer = 11;
-			gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
-		}
-		
 		//Create the control area mesh?
 		//controlMesh = new Mesh();
 		//controlMesh.vertices = new Vector3[] {new Vector3(0, 0, 0), new Vector3(0, 1, 0), new Vector3(1, 1, 0)};
@@ -86,9 +76,11 @@ public class AreaBallScript : MonoBehaviour
 		//Set the material of the mesh based on the player so it matches the material of the units
 		if (gameObject.transform.parent.tag == "Player1Owned"){
 			 gameObject.GetComponent<MeshRenderer>().material = p1Material;
+			 gameObject.layer = 14;
 		}
 		else{
 			 gameObject.GetComponent<MeshRenderer>().material = p2Material;
+			 gameObject.layer = 15;
 		}
 		
 		//If object is static the mesh and area only have to be checked once.
@@ -133,6 +125,10 @@ public class AreaBallScript : MonoBehaviour
 			msh.RecalculateBounds();
 			//Set the new mesh to be the gameobject mesh.
 			GetComponent<MeshFilter>().mesh = msh;
+			
+			//Add polygon collider to area control
+			PolygonCollider2D pc = gameObject.AddComponent(typeof(PolygonCollider2D)) as PolygonCollider2D;
+			pc.points = hitList;
 		}
     }
 

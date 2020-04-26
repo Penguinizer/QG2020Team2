@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2964756052765546248}
   - component: {fileID: 2964756052765546255}
   - component: {fileID: 2964756052765546250}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Photon
   m_TagString: Energyball
   m_Icon: {fileID: 0}
@@ -96,3 +96,4 @@ MonoBehaviour:
   energyBall: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
     type: 3}
   initialPhotonDistance: 1
+  initialPhotonPush: 1
