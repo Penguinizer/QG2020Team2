@@ -27,12 +27,12 @@ TagManager:
   - Walls
   - Player Object
   - Area Control
-  - Game Objects
-  - transparencyCollider
+  - Player 1 Objects
+  - Player 2 Objects
+  - Player 1 Area Control
+  - Player 2 Area Control
   - 
-  - 
-  - 
-  - 
+  - Generic Game Objects
   - 
   - 
   - 

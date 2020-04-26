@@ -112,6 +112,16 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6dc7af694f5b4a847ae78e423fa1116c,
       type: 2}
+  ParticleMove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 80293fa06d5fdf34eb3b0cfb755a2a72,
+      type: 2}
+  WallCollision:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 167bf724b68c8044389b23311342203e,
+      type: 2}
   particleSpeed:
     idInternal: 0
     valueGuidInternal: 
@@ -234,6 +244,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
         type: 3}
+    - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: Photon
+      value: 
+      objectReference: {fileID: 2964756052765546252, guid: fb07dd313ad56a84895631fafda95db9,
+        type: 3}
+    - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: spawnPhotonOnAnnihilate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_LocalPosition.x

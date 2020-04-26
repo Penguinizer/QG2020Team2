@@ -64,6 +64,24 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6dc7af694f5b4a847ae78e423fa1116c,
       type: 2}
+  ParticleMove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 80293fa06d5fdf34eb3b0cfb755a2a72,
+      type: 2}
+  WallCollision:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 167bf724b68c8044389b23311342203e,
+      type: 2}
+  CreatePlusMin:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  CreateTerritory:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   particleSpeed:
     idInternal: 0
     valueGuidInternal: 
@@ -139,12 +157,12 @@ PrefabInstance:
     - target: {fileID: 3533474689194576167, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3535067532586323349, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4070381972403607515, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
@@ -154,12 +172,12 @@ PrefabInstance:
     - target: {fileID: 4070381972405864731, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4208408060736864068, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5516309980751413384, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
@@ -249,7 +267,7 @@ PrefabInstance:
     - target: {fileID: 5516309980751413389, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6712584332452053341, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
@@ -259,6 +277,11 @@ PrefabInstance:
     - target: {fileID: 8841874158369141528, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894306373534668086, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
+        type: 3}
+      propertyPath: spawnPhotonOnAnnihilate
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -289,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 773ea36386852634e85c86f222adb7d9, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 773ea36386852634e85c86f222adb7d9, type: 3}
       propertyPath: m_LocalPosition.x

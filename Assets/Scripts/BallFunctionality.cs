@@ -35,7 +35,10 @@ public class BallFunctionality : MonoBehaviour{
 	[SerializeField]
 	bool BlackHoleDestroyBasedOnMaterial = true;
 	[SerializeField]
-	GameObject EnergyBallPrefab;
+	GameObject Photon;
+	//To prevent doublespawning. True for minus, false for positive.
+	[SerializeField]
+	bool spawnPhotonOnAnnihilate;
 	
     // Start is called before the first frame update
     void Start(){
@@ -101,11 +104,14 @@ public class BallFunctionality : MonoBehaviour{
 		//Includes spawning energy ball on annihilation
         if (((gameObject.tag == "PosBall" && collision.collider.tag == "MinusBall")|(gameObject.tag == "MinusBall" && collision.collider.tag == "PosBall")) && ((gameObject.transform.parent.tag != collision.collider.transform.parent.tag) | ffToggle)){
             //print("Colliding");
+            gameObject.GetComponent<AudioManager>().PostAnnihilationWwiseEvent();
             Destroy(gameObject);
 			//eBPos = new Vector3 (gameObject.GetComponent<Rigidbody2D>().position.x, gameObject.GetComponent<Rigidbody2D>().position.y, 0);
 			//Create energyball where the collision happened
-			eBPos = collision.contacts[0].point;
-			Instantiate(EnergyBallPrefab, eBPos, new Quaternion(0,0,0,0));
+			if (spawnPhotonOnAnnihilate){
+				eBPos = collision.contacts[0].point;
+				Instantiate(Photon, eBPos, new Quaternion(0,0,0,0));
+			}
         }
 		//For collisions with black hole. Includes an if for two ways of handling black holes (either via tag or material)
 		if(BlackHoleDestroyBasedOnMaterial){
@@ -121,9 +127,9 @@ public class BallFunctionality : MonoBehaviour{
 			}
 		}
 		//For collision with energy ball and adding energy to the player.
-		if(collision.collider.tag == "Energyball"){
-			//Call the function to add energy to player 
-			gameObject.transform.parent.gameObject.GetComponent<CharacterControl>().addEnergy();
-		}
+		//if(collision.collider.tag == "Energyball"){
+		//	//Call the function to add energy to player 
+		//	gameObject.transform.parent.gameObject.GetComponent<CharacterControl>().addEnergy();
+		//}
     }
 }

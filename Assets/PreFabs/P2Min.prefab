@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3423475008941741431}
   - component: {fileID: 6712584332452053341}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,6 +162,24 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6dc7af694f5b4a847ae78e423fa1116c,
       type: 2}
+  ParticleMove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 80293fa06d5fdf34eb3b0cfb755a2a72,
+      type: 2}
+  WallCollision:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 167bf724b68c8044389b23311342203e,
+      type: 2}
+  CreatePlusMin:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  CreateTerritory:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   particleSpeed:
     idInternal: 0
     valueGuidInternal: 
@@ -199,11 +217,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1053203839010120, guid: a9f3cc968bdb1cd4d800ee747b078afc, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1623226520601082, guid: a9f3cc968bdb1cd4d800ee747b078afc, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4422034244011964, guid: a9f3cc968bdb1cd4d800ee747b078afc, type: 3}
       propertyPath: m_LocalRotation.x
@@ -401,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 6a8bd1ad75247c24883c919ce190d7cd, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a8bd1ad75247c24883c919ce190d7cd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -509,6 +527,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
         type: 3}
+    - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: Photon
+      value: 
+      objectReference: {fileID: 2964756052765546252, guid: fb07dd313ad56a84895631fafda95db9,
+        type: 3}
+    - target: {fileID: 1776699464532422534, guid: addb2a9a6f42f1044bb5c06726847f70,
+        type: 3}
+      propertyPath: spawnPhotonOnAnnihilate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3407862113248705080, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -602,7 +631,7 @@ PrefabInstance:
     - target: {fileID: 3407862113248705085, guid: addb2a9a6f42f1044bb5c06726847f70,
         type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3407862113248705082, guid: addb2a9a6f42f1044bb5c06726847f70, type: 3}
