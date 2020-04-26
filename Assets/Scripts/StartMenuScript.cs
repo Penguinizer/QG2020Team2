@@ -7,10 +7,6 @@ using System;
 public class StartMenuScript : MonoBehaviour
 {
 	[SerializeField]
-	private GameObject player1;
-	[SerializeField]
-	private GameObject player2;
-	[SerializeField]
 	private Texture controlImage;
 
 	
@@ -19,14 +15,19 @@ public class StartMenuScript : MonoBehaviour
 	private GUIStyle style = new GUIStyle();
 	
 	void unpausePlayers(){
-		player1.GetComponent<CharacterControl>().unpausePlayer();
-		player2.GetComponent<CharacterControl>().unpausePlayer();
+		GameObject.FindWithTag("Player1Owned").GetComponent<CharacterControl>().unpausePlayer();
+		GameObject.FindWithTag("Player2Owned").GetComponent<CharacterControl>().unpausePlayer();
 	}
 	
+	void pausePlayers(){
+		GameObject.FindWithTag("Player1Owned").GetComponent<CharacterControl>().pausePlayer();
+		GameObject.FindWithTag("Player2Owned").GetComponent<CharacterControl>().pausePlayer();
+	}
     // Start is called before the first frame update
     void Start()
     {
-		descriptionText = new GUIContent("\nESC quits the game \n\n The goal of the game is to gather photons created by annihilating particles to gain energy.\n This energy is used to create area control particles. Create enough area control particles to win.\n\n Annihilations create two entangled photons which we do not know the location of.\n Your particles can gather these photons by colliding into them in the area.\n When you collide with a photon the entangled photon's location is also revealed.");
+		pausePlayers();
+		descriptionText = new GUIContent("\nEscape to re-open this menu and pause \n\n The goal of the game is to gather photons created by annihilating particles to gain energy.\n This energy is used to create area control particles. Create enough area control particles to win.\n\n Annihilations create two entangled photons which we do not know the location of.\n Your particles can gather these photons by colliding into them in the area.\n When you collide with a photon the entangled photon's location is also revealed.");
 		controlIMG = new GUIContent(controlImage);
 		style.alignment = TextAnchor.MiddleCenter;
 		style.normal.textColor=Color.white;
@@ -55,8 +56,8 @@ public class StartMenuScript : MonoBehaviour
 			unpausePlayers();
 			Destroy(gameObject);
 		}
-		if (Input.GetButtonDown("Escape")){
-			Application.Quit();
-		}
+		//if (Input.GetButtonDown("Escape")){
+		//	Application.Quit();
+		//}
     }
 }

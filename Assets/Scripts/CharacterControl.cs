@@ -58,6 +58,8 @@ public class CharacterControl : MonoBehaviour{
 	Slider fillBar;
 	[SerializeField]
 	Slider areaBar;
+	[SerializeField]
+	GameObject mainMenu;
 
 	private bool gameIsUnpaused;
 	
@@ -111,6 +113,7 @@ public class CharacterControl : MonoBehaviour{
 		//print (gameIsUnpaused);
 	}
 	public void pausePlayer(){
+		//print("ding");
 		gameIsUnpaused = false;
 	}
 	
@@ -213,8 +216,8 @@ public class CharacterControl : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-		if (Input.GetButtonDown("Escape")){
-			Application.Quit();
+		if (Input.GetButtonDown("MainMenu") & tag == "Player1Owned"){
+			Instantiate(mainMenu);
 		}
 		if (gameIsUnpaused){
 			//Player Object Movement vector

@@ -144,6 +144,8 @@ MonoBehaviour:
   maxEnergy: 200
   fillBar: {fileID: 0}
   areaBar: {fileID: 0}
+  mainMenu: {fileID: 1758806338704108066, guid: 4c05357afa2e24c4ba8ce3018c0eac02,
+    type: 3}
 --- !u!50 &7510372055992168942
 Rigidbody2D:
   serializedVersion: 4
