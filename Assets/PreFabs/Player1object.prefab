@@ -130,7 +130,7 @@ MonoBehaviour:
     type: 3}
   energyOnPickup: 20
   startingEnergy: 0
-  areaBallCost: 50
+  areaBallCost: 10
   AreaBallPrefab: {fileID: 6141130091478619759, guid: 0d184c65417bb174ebc5531b6c3c979f,
     type: 3}
   posMinBallCost: 10
@@ -139,6 +139,11 @@ MonoBehaviour:
   energyText: {fileID: 0}
   areaText: {fileID: 0}
   winText: {fileID: 0}
+  timeBeforeReset: 5
+  startGamePaused: 0
+  maxEnergy: 200
+  fillBar: {fileID: 0}
+  areaBar: {fileID: 0}
 --- !u!50 &7510372055992168942
 Rigidbody2D:
   serializedVersion: 4
@@ -204,6 +209,24 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 6dc7af694f5b4a847ae78e423fa1116c,
+      type: 2}
+  ParticleMove:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  WallCollision:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  CreatePlusMin:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a0cf642d17ff5ba44917ccd439851c8e,
+      type: 2}
+  CreateTerritory:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 11ed36adc984e2743847fe4f3334a0fe,
       type: 2}
   particleSpeed:
     idInternal: 0

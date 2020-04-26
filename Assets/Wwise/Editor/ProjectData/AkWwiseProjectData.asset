@@ -51,7 +51,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 79d8ae792bd85641a7f745a1908fe8f2
     GuidInternal: 
-    m_lastTime: -8586151845995233200
+    m_lastTime: -8586137171951323700
     List:
     - name: Main
       guid: 9e12ad08d9bc6f468866eb1efb37bfc8
@@ -67,7 +67,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b4c86fa16aad31488415514b00834156
     GuidInternal: 
-    m_lastTime: -8586151838388984477
+    m_lastTime: -8586137171951443633
     List:
     - name: CharacterControl_Impulse
       guid: 0b030670bd42674a888d7b5c8d0af13e
@@ -78,6 +78,30 @@ MonoBehaviour:
       - ElementName: CharacterControl_Impulse
         ObjectType: 3
       Path: Default Work Unit\CharacterControl_Impulse
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: CreatePlusMin
+      guid: fb7c26f87de3d943b7980dd56d67e169
+      id: 2454750719
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CreatePlusMin
+        ObjectType: 3
+      Path: Default Work Unit\CreatePlusMin
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: ParticleMove
+      guid: fc55ec24a36cbc4ab2f970576111a558
+      id: 1819005792
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ParticleMove
+        ObjectType: 3
+      Path: Default Work Unit\ParticleMove
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -114,6 +138,18 @@ MonoBehaviour:
       - ElementName: Start_Ambience
         ObjectType: 3
       Path: Default Work Unit\Start_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: WallHit
+      guid: 676ad09221f0734398a8c18174852b6d
+      id: 3961855540
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: WallHit
+        ObjectType: 3
+      Path: Default Work Unit\WallHit
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -156,7 +192,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /QG2020Team2_WwiseProject
-  - /QG2020Team2_WwiseProject/SoundBanks
-  - /QG2020Team2_WwiseProject/SoundBanks/Default Work Unit
+  - /QG2020Team2_WwiseProject/Events
+  - /QG2020Team2_WwiseProject/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

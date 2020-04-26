@@ -269,7 +269,8 @@ public class CharacterControl : MonoBehaviour{
 				}
 				//If there are no area orbs too close create new one
 				if(!tooClose){
-					nextCreate = myTime + createCooldown;
+                    gameObject.GetComponent<AudioManager>().PostWwiseCreateTerritory();
+                    nextCreate = myTime + createCooldown;
 					Instantiate(AreaBallPrefab,gameObject.transform);
 					nextCreate = nextCreate - myTime;
 					myTime = 0.0f;
@@ -283,7 +284,8 @@ public class CharacterControl : MonoBehaviour{
 			//Create a new prefab object with the playerobject as its parent.
 			//After creating resets the cooldown
 			else if(Input.GetButtonDown(posControlString)  && myTime > createCooldown && currentEnergy >= posMinBallCost){
-				nextCreate = myTime + createCooldown;
+                gameObject.GetComponent<AudioManager>().PostCreatePlusMin();
+                nextCreate = myTime + createCooldown;
 				if(gameObject.tag == "Player1Owned"){
 					Instantiate(P1PosPrefab,gameObject.transform);
 				}
@@ -296,7 +298,8 @@ public class CharacterControl : MonoBehaviour{
 				//print (gameObject.tag + " Positive Particle Created, Current Energy: " + currentEnergy);
 			}
 			else if(Input.GetButtonDown(minControlString) && myTime > createCooldown && currentEnergy >= posMinBallCost){
-				nextCreate = myTime + createCooldown;
+                gameObject.GetComponent<AudioManager>().PostCreatePlusMin();
+                nextCreate = myTime + createCooldown;
 				if(gameObject.tag == "Player1Owned"){
 					Instantiate(P1MinPrefab,gameObject.transform);
 				}

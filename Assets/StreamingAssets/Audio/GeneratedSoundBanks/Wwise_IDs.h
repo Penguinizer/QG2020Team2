@@ -14,6 +14,8 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CHARACTERCONTROL_IMPULSE = 1548417789U;
+        static const AkUniqueID CREATEPLUSMIN = 2454750719U;
+        static const AkUniqueID CREATETERRITORY = 1823101429U;
         static const AkUniqueID PARTICLEMOVE = 1819005792U;
         static const AkUniqueID PLUSMINBALL_ANNIHILATION = 1543154663U;
         static const AkUniqueID PLUSMINBALL_COLLISION = 3640416505U;

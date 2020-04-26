@@ -13,6 +13,8 @@ public class AudioManager : MonoBehaviour
     public AK.Wwise.Event Impulse;
     public AK.Wwise.Event ParticleMove;
     public AK.Wwise.Event WallCollision;
+    public AK.Wwise.Event CreatePlusMin;
+    public AK.Wwise.Event CreateTerritory;
 
     public AK.Wwise.RTPC particleSpeed;
 
@@ -64,5 +66,16 @@ public class AudioManager : MonoBehaviour
         print("Play collision sound");
         Annihilation.Post(gameObject);
         ParticleMove.Stop(gameObject);
+    }
+
+
+    public void PostCreatePlusMin()
+    {
+        CreatePlusMin.Post(gameObject);
+    }
+
+    public void PostWwiseCreateTerritory()
+    {
+        CreateTerritory.Post(gameObject);
     }
 }

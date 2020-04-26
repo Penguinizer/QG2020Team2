@@ -88,27 +88,83 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2454750719" Name="CreatePlusMin" ObjectPath="\Events\Default Work Unit\CreatePlusMin" GUID="{F8267CFB-E37D-43D9-B798-0DD56D67E169}" DurationType="OneShot" DurationMin="4.953458" DurationMax="7.395792">
+					<IncludedMemoryFiles>
+						<File Id="89498750" Language="SFX">
+							<ShortName>PlusMin_Note 4.wav</ShortName>
+							<Path>SFX\PlusMin_Note 4_10C4C929.wem</Path>
+						</File>
+						<File Id="155818264" Language="SFX">
+							<ShortName>PlusMin_Note 5.wav</ShortName>
+							<Path>SFX\PlusMin_Note 5_10C4C929.wem</Path>
+						</File>
+						<File Id="191290918" Language="SFX">
+							<ShortName>PlusMin_Note 6.wav</ShortName>
+							<Path>SFX\PlusMin_Note 6_10C4C929.wem</Path>
+						</File>
+						<File Id="236726741" Language="SFX">
+							<ShortName>PlusMin_Note 8.wav</ShortName>
+							<Path>SFX\PlusMin_Note 8_10C4C929.wem</Path>
+						</File>
+						<File Id="417122594" Language="SFX">
+							<ShortName>PlusMin_Note 3.wav</ShortName>
+							<Path>SFX\PlusMin_Note 3_10C4C929.wem</Path>
+						</File>
+						<File Id="721085955" Language="SFX">
+							<ShortName>PlusMin_Note 1.wav</ShortName>
+							<Path>SFX\PlusMin_Note 1_10C4C929.wem</Path>
+						</File>
+						<File Id="941512419" Language="SFX">
+							<ShortName>PlusMin_Note 7.wav</ShortName>
+							<Path>SFX\PlusMin_Note 7_10C4C929.wem</Path>
+						</File>
+						<File Id="1034111376" Language="SFX">
+							<ShortName>PlusMin_Note 2.wav</ShortName>
+							<Path>SFX\PlusMin_Note 2_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1823101429" Name="CreateTerritory" ObjectPath="\Events\Default Work Unit\CreateTerritory" GUID="{ED121F3D-ED9C-4282-9198-B6160EE4697C}" DurationType="OneShot" DurationMin="14.101334" DurationMax="16.431999">
+					<IncludedMemoryFiles>
+						<File Id="526793258" Language="SFX">
+							<ShortName>AreaUnit AstralVoices-03.wav</ShortName>
+							<Path>SFX\AreaUnit AstralVoices-03_10C4C929.wem</Path>
+						</File>
+						<File Id="667507286" Language="SFX">
+							<ShortName>AreaUnit AstralVoices-01.wav</ShortName>
+							<Path>SFX\AreaUnit AstralVoices-01_10C4C929.wem</Path>
+						</File>
+						<File Id="771306374" Language="SFX">
+							<ShortName>AreaUnit AstralVoices-05.wav</ShortName>
+							<Path>SFX\AreaUnit AstralVoices-05_10C4C929.wem</Path>
+						</File>
+						<File Id="1067801504" Language="SFX">
+							<ShortName>AreaUnit AstralVoices-06.wav</ShortName>
+							<Path>SFX\AreaUnit AstralVoices-06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1819005792" Name="ParticleMove" ObjectPath="\Events\Default Work Unit\ParticleMove" GUID="{24EC55FC-6CA3-4ABC-B2F9-70576111A558}" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="115779775" Language="SFX">
 							<ShortName>ParticleMove_ModularV3Mono.wav</ShortName>
-							<Path>SFX\ParticleMove_ModularV3Mono_B7E955FA.wem</Path>
+							<Path>SFX\ParticleMove_ModularV3Mono_C57853FD.wem</Path>
 						</File>
 						<File Id="418772786" Language="SFX">
 							<ShortName>ParticleMove_ModularV3Mono.wav</ShortName>
-							<Path>SFX\ParticleMove_ModularV3Mono_7D61BF8A.wem</Path>
+							<Path>SFX\ParticleMove_ModularV3Mono_A35500FF.wem</Path>
 						</File>
 						<File Id="430868510" Language="SFX">
 							<ShortName>ParticleMove_ModularV3Mono.wav</ShortName>
-							<Path>SFX\ParticleMove_ModularV3Mono_065810DE.wem</Path>
+							<Path>SFX\ParticleMove_ModularV3Mono_F1DB8957.wem</Path>
 						</File>
 						<File Id="989765014" Language="SFX">
 							<ShortName>ParticleMove_ModularV3Mono.wav</ShortName>
-							<Path>SFX\ParticleMove_ModularV3Mono_10B84BD8.wem</Path>
+							<Path>SFX\ParticleMove_ModularV3Mono_CA7D0801.wem</Path>
 						</File>
 						<File Id="999587089" Language="SFX">
 							<ShortName>ParticleMove_ModularV3Mono.wav</ShortName>
-							<Path>SFX\ParticleMove_ModularV3Mono_38F00CF1.wem</Path>
+							<Path>SFX\ParticleMove_ModularV3Mono_687B3CED.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -292,55 +348,55 @@
 					<IncludedMemoryFiles>
 						<File Id="156361855" Language="SFX">
 							<ShortName>Rubber_Ball_ODC-0032-137.L.wav</ShortName>
-							<Path>SFX\Rubber_Ball_ODC-0032-137.L_C046D706.wem</Path>
+							<Path>SFX\Rubber_Ball_ODC-0032-137.L_4D0225B5.wem</Path>
 						</File>
 						<File Id="160542972" Language="SFX">
 							<ShortName>Rubber_Ball_ODC-0032-123.L.wav</ShortName>
-							<Path>SFX\Rubber_Ball_ODC-0032-123.L_83D0226D.wem</Path>
+							<Path>SFX\Rubber_Ball_ODC-0032-123.L_16F88FF8.wem</Path>
 						</File>
 						<File Id="186403411" Language="SFX">
 							<ShortName>Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_05-01.L.wav</ShortName>
-							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_05-01.L_DB69A837.wem</Path>
+							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_05-01.L_7C921ED8.wem</Path>
 						</File>
 						<File Id="312158753" Language="SFX">
 							<ShortName>wallhit_space.wav</ShortName>
-							<Path>SFX\wallhit_space_18E1DBD0.wem</Path>
+							<Path>SFX\wallhit_space_2BB9AFFD.wem</Path>
 						</File>
 						<File Id="477433340" Language="SFX">
 							<ShortName>wallhit_space.wav</ShortName>
-							<Path>SFX\wallhit_space_2C907AB4.wem</Path>
+							<Path>SFX\wallhit_space_B1E503CD.wem</Path>
 						</File>
 						<File Id="494296337" Language="SFX">
 							<ShortName>Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_03-01.L.wav</ShortName>
-							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_03-01.L_8D6707A0.wem</Path>
+							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_03-01.L_4F1D043D.wem</Path>
 						</File>
 						<File Id="575074549" Language="SFX">
 							<ShortName>Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_01-01.L.wav</ShortName>
-							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_01-01.L_06873FA5.wem</Path>
+							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_01-01.L_571FFC18.wem</Path>
 						</File>
 						<File Id="629711301" Language="SFX">
 							<ShortName>Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_02-01.L.wav</ShortName>
-							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_02-01.L_555F5F8A.wem</Path>
+							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_02-01.L_EC844711.wem</Path>
 						</File>
 						<File Id="665519226" Language="SFX">
 							<ShortName>wallhit_space.wav</ShortName>
-							<Path>SFX\wallhit_space_88A3AA9A.wem</Path>
+							<Path>SFX\wallhit_space_86C7B7D0.wem</Path>
 						</File>
 						<File Id="733038419" Language="SFX">
 							<ShortName>Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_04-01.L.wav</ShortName>
-							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_04-01.L_F7F2B03F.wem</Path>
+							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_04-01.L_8B508F1D.wem</Path>
 						</File>
 						<File Id="832301906" Language="SFX">
 							<ShortName>Rubber_Ball_ODC-0032-127.L.wav</ShortName>
-							<Path>SFX\Rubber_Ball_ODC-0032-127.L_BB91F169.wem</Path>
+							<Path>SFX\Rubber_Ball_ODC-0032-127.L_59B28657.wem</Path>
 						</File>
 						<File Id="860855702" Language="SFX">
 							<ShortName>Rubber_Ball_ODC-0032-125.L.wav</ShortName>
-							<Path>SFX\Rubber_Ball_ODC-0032-125.L_9151A402.wem</Path>
+							<Path>SFX\Rubber_Ball_ODC-0032-125.L_D7962D7B.wem</Path>
 						</File>
 						<File Id="1050436904" Language="SFX">
 							<ShortName>wallhit_space.wav</ShortName>
-							<Path>SFX\wallhit_space_618AB6AC.wem</Path>
+							<Path>SFX\wallhit_space_7D3A1D50.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
