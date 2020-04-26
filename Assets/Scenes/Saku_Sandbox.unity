@@ -1017,7 +1017,7 @@ PrefabInstance:
     - target: {fileID: 7510372055992168943, guid: b03a5c6abbb59a546a2ca2c6cb431371,
         type: 3}
       propertyPath: areaBallCost
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7510372055992168943, guid: b03a5c6abbb59a546a2ca2c6cb431371,
         type: 3}
@@ -1541,7 +1541,7 @@ PrefabInstance:
     - target: {fileID: 7510372055992168943, guid: b03a5c6abbb59a546a2ca2c6cb431371,
         type: 3}
       propertyPath: areaBallCost
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7510372055992168943, guid: b03a5c6abbb59a546a2ca2c6cb431371,
         type: 3}

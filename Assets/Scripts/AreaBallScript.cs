@@ -30,6 +30,12 @@ public class AreaBallScript : MonoBehaviour
 	[SerializeField]
 	Material p2Material;
 	
+	//Textures
+	[SerializeField]
+	Texture p1Texture;
+	[SerializeField]
+	Texture p2Texture;
+	
 	
 	//A temporary variable for Raycast Hits and a list for containing the distances them.
 	private RaycastHit2D tmpHit;
@@ -75,12 +81,16 @@ public class AreaBallScript : MonoBehaviour
 		
 		//Set the material of the mesh based on the player so it matches the material of the units
 		if (gameObject.transform.parent.tag == "Player1Owned"){
-			 gameObject.GetComponent<MeshRenderer>().material = p1Material;
-			 gameObject.layer = 14;
+			gameObject.GetComponent<MeshRenderer>().material = p1Material;
+			gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", p1Texture);
+			gameObject.GetComponent<MeshRenderer>().material.SetTexture("_BumpMap", p1Texture);
+			gameObject.layer = 14;
 		}
 		else{
-			 gameObject.GetComponent<MeshRenderer>().material = p2Material;
-			 gameObject.layer = 15;
+			gameObject.GetComponent<MeshRenderer>().material = p2Material;
+			gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", p2Texture);
+			gameObject.GetComponent<MeshRenderer>().material.SetTexture("_BumpMap", p2Texture);
+			gameObject.layer = 15;
 		}
 		
 		//If object is static the mesh and area only have to be checked once.
@@ -129,6 +139,15 @@ public class AreaBallScript : MonoBehaviour
 			//Add polygon collider to area control
 			PolygonCollider2D pc = gameObject.AddComponent(typeof(PolygonCollider2D)) as PolygonCollider2D;
 			pc.points = hitList;
+			
+			//if (gameObject.transform.parent.tag == "Player1Owned"){
+			//	gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", p1Texture);
+			//	gameObject.GetComponent<MeshRenderer>().material.SetTexture("_BumpMap", p1Texture);
+			//}
+			//else{
+			//	gameObject.GetComponent<MeshRenderer>().material.SetTexture("_MainTex", p2Texture);
+			//	gameObject.GetComponent<MeshRenderer>().material.SetTexture("_BumpMap", p2Texture);
+			//}
 		}
     }
 
