@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.113
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.117589496, g: 0.120661624, b: 0.11178755, a: 0.113}
+  m_IndirectSpecularColor: {r: 0.11758966, g: 0.12066171, b: 0.11178743, a: 0.113}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1099,6 +1099,11 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: b1cb922e2a23c5b44b59a0a9d720d203,
+      type: 2}
+  PlayAmbience:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d320a1ad89292d448992d7c9bc68c1a5,
       type: 2}
 --- !u!4 &701202429
 Transform:
@@ -3295,12 +3300,12 @@ PrefabInstance:
         type: 3}
       propertyPath: fillBar
       value: 
-      objectReference: {fileID: 2000085829}
+      objectReference: {fileID: 1071647369}
     - target: {fileID: 6480747458523221886, guid: a3d288fdd0665d84fbafd85223edd249,
         type: 3}
       propertyPath: areaBar
       value: 
-      objectReference: {fileID: 252250078}
+      objectReference: {fileID: 379247661}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3d288fdd0665d84fbafd85223edd249, type: 3}
 --- !u!1 &7510372055478178578 stripped
@@ -3346,12 +3351,12 @@ PrefabInstance:
         type: 3}
       propertyPath: fillBar
       value: 
-      objectReference: {fileID: 1071647369}
+      objectReference: {fileID: 2000085829}
     - target: {fileID: 1350507190751229353, guid: c8678f0fe1c7bdc4bbefcd62e1f58904,
         type: 3}
       propertyPath: areaBar
       value: 
-      objectReference: {fileID: 379247661}
+      objectReference: {fileID: 252250078}
     - target: {fileID: 1350507190751229354, guid: c8678f0fe1c7bdc4bbefcd62e1f58904,
         type: 3}
       propertyPath: m_LocalPosition.x

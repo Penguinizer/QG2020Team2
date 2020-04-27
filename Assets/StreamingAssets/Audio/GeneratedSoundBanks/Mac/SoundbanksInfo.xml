@@ -404,12 +404,8 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3626999974" Name="Start_Ambience" ObjectPath="\Events\Default Work Unit\Start_Ambience" GUID="{5D3B8510-84E2-45F2-970C-4EA813AB3F77}" DurationType="Infinite">
+				<Event Id="3626999974" Name="Start_Ambience" ObjectPath="\Events\Default Work Unit\Start_Ambience" GUID="{7215D484-78E9-436E-A21B-ED96AAA5FD3C}" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="201257056" Language="SFX">
-							<ShortName>QGTeam2_Music.wav</ShortName>
-							<Path>SFX\QGTeam2_Music_CB37816B.wem</Path>
-						</File>
 						<File Id="347985271" Language="SFX">
 							<ShortName>Metal_Synthetic_Ambience_Calm_Ominous_Eerie_SC_BM.586.wav</ShortName>
 							<Path>SFX\Metal_Synthetic_Ambience_Calm_Ominous_Eerie_SC_BM.586_C347298D.wem</Path>
@@ -417,6 +413,14 @@
 						<File Id="526652532" Language="SFX">
 							<ShortName>Space_Presence_ODY-0295-025.wav</ShortName>
 							<Path>SFX\Space_Presence_ODY-0295-025_C757FAC8.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="540993415" Name="Start_Music" ObjectPath="\Events\Default Work Unit\Start_Music" GUID="{5D3B8510-84E2-45F2-970C-4EA813AB3F77}" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="201257056" Language="SFX">
+							<ShortName>QGTeam2_Music.wav</ShortName>
+							<Path>SFX\QGTeam2_Music_CB37816B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

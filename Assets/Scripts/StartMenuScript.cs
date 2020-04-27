@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class StartMenuScript : MonoBehaviour
 {
@@ -33,26 +34,33 @@ public class StartMenuScript : MonoBehaviour
 		style.alignment = TextAnchor.MiddleCenter;
 		style.normal.textColor=Color.white;
     }
-	
-	void OnGUI(){
-		GUI.BeginGroup(new Rect((Screen.width/2)-300, (Screen.height/2)-300, 600, 600));
-		GUI.Box(new Rect(0,0,600,600), "Controls:");
-		GUI.Box(new Rect(0,0,600,200),controlIMG, style);
-		GUI.Box(new Rect(100,200,400,200),descriptionText,style);
-		
-		if(GUI.Button(new Rect(200, 400, 200, 100), "Press To Start Game")){
-            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwisePlayMusic();
-			unpausePlayers();
-			Destroy(gameObject);
-		}
-		if(GUI.Button(new Rect(200, 500, 200, 100), "Press To Exit Game")){
-			Application.Quit();
-		}
-		GUI.EndGroup();
-	}
 
-    // Update is called once per frame
-    void Update()
+    void OnGUI()
+    {
+        GUI.BeginGroup(new Rect((Screen.width / 2) - 300, (Screen.height / 2) - 300, 600, 600));
+        GUI.Box(new Rect(0, 0, 600, 600), "Controls:");
+        GUI.Box(new Rect(0, 0, 600, 200), controlIMG, style);
+        GUI.Box(new Rect(100, 200, 400, 200), descriptionText, style);
+
+        if (GUI.Button(new Rect(200, 400, 200, 100), "Press To Start Game"))
+        {
+            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwisePlayMusic();
+            unpausePlayers();
+            Destroy(gameObject);
+        }
+        if (GUI.Button(new Rect(100, 500, 150, 100), "Press To Exit Game"))
+        {
+            Application.Quit();
+        }
+        if (GUI.Button(new Rect(250, 500, 150, 100), "Press to Restart Game"))
+        {
+            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseStopMusic();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
+
+        // Update is called once per frame
+        void Update()
     {
         if (Input.GetButtonDown("Submit")){
 			unpausePlayers();

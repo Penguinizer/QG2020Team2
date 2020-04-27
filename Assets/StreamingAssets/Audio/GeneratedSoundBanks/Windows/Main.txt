@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	420808075	CollectPhoton			\Default Work Unit\CollectPhoton	
+	540993415	Start_Music			\Default Work Unit\Start_Music	
 	1543154663	PlusMinBall_Annihilation			\Default Work Unit\PlusMinBall_Annihilation	
 	1548417789	CharacterControl_Impulse			\Default Work Unit\CharacterControl_Impulse	
 	1819005792	ParticleMove			\Default Work Unit\ParticleMove	

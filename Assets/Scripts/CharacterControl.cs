@@ -217,7 +217,7 @@ public class CharacterControl : MonoBehaviour{
     // Update is called once per frame
     void Update(){
 		if (Input.GetButtonDown("MainMenu") & tag == "Player1Owned"){
-			Instantiate(mainMenu);
+            Instantiate(mainMenu);
 		}
 		if (gameIsUnpaused){
 			//Player Object Movement vector
