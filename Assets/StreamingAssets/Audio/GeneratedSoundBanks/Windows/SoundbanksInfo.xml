@@ -192,19 +192,19 @@
 					<IncludedMemoryFiles>
 						<File Id="526793258" Language="SFX">
 							<ShortName>AreaUnit AstralVoices-03.wav</ShortName>
-							<Path>SFX\AreaUnit AstralVoices-03_5334F033.wem</Path>
+							<Path>SFX\AreaUnit AstralVoices-03_30D5A0D4.wem</Path>
 						</File>
 						<File Id="667507286" Language="SFX">
 							<ShortName>AreaUnit AstralVoices-01.wav</ShortName>
-							<Path>SFX\AreaUnit AstralVoices-01_FB024116.wem</Path>
+							<Path>SFX\AreaUnit AstralVoices-01_7D6E2D7E.wem</Path>
 						</File>
 						<File Id="771306374" Language="SFX">
 							<ShortName>AreaUnit AstralVoices-05.wav</ShortName>
-							<Path>SFX\AreaUnit AstralVoices-05_FB737B5F.wem</Path>
+							<Path>SFX\AreaUnit AstralVoices-05_A0B3F127.wem</Path>
 						</File>
 						<File Id="1067801504" Language="SFX">
 							<ShortName>AreaUnit AstralVoices-06.wav</ShortName>
-							<Path>SFX\AreaUnit AstralVoices-06_90DF60D7.wem</Path>
+							<Path>SFX\AreaUnit AstralVoices-06_8F72414B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -212,7 +212,7 @@
 					<IncludedMemoryFiles>
 						<File Id="222781942" Language="SFX">
 							<ShortName>QGTeam2_Music_Ending-01.wav</ShortName>
-							<Path>SFX\QGTeam2_Music_Ending-01_1778BA6A.wem</Path>
+							<Path>SFX\QGTeam2_Music_Ending-01_193D8470.wem</Path>
 						</File>
 						<File Id="1010086558" Language="SFX">
 							<ShortName>Metal_String_Pluck_High_Tension_Twang_SC_BM.488-01.wav</ShortName>
