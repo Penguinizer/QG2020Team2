@@ -138,9 +138,10 @@ public class PhotonScript : MonoBehaviour{
 		tmpHit = Physics2D.Raycast(tmpLoc, vec2Angle, photonDistance);
 		if (tmpHit.collider != null){
 			if(tmpHit.collider.tag=="PosBall" | tmpHit.collider.tag=="MinusBall"){
-				//Give energy
-				tmpHit.collider.transform.parent.GetComponent<CharacterControl>().addEnergy();
-				//Reveal entangled particle opposite of gathered particle
+                gameObject.GetComponent<AudioManager>().PostWwiseRevelPhoton();
+                //Give energy
+                tmpHit.collider.transform.parent.GetComponent<CharacterControl>().addEnergy();
+                //Reveal entangled particle opposite of gathered particle              
 				GameObject obj = (GameObject) Instantiate(energyBall, tmpLoc + vec2Angle*photonDistance*-0.6f, Quaternion.identity);
 				obj.GetComponent<Rigidbody2D>().AddForce(vec2Angle*initialPhotonPush*-1, ForceMode2D.Impulse);
 				Destroy(gameObject);

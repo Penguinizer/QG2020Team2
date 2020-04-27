@@ -6,6 +6,7 @@ using System;
 
 public class StartMenuScript : MonoBehaviour
 {
+
 	[SerializeField]
 	private Texture controlImage;
 
@@ -40,6 +41,7 @@ public class StartMenuScript : MonoBehaviour
 		GUI.Box(new Rect(100,200,400,200),descriptionText,style);
 		
 		if(GUI.Button(new Rect(200, 400, 200, 100), "Press To Start Game")){
+            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwisePlayMusic();
 			unpausePlayers();
 			Destroy(gameObject);
 		}

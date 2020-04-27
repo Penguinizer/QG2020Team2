@@ -15,6 +15,8 @@ public class AudioManager : MonoBehaviour
     public AK.Wwise.Event WallCollision;
     public AK.Wwise.Event CreatePlusMin;
     public AK.Wwise.Event CreateTerritory;
+    public AK.Wwise.Event RevealPhoton;
+    public AK.Wwise.Event CollectPhoton;
 
     public AK.Wwise.RTPC particleSpeed;
 
@@ -77,5 +79,15 @@ public class AudioManager : MonoBehaviour
     public void PostWwiseCreateTerritory()
     {
         CreateTerritory.Post(gameObject);
+    }
+
+    public void PostWwiseRevelPhoton()
+    {
+        RevealPhoton.Post(gameObject);
+    }
+
+    public void PostWwiseCollectPhoton()
+    {
+        CollectPhoton.Post(gameObject);
     }
 }

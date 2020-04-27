@@ -88,39 +88,95 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2454750719" Name="CreatePlusMin" ObjectPath="\Events\Default Work Unit\CreatePlusMin" GUID="{F8267CFB-E37D-43D9-B798-0DD56D67E169}" DurationType="OneShot" DurationMin="4.953458" DurationMax="7.395792">
+				<Event Id="420808075" Name="CollectPhoton" ObjectPath="\Events\Default Work Unit\CollectPhoton" GUID="{942BC8B5-C656-4D05-9948-772ED7C13455}" DurationType="OneShot" DurationMin="2.809083" DurationMax="5.403438">
 					<IncludedMemoryFiles>
-						<File Id="89498750" Language="SFX">
-							<ShortName>PlusMin_Note 4.wav</ShortName>
-							<Path>SFX\PlusMin_Note 4_10C4C929.wem</Path>
+						<File Id="203511670" Language="SFX">
+							<ShortName>CollectPhoton_Sparkle 7.wav</ShortName>
+							<Path>SFX\CollectPhoton_Sparkle 7_10C4C929.wem</Path>
 						</File>
-						<File Id="155818264" Language="SFX">
-							<ShortName>PlusMin_Note 5.wav</ShortName>
-							<Path>SFX\PlusMin_Note 5_10C4C929.wem</Path>
+						<File Id="213590152" Language="SFX">
+							<ShortName>CollectPhoton_Sparkle 10.wav</ShortName>
+							<Path>SFX\CollectPhoton_Sparkle 10_10C4C929.wem</Path>
 						</File>
-						<File Id="191290918" Language="SFX">
-							<ShortName>PlusMin_Note 6.wav</ShortName>
-							<Path>SFX\PlusMin_Note 6_10C4C929.wem</Path>
+						<File Id="243613298" Language="SFX">
+							<ShortName>CollectPhoton_Sparkle 5.wav</ShortName>
+							<Path>SFX\CollectPhoton_Sparkle 5_10C4C929.wem</Path>
 						</File>
-						<File Id="236726741" Language="SFX">
-							<ShortName>PlusMin_Note 8.wav</ShortName>
-							<Path>SFX\PlusMin_Note 8_10C4C929.wem</Path>
+						<File Id="341342899" Language="SFX">
+							<ShortName>CollectPhoton_Sparkle 8.wav</ShortName>
+							<Path>SFX\CollectPhoton_Sparkle 8_10C4C929.wem</Path>
 						</File>
-						<File Id="417122594" Language="SFX">
-							<ShortName>PlusMin_Note 3.wav</ShortName>
-							<Path>SFX\PlusMin_Note 3_10C4C929.wem</Path>
+						<File Id="367426260" Language="SFX">
+							<ShortName>CollectPhoton_Sparkle 6.wav</ShortName>
+							<Path>SFX\CollectPhoton_Sparkle 6_10C4C929.wem</Path>
 						</File>
-						<File Id="721085955" Language="SFX">
-							<ShortName>PlusMin_Note 1.wav</ShortName>
-							<Path>SFX\PlusMin_Note 1_10C4C929.wem</Path>
+						<File Id="387747262" Language="SFX">
+							<ShortName>CollectPhoton_Sparkle 2.wav</ShortName>
+							<Path>SFX\CollectPhoton_Sparkle 2_10C4C929.wem</Path>
 						</File>
-						<File Id="941512419" Language="SFX">
-							<ShortName>PlusMin_Note 7.wav</ShortName>
-							<Path>SFX\PlusMin_Note 7_10C4C929.wem</Path>
+						<File Id="559169585" Language="SFX">
+							<ShortName>CollectPhoton_Sparkle 3.wav</ShortName>
+							<Path>SFX\CollectPhoton_Sparkle 3_10C4C929.wem</Path>
 						</File>
-						<File Id="1034111376" Language="SFX">
-							<ShortName>PlusMin_Note 2.wav</ShortName>
-							<Path>SFX\PlusMin_Note 2_10C4C929.wem</Path>
+						<File Id="562985988" Language="SFX">
+							<ShortName>CollectPhoton_Sparkle 1.wav</ShortName>
+							<Path>SFX\CollectPhoton_Sparkle 1_10C4C929.wem</Path>
+						</File>
+						<File Id="623541335" Language="SFX">
+							<ShortName>CollectPhoton_Sparkle 4.wav</ShortName>
+							<Path>SFX\CollectPhoton_Sparkle 4_10C4C929.wem</Path>
+						</File>
+						<File Id="948669572" Language="SFX">
+							<ShortName>CollectPhoton_Sparkle 9.wav</ShortName>
+							<Path>SFX\CollectPhoton_Sparkle 9_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2454750719" Name="CreatePlusMin" ObjectPath="\Events\Default Work Unit\CreatePlusMin" GUID="{F8267CFB-E37D-43D9-B798-0DD56D67E169}" DurationType="OneShot" DurationMin="4.640812" DurationMax="9.368063">
+					<IncludedMemoryFiles>
+						<File Id="44388723" Language="SFX">
+							<ShortName>CreatePlusMinus_Note2-11.wav</ShortName>
+							<Path>SFX\CreatePlusMinus_Note2-11_10C4C929.wem</Path>
+						</File>
+						<File Id="93560203" Language="SFX">
+							<ShortName>CreatePlusMinus_Note2-13.wav</ShortName>
+							<Path>SFX\CreatePlusMinus_Note2-13_10C4C929.wem</Path>
+						</File>
+						<File Id="122407967" Language="SFX">
+							<ShortName>CreatePlusMinus_Note2-02.wav</ShortName>
+							<Path>SFX\CreatePlusMinus_Note2-02_10C4C929.wem</Path>
+						</File>
+						<File Id="138297185" Language="SFX">
+							<ShortName>CreatePlusMinus_Note2-21.wav</ShortName>
+							<Path>SFX\CreatePlusMinus_Note2-21_10C4C929.wem</Path>
+						</File>
+						<File Id="260987788" Language="SFX">
+							<ShortName>CreatePlusMinus_Note2-04.wav</ShortName>
+							<Path>SFX\CreatePlusMinus_Note2-04_10C4C929.wem</Path>
+						</File>
+						<File Id="539330939" Language="SFX">
+							<ShortName>CreatePlusMinus_Note2-15.wav</ShortName>
+							<Path>SFX\CreatePlusMinus_Note2-15_10C4C929.wem</Path>
+						</File>
+						<File Id="684581168" Language="SFX">
+							<ShortName>CreatePlusMinus_Note2-22.wav</ShortName>
+							<Path>SFX\CreatePlusMinus_Note2-22_10C4C929.wem</Path>
+						</File>
+						<File Id="721607294" Language="SFX">
+							<ShortName>CreatePlusMinus_Note2-06.wav</ShortName>
+							<Path>SFX\CreatePlusMinus_Note2-06_10C4C929.wem</Path>
+						</File>
+						<File Id="779271310" Language="SFX">
+							<ShortName>CreatePlusMinus_Note2-19.wav</ShortName>
+							<Path>SFX\CreatePlusMinus_Note2-19_10C4C929.wem</Path>
+						</File>
+						<File Id="935819679" Language="SFX">
+							<ShortName>CreatePlusMinus_Note2-17.wav</ShortName>
+							<Path>SFX\CreatePlusMinus_Note2-17_10C4C929.wem</Path>
+						</File>
+						<File Id="1062060306" Language="SFX">
+							<ShortName>CreatePlusMinus_Note2-09.wav</ShortName>
+							<Path>SFX\CreatePlusMinus_Note2-09_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -325,6 +381,26 @@
 						<File Id="1069620099" Language="SFX">
 							<ShortName>Stun_Gun_Suck_Ricochets_ODY-1275-109.wav</ShortName>
 							<Path>SFX\Stun_Gun_Suck_Ricochets_ODY-1275-109_C347298D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3333144297" Name="RevelPhoton" ObjectPath="\Events\Default Work Unit\RevelPhoton" GUID="{112C5DC5-41B9-4C0F-AE43-7D7158726E48}" DurationType="OneShot" DurationMin="12.559792" DurationMax="16.250000">
+					<IncludedMemoryFiles>
+						<File Id="58886535" Language="SFX">
+							<ShortName>PhotonRevealed_Chord 3.wav</ShortName>
+							<Path>SFX\PhotonRevealed_Chord 3_10C4C929.wem</Path>
+						</File>
+						<File Id="217052163" Language="SFX">
+							<ShortName>PhotonRevealed_Chord 1.wav</ShortName>
+							<Path>SFX\PhotonRevealed_Chord 1_10C4C929.wem</Path>
+						</File>
+						<File Id="231476937" Language="SFX">
+							<ShortName>PhotonRevealed_Chord 4.wav</ShortName>
+							<Path>SFX\PhotonRevealed_Chord 4_10C4C929.wem</Path>
+						</File>
+						<File Id="570210784" Language="SFX">
+							<ShortName>PhotonRevealed_Chord 2.wav</ShortName>
+							<Path>SFX\PhotonRevealed_Chord 2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

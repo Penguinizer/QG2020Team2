@@ -9,12 +9,17 @@ public class MusicPlayer : MonoBehaviour
     public AK.Wwise.Event PlayMusic;
     void Start()
     {
-        PlayMusic.Post(gameObject);
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void PostWwisePlayMusic()
+    {
+        PlayMusic.Post(gameObject);
     }
 }
