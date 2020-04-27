@@ -39,8 +39,10 @@ public class PhotonScript : MonoBehaviour{
 	private float photonDistance;
 	
 	private LayerMask wallMask;
-	
-	private IEnumerator photonRandomizer(){
+
+    private int rndNum;
+
+    private IEnumerator photonRandomizer(){
 		while(true){
 			yield return new WaitForSeconds(0.5f);
 			randomRaycastSpoke = UnityEngine.Random.Range(0,photonRaycastTrajectorySpokes);
@@ -137,14 +139,19 @@ public class PhotonScript : MonoBehaviour{
 		vec2Angle.Normalize();
 		tmpHit = Physics2D.Raycast(tmpLoc, vec2Angle, photonDistance);
 		if (tmpHit.collider != null){
-			if(tmpHit.collider.tag=="PosBall" | tmpHit.collider.tag=="MinusBall"){
-                gameObject.GetComponent<AudioManager>().PostWwiseRevelPhoton();
-                //Give energy
-                tmpHit.collider.transform.parent.GetComponent<CharacterControl>().addEnergy();
-                //Reveal entangled particle opposite of gathered particle              
-				GameObject obj = (GameObject) Instantiate(energyBall, tmpLoc + vec2Angle*photonDistance*-0.6f, Quaternion.identity);
-				obj.GetComponent<Rigidbody2D>().AddForce(vec2Angle*initialPhotonPush*-1, ForceMode2D.Impulse);
-				Destroy(gameObject);
+            rndNum = UnityEngine.Random.Range(1, 3);
+            if(rndNum <= 1)
+             {
+                if (tmpHit.collider.tag == "PosBall" | tmpHit.collider.tag == "MinusBall")
+                {
+                    gameObject.GetComponent<AudioManager>().PostWwiseRevelPhoton();
+                    //Give energy
+                    tmpHit.collider.transform.parent.GetComponent<CharacterControl>().addEnergy();
+                    //Reveal entangled particle opposite of gathered particle              
+                    GameObject obj = (GameObject)Instantiate(energyBall, tmpLoc + vec2Angle * photonDistance * -0.6f, Quaternion.identity);
+                    obj.GetComponent<Rigidbody2D>().AddForce(vec2Angle * initialPhotonPush * -1, ForceMode2D.Impulse);
+                    Destroy(gameObject);
+                }
 			}
 		}
     }

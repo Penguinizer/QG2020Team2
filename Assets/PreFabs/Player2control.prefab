@@ -75,7 +75,7 @@ MonoBehaviour:
   impulseDistance: 5
   impulseForce: 7
   impulseCooldown: 1
-  createCooldown: 0.1
+  createCooldown: 0.3
   P1PosPrefab: {fileID: 7625452397344959228, guid: 13b093eecfb56b84ab47a14fae31a14b,
     type: 3}
   P1MinPrefab: {fileID: 2511316111756870789, guid: 376b73b218c4c744c9fb33862de50d70,
@@ -84,7 +84,7 @@ MonoBehaviour:
     type: 3}
   P2MinPrefab: {fileID: 5516309980751413389, guid: 9ecf97549fe02ba4dbd21b2d8ef7572f,
     type: 3}
-  energyOnPickup: 20
+  energyOnPickup: 15
   startingEnergy: 0
   areaBallCost: 50
   AreaBallPrefab: {fileID: 6141130091478619759, guid: 0d184c65417bb174ebc5531b6c3c979f,

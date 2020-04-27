@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de43ab87ecfe42f428dc6835c76c7428, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlRadius: 2
-  amountOfRaycastSpokes: 20
+  controlRadius: 2.5
+  amountOfRaycastSpokes: 30
   allowOverlapBetweenControlAreas: 1
   isStatic: 1
   p1Material: {fileID: 2100000, guid: 4cdde3427c58a3d46b78cd185c0640a2, type: 2}

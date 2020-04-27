@@ -91,13 +91,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c320afa7450094d41a8b5dfc4657446e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  photonRaycastTrajectorySpokes: 11
-  photonSpeed: 0.2
-  photonMaxDistance: 3
+  photonRaycastTrajectorySpokes: 30
+  photonSpeed: 0.1
+  photonMaxDistance: 5
   energyBall: {fileID: 6808098466707770467, guid: 5759e9af9b8a6dd43b08939213a96d78,
     type: 3}
-  initialPhotonDistance: 1
-  initialPhotonPush: 1
+  initialPhotonDistance: 3
+  initialPhotonPush: 0.5
 --- !u!114 &114111633817481976
 MonoBehaviour:
   m_ObjectHideFlags: 0
