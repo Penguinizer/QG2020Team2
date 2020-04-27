@@ -216,7 +216,9 @@ public class CharacterControl : MonoBehaviour{
 
     // Update is called once per frame
     void Update(){
-		if (Input.GetButtonDown("MainMenu") & tag == "Player1Owned"){
+		if (Input.GetButtonDown("MainMenu") & tag == "Player1Owned" & gameIsUnpaused)
+        {
+            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseStopMusic();
             Instantiate(mainMenu);
 		}
 		if (gameIsUnpaused){

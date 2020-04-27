@@ -54,9 +54,10 @@ public class StartMenuScript : MonoBehaviour
         }
         if (GUI.Button(new Rect(300, 500, 150, 100), "Press to Restart Game"))
         {
-            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseStopMusic();
+            
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        GUI.EndGroup();
     }
 
         // Update is called once per frame

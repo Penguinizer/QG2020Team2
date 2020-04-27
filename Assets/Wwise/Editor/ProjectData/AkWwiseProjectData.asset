@@ -51,7 +51,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: 79d8ae792bd85641a7f745a1908fe8f2
     GuidInternal: 
-    m_lastTime: -8586137171951323700
+    m_lastTime: -8586136200705045402
     List:
     - name: Main
       guid: 9e12ad08d9bc6f468866eb1efb37bfc8
@@ -67,7 +67,7 @@ MonoBehaviour:
     ParentPath: Default Work Unit
     guid: b4c86fa16aad31488415514b00834156
     GuidInternal: 
-    m_lastTime: -8586137171951443633
+    m_lastTime: -8586136136307752501
     List:
     - name: CharacterControl_Impulse
       guid: 0b030670bd42674a888d7b5c8d0af13e
@@ -81,6 +81,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: CollectPhoton
+      guid: b5c82b9456c6054d9948772ed7c13455
+      id: 420808075
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CollectPhoton
+        ObjectType: 3
+      Path: Default Work Unit\CollectPhoton
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: CreatePlusMin
       guid: fb7c26f87de3d943b7980dd56d67e169
       id: 2454750719
@@ -90,6 +102,18 @@ MonoBehaviour:
       - ElementName: CreatePlusMin
         ObjectType: 3
       Path: Default Work Unit\CreatePlusMin
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: CreateTerritory
+      guid: 3d1f12ed9ced82429198b6160ee4697c
+      id: 1823101429
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CreateTerritory
+        ObjectType: 3
+      Path: Default Work Unit\CreateTerritory
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -129,8 +153,20 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: RevelPhoton
+      guid: c55d2c11b9410f4cae437d7158726e48
+      id: 3333144297
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: RevelPhoton
+        ObjectType: 3
+      Path: Default Work Unit\RevelPhoton
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Start_Ambience
-      guid: 10853b5de284f245970c4ea813ab3f77
+      guid: 84d41572e9786e43a21bed96aaa5fd3c
       id: 3626999974
       PathAndIcons:
       - ElementName: Default Work Unit
@@ -138,6 +174,42 @@ MonoBehaviour:
       - ElementName: Start_Ambience
         ObjectType: 3
       Path: Default Work Unit\Start_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Start_Music
+      guid: 10853b5de284f245970c4ea813ab3f77
+      id: 540993415
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Start_Music
+        ObjectType: 3
+      Path: Default Work Unit\Start_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Ambience
+      guid: 34cc09ba61af50438bf8c50909c363ca
+      id: 2477713992
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Ambience
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Ambience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Music
+      guid: 198d28082dbc0a43838d457bee72af0c
+      id: 2837384057
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Music
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1

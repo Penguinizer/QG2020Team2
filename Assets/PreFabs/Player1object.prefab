@@ -134,7 +134,7 @@ MonoBehaviour:
   AreaBallPrefab: {fileID: 6141130091478619759, guid: 0d184c65417bb174ebc5531b6c3c979f,
     type: 3}
   posMinBallCost: 10
-  areaToCoverToWin: 200
+  areaToCoverToWin: 100
   passiveEnergyPerSecond: 0.5
   energyText: {fileID: 0}
   areaText: {fileID: 0}
@@ -230,6 +230,14 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 11ed36adc984e2743847fe4f3334a0fe,
       type: 2}
+  RevealPhoton:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  CollectPhoton:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   particleSpeed:
     idInternal: 0
     valueGuidInternal: 
