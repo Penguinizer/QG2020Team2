@@ -216,4 +216,10 @@ QualitySettings:
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
     excludedTargetPlatforms: []
-  m_PerPlatformDefaultQuality: {}
+  m_PerPlatformDefaultQuality:
+    Android: 3
+    Standalone: 3
+    WebGL: 3
+    Windows Store Apps: 3
+    iPhone: 3
+    tvOS: 3

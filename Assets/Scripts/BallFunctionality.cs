@@ -51,31 +51,31 @@ public class BallFunctionality : MonoBehaviour{
     // Update is called once per frame
     void Update(){
         // Code for pushing balls away from mouse when mouse is pressed.
-        if (Input.GetMouseButtonDown(0)){
-			foreach (string inputString in thingsToImpulse){
-				foreach (GameObject ball in GameObject.FindGameObjectsWithTag(inputString)){
+        //if (Input.GetMouseButtonDown(0)){
+			//foreach (string inputString in thingsToImpulse){
+				//foreach (GameObject ball in GameObject.FindGameObjectsWithTag(inputString)){
 					//Get mouse position, use to calculation vector from mouse to sphere.
-					var v3 = Input.mousePosition;
-					v3.z = 10;
-					mousePos = Camera.main.ScreenToWorldPoint(v3);
-					ballPos = new Vector3(ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y, 0);
-					impForceDir = ballPos - mousePos;
+					//var v3 = Input.mousePosition;
+					//v3.z = 10;
+					//mousePos = Camera.main.ScreenToWorldPoint(v3);
+					//ballPos = new Vector3(ball.GetComponent<Rigidbody2D>().position.x, ball.GetComponent<Rigidbody2D>().position.y, 0);
+					//impForceDir = ballPos - mousePos;
 					//Normalize vector to avoid fuckery
-					impForceDir.Normalize();
+					//impForceDir.Normalize();
 					//Multiply direction with force to get force vector
-					impForce = impForceDir * (float)(impulseForce / Math.Pow(powerBase, Vector3.Distance(mousePos, ballPos)));
+					//impForce = impForceDir * (float)(impulseForce / Math.Pow(powerBase, Vector3.Distance(mousePos, ballPos)));
 					//impForce = impForceDir * impulseForce;
 					//print ("impulseForce:" + impulseForce);
 					//print ("iimpForceDir:" + impForceDir);
 					//print("impforce:" + impForce);
 					//print(Vector3.Distance(upMousePos,ballPos));
 					//Apply impulse to sphere
-					if (Vector3.Distance(mousePos, ballPos) < impulseDistance){
-                    ball.GetComponent<Rigidbody2D>().AddForce(impForce, ForceMode2D.Impulse);
-					}
-                }
-            }
-        }
+					//if (Vector3.Distance(mousePos, ballPos) < impulseDistance){
+                    //ball.GetComponent<Rigidbody2D>().AddForce(impForce, ForceMode2D.Impulse);
+					//}
+                //}
+           // }
+      //  }
         //Balls of the same type repel and different types pull eachother
 		foreach (string inputString in thingsToImpulse){
 			foreach (GameObject ball in GameObject.FindGameObjectsWithTag(inputString)){
