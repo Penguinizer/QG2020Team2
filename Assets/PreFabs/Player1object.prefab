@@ -101,7 +101,6 @@ MonoBehaviour:
     type: 3}
   ffToggle: 1
   isUnit: 0
-  isController: 1
 --- !u!114 &7510372055992168943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,8 +133,8 @@ MonoBehaviour:
   AreaBallPrefab: {fileID: 6141130091478619759, guid: 0d184c65417bb174ebc5531b6c3c979f,
     type: 3}
   posMinBallCost: 10
-  areaToCoverToWin: 100
-  passiveEnergyPerSecond: 0.5
+  areaToCoverToWin: 16.2
+  passiveEnergyPerSecond: 61.65
   energyText: {fileID: 0}
   areaText: {fileID: 0}
   winText: {fileID: 0}

@@ -61,6 +61,8 @@ public class CharacterControl : MonoBehaviour{
 	[SerializeField]
 	GameObject mainMenu;
 
+    GameObject musicPlayer;
+
 	private bool gameIsUnpaused;
 	
 	private float myTime = 0.0f;
@@ -157,6 +159,8 @@ public class CharacterControl : MonoBehaviour{
 		
 		//Start the energy regen routine
 		StartCoroutine("EnergyPerSecond");
+
+        musicPlayer = GameObject.Find("MusicPlayer");
     }
 	
 	//Coroutine for checking the winner
@@ -177,16 +181,17 @@ public class CharacterControl : MonoBehaviour{
 			
 				//Check for win, if not reset temp variable.
 				if(tempArea >= areaToCoverToWin){
-                    GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseEndGame();
+                    musicPlayer.GetComponent<MusicPlayer>().PostWwiseEndGame();
+                    musicPlayer.GetComponent<MusicPlayer>().PostWwisePlayAmbience();
                     isWinner = true;
 					//print(gameObject.tag + " WINS");
 				
 					if (gameObject.tag == "Player1Owned"){
 						//Set win text, wait for 2 seconds and reload scene.
-						winText.text = "Player 1 Wins";
+						winText.text = "Player 2 Wins";
 					}
 					else{
-						winText.text = "Player 2 Wins";
+						winText.text = "Player 1 Wins";
 					}
 					tempArea = 0;
 					yield return new WaitForSeconds(timeBeforeReset);
@@ -219,7 +224,8 @@ public class CharacterControl : MonoBehaviour{
     void Update(){
 		if (Input.GetButtonDown("MainMenu") & tag == "Player1Owned" & gameIsUnpaused)
         {
-            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseStopMusic();
+            musicPlayer.GetComponent<MusicPlayer>().PostWwisePlayAmbience();
+            musicPlayer.GetComponent<MusicPlayer>().PostWwiseStopMusic();
             Instantiate(mainMenu);
 		}
 		if (gameIsUnpaused){

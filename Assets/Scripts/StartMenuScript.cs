@@ -15,6 +15,8 @@ public class StartMenuScript : MonoBehaviour
 	private GUIContent controlIMG;
 	private GUIContent descriptionText;
 	private GUIStyle style = new GUIStyle();
+
+    GameObject musicPlayer;
 	
 	void unpausePlayers(){
 		GameObject.FindWithTag("Player1Owned").GetComponent<CharacterControl>().unpausePlayer();
@@ -29,10 +31,13 @@ public class StartMenuScript : MonoBehaviour
     void Start()
     {
 		pausePlayers();
-		descriptionText = new GUIContent("\nEscape to re-open this menu and pause \n\n The goal of the game is to gather photons created by annihilating particles to gain energy.\n This energy is used to create area control particles. Create enough area control particles to win.\n\n Annihilations create two entangled photons which we do not know the location of.\n Your particles can gather these photons by colliding into them in the area.\n When you collide with a photon the entangled photon's location is also revealed.");
+		descriptionText = new GUIContent("\n ESC to open menu \n\n The goal of the game is to gather photons created by annihilation of particles. \n Annihilation happens when particles of different form and color collide. \n By collecting photons you gain energy which is used to create more particles. \n Create enough control enough area to win.\n\n Annihilations create two entangled photons which we do not know the location of.\n Your particles can gather these photons by colliding into them in the set area.\n When you collide with a photon the entangled photon's location is also revealed. \n\n Make impulses to move particles around.");
 		controlIMG = new GUIContent(controlImage);
 		style.alignment = TextAnchor.MiddleCenter;
 		style.normal.textColor=Color.white;
+
+        musicPlayer = GameObject.Find("MusicPlayer");
+
     }
 
     void OnGUI()
@@ -44,20 +49,24 @@ public class StartMenuScript : MonoBehaviour
 
         if (GUI.Button(new Rect(200, 400, 200, 100), "Press To Start Game"))
         {
-            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseClickMenuItem();
-            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseStartGame();
-            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwisePlayMusic();
+            musicPlayer.GetComponent<MusicPlayer>().PostWwiseClickMenuItem();
+            musicPlayer.GetComponent<MusicPlayer>().PostWwiseStartGame();
+            musicPlayer.GetComponent<MusicPlayer>().PostWwisePlayMusic();
+            musicPlayer.GetComponent<MusicPlayer>().PostWwiseStopAmbience();
+
             unpausePlayers();
             Destroy(gameObject);
         }
         if (GUI.Button(new Rect(150, 500, 150, 100), "Press To Exit Game"))
         {
-            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseClickMenuItem();
+            musicPlayer.GetComponent<MusicPlayer>().PostWwiseClickMenuItem();
+
             Application.Quit();
         }
         if (GUI.Button(new Rect(300, 500, 150, 100), "Press to Restart Game"))
         {
-            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseClickMenuItem();
+            musicPlayer.GetComponent<MusicPlayer>().PostWwiseClickMenuItem();
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         GUI.EndGroup();

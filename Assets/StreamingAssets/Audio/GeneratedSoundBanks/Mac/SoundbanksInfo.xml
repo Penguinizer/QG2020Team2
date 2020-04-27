@@ -188,23 +188,23 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1823101429" Name="CreateTerritory" ObjectPath="\Events\Default Work Unit\CreateTerritory" GUID="{ED121F3D-ED9C-4282-9198-B6160EE4697C}" DurationType="OneShot" DurationMin="14.101334" DurationMax="16.431999">
+				<Event Id="1823101429" Name="CreateTerritory" ObjectPath="\Events\Default Work Unit\CreateTerritory" GUID="{ED121F3D-ED9C-4282-9198-B6160EE4697C}" DurationType="OneShot" DurationMin="13.471376" DurationMax="16.000000">
 					<IncludedMemoryFiles>
 						<File Id="526793258" Language="SFX">
 							<ShortName>AreaUnit AstralVoices-03.wav</ShortName>
-							<Path>SFX\AreaUnit AstralVoices-03_10C4C929.wem</Path>
+							<Path>SFX\AreaUnit AstralVoices-03_5334F033.wem</Path>
 						</File>
 						<File Id="667507286" Language="SFX">
 							<ShortName>AreaUnit AstralVoices-01.wav</ShortName>
-							<Path>SFX\AreaUnit AstralVoices-01_10C4C929.wem</Path>
+							<Path>SFX\AreaUnit AstralVoices-01_FB024116.wem</Path>
 						</File>
 						<File Id="771306374" Language="SFX">
 							<ShortName>AreaUnit AstralVoices-05.wav</ShortName>
-							<Path>SFX\AreaUnit AstralVoices-05_10C4C929.wem</Path>
+							<Path>SFX\AreaUnit AstralVoices-05_FB737B5F.wem</Path>
 						</File>
 						<File Id="1067801504" Language="SFX">
 							<ShortName>AreaUnit AstralVoices-06.wav</ShortName>
-							<Path>SFX\AreaUnit AstralVoices-06_10C4C929.wem</Path>
+							<Path>SFX\AreaUnit AstralVoices-06_90DF60D7.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -212,7 +212,7 @@
 					<IncludedMemoryFiles>
 						<File Id="222781942" Language="SFX">
 							<ShortName>QGTeam2_Music_Ending-01.wav</ShortName>
-							<Path>SFX\QGTeam2_Music_Ending-01_0D01859B.wem</Path>
+							<Path>SFX\QGTeam2_Music_Ending-01_1778BA6A.wem</Path>
 						</File>
 						<File Id="1010086558" Language="SFX">
 							<ShortName>Metal_String_Pluck_High_Tension_Twang_SC_BM.488-01.wav</ShortName>
@@ -463,10 +463,6 @@
 						<File Id="160542972" Language="SFX">
 							<ShortName>Rubber_Ball_ODC-0032-123.L.wav</ShortName>
 							<Path>SFX\Rubber_Ball_ODC-0032-123.L_16F88FF8.wem</Path>
-						</File>
-						<File Id="186403411" Language="SFX">
-							<ShortName>Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_05-01.L.wav</ShortName>
-							<Path>SFX\Sheet_Metal_Pluck_Twang_Vibrate_Spring_KCV1-Ringmod_05-01.L_7C921ED8.wem</Path>
 						</File>
 						<File Id="312158753" Language="SFX">
 							<ShortName>wallhit_space.wav</ShortName>

@@ -82,7 +82,6 @@ MonoBehaviour:
     type: 3}
   ffToggle: 0
   isUnit: 1
-  isController: 0
 --- !u!114 &3649336612840617836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +121,22 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 167bf724b68c8044389b23311342203e,
       type: 2}
+  CreatePlusMin:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  CreateTerritory:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  RevealPhoton:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  CollectPhoton:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   particleSpeed:
     idInternal: 0
     valueGuidInternal: 
@@ -169,9 +184,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 2.46
-  m_SpotAngle: 31.73
+  m_Intensity: 2.67
+  m_Range: 2.88
+  m_SpotAngle: 41
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0

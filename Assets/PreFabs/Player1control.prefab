@@ -59,7 +59,6 @@ MonoBehaviour:
   impulseParticles: {fileID: 648061766018728060}
   ffToggle: 1
   isUnit: 0
-  isController: 1
 --- !u!114 &6480747458523221886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,11 +92,11 @@ MonoBehaviour:
     type: 3}
   posMinBallCost: 10
   areaToCoverToWin: 200
-  passiveEnergyPerSecond: 1
+  passiveEnergyPerSecond: 0.5
   energyText: {fileID: 0}
   areaText: {fileID: 0}
   winText: {fileID: 0}
-  timeBeforeReset: 5
+  timeBeforeReset: 10
   startGamePaused: 1
   maxEnergy: 200
   fillBar: {fileID: 0}

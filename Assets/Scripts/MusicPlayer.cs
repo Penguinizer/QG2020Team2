@@ -17,13 +17,20 @@ public class MusicPlayer : MonoBehaviour
 
     void Start()
     {
-        PlayAmbience.Post(gameObject);
+        PostWwisePlayAmbience();
     }
+
+
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void PostWwisePlayAmbience()
+    {
+        PlayAmbience.Post(gameObject);
     }
 
     public void PostWwisePlayMusic()

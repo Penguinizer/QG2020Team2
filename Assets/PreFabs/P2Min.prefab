@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4208408060736864068
+--- !u!1 &3798814536429493444
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,43 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3423475008941741431}
-  - component: {fileID: 6712584332452053341}
-  m_Layer: 13
+  - component: {fileID: 8042902712680568779}
+  - component: {fileID: 349097007247773635}
+  m_Layer: 12
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3423475008941741431
+--- !u!4 &8042902712680568779
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4208408060736864068}
+  m_GameObject: {fileID: 3798814536429493444}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -7.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5516309980751413384}
+  m_Father: {fileID: 3532267246938748995}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &6712584332452053341
+--- !u!108 &349097007247773635
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4208408060736864068}
+  m_GameObject: {fileID: 3798814536429493444}
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 2.46
-  m_SpotAngle: 31.73
+  m_Intensity: 2.67
+  m_Range: 2.88
+  m_SpotAngle: 41
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -180,6 +180,14 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  RevealPhoton:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  CollectPhoton:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
   particleSpeed:
     idInternal: 0
     valueGuidInternal: 
@@ -203,7 +211,6 @@ MonoBehaviour:
     type: 3}
   ffToggle: 0
   isUnit: 1
-  isController: 0
 --- !u!1001 &3533867068291386479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -406,6 +413,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1a754ee911c021f408022516e8bd4d01, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9f3cc968bdb1cd4d800ee747b078afc, type: 3}
+--- !u!4 &3532267246938748995 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4489549471446060, guid: a9f3cc968bdb1cd4d800ee747b078afc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3533867068291386479}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4070381972405768123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -451,7 +464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a8bd1ad75247c24883c919ce190d7cd, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a8bd1ad75247c24883c919ce190d7cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
