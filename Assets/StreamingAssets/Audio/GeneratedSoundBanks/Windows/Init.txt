@@ -5,6 +5,9 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	4041660465	SpaceReverb			\Default Work Unit\Master Audio Bus\SpaceReverb	
 
 Effect plug-ins	ID	Name	Type				Notes
+	299307467	Wwise_Peak_Limiter_(Custom)	Wwise Peak Limiter			
+	304114135	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
+	996301304	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
 	3900114836	Metal_Hangar	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes

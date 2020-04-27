@@ -11,7 +11,7 @@ public class ParticleManager : MonoBehaviour
 
     public bool ffToggle = true;
     [SerializeField] bool isUnit = true;
-    [SerializeField] bool isController = false;
+    //[SerializeField] bool isController = false;
     
 
 

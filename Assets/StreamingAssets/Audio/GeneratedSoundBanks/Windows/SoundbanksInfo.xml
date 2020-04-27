@@ -88,6 +88,14 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="2020472247" Name="ClickMenuItem" ObjectPath="\Events\Default Work Unit\ClickMenuItem" GUID="{F4F1FC50-7C4D-4C3A-8D4C-C51D706191B2}" DurationType="OneShot" DurationMin="1.900376" DurationMax="2.581038">
+					<IncludedMemoryFiles>
+						<File Id="531508631" Language="SFX">
+							<ShortName>Click menu item.wav</ShortName>
+							<Path>SFX\Click menu item_C347298D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="420808075" Name="CollectPhoton" ObjectPath="\Events\Default Work Unit\CollectPhoton" GUID="{942BC8B5-C656-4D05-9948-772ED7C13455}" DurationType="OneShot" DurationMin="2.809083" DurationMax="5.403438">
 					<IncludedMemoryFiles>
 						<File Id="203511670" Language="SFX">
@@ -197,6 +205,18 @@
 						<File Id="1067801504" Language="SFX">
 							<ShortName>AreaUnit AstralVoices-06.wav</ShortName>
 							<Path>SFX\AreaUnit AstralVoices-06_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4264815106" Name="EndGame" ObjectPath="\Events\Default Work Unit\EndGame" GUID="{8213DBA4-BD1D-44DB-973D-77E6020EFAB7}" DurationType="OneShot" DurationMin="10.400000" DurationMax="10.400000">
+					<IncludedMemoryFiles>
+						<File Id="222781942" Language="SFX">
+							<ShortName>QGTeam2_Music_Ending-01.wav</ShortName>
+							<Path>SFX\QGTeam2_Music_Ending-01_0D01859B.wem</Path>
+						</File>
+						<File Id="1010086558" Language="SFX">
+							<ShortName>Metal_String_Pluck_High_Tension_Twang_SC_BM.488-01.wav</ShortName>
+							<Path>SFX\Metal_String_Pluck_High_Tension_Twang_SC_BM.488-01_C347298D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -424,6 +444,16 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
+				<Event Id="1521187885" Name="StartGame" ObjectPath="\Events\Default Work Unit\StartGame" GUID="{8ABBDACF-712B-40F9-B375-97D348E0AE8C}" DurationType="OneShot" DurationMin="10.400000" DurationMax="10.400000">
+					<IncludedMemoryFiles>
+						<File Id="1038593006" Language="SFX">
+							<ShortName>StartGame.wav</ShortName>
+							<Path>SFX\StartGame_C347298D.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2477713992" Name="Stop_Ambience" ObjectPath="\Events\Default Work Unit\Stop_Ambience" GUID="{BA09CC34-AF61-4350-8BF8-C50909C363CA}" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music" GUID="{08288D19-BC2D-430A-838D-457BEE72AF0C}" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3961855540" Name="WallHit" ObjectPath="\Events\Default Work Unit\WallHit" GUID="{92D06A67-F021-4373-98A8-C18174852B6D}" DurationType="OneShot" DurationMin="4.081998" DurationMax="7.027456">
 					<IncludedMemoryFiles>
 						<File Id="156361855" Language="SFX">

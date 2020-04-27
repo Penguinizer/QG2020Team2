@@ -1,23 +1,31 @@
 Event	ID	Name			Wwise Object Path	Notes
 	420808075	CollectPhoton			\Default Work Unit\CollectPhoton	
 	540993415	Start_Music			\Default Work Unit\Start_Music	
+	1521187885	StartGame			\Default Work Unit\StartGame	
 	1543154663	PlusMinBall_Annihilation			\Default Work Unit\PlusMinBall_Annihilation	
 	1548417789	CharacterControl_Impulse			\Default Work Unit\CharacterControl_Impulse	
 	1819005792	ParticleMove			\Default Work Unit\ParticleMove	
 	1823101429	CreateTerritory			\Default Work Unit\CreateTerritory	
+	2020472247	ClickMenuItem			\Default Work Unit\ClickMenuItem	
 	2454750719	CreatePlusMin			\Default Work Unit\CreatePlusMin	
+	2477713992	Stop_Ambience			\Default Work Unit\Stop_Ambience	
+	2837384057	Stop_Music			\Default Work Unit\Stop_Music	
 	3333144297	RevelPhoton			\Default Work Unit\RevelPhoton	
 	3626999974	Start_Ambience			\Default Work Unit\Start_Ambience	
 	3640416505	PlusMinBall_Collision			\Default Work Unit\PlusMinBall_Collision	
 	3961855540	WallHit			\Default Work Unit\WallHit	
+	4264815106	EndGame			\Default Work Unit\EndGame	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1641608847	Particle_Speed			\Default Work Unit\Particle_Speed	
 
 Effect plug-ins	ID	Name	Type				Notes
+	101894586	High_Pass_60Hz_(Custom)	Wwise Parametric EQ			
+	954957676	Wwise_Parametric_EQ_(Custom)	Wwise Parametric EQ			
 	1198215643	Boomerang	Wwise Tremolo			
 	1674078407	Chorus_Like	Wwise Flanger			
 	2653529179	Three_Voices	Wwise Harmonizer			
+	3604890626	High_Pass_60Hz	Wwise Parametric EQ			
 	4202347640	Repeat_after_me	Wwise Harmonizer			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
@@ -47,6 +55,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	212901090	Pop_Airy_ODY-0299-045-03	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Pop_Airy_ODY-0299-045-03_C347298D.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlusMinUnit\Annihilation\Pop\Pop_Airy_ODY-0299-045-03		2527
 	213590152	CollectPhoton_Sparkle 10	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\CollectPhoton_Sparkle 10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\CollectPhotons\CollectPhoton\CollectPhoton_Sparkle 10		1037524
 	217052163	PhotonRevealed_Chord 1	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\PhotonRevealed_Chord 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\CollectPhotons\RevealPhoton\PhotonRevealed_Chord 1		3065768
+	222781942	QGTeam2_Music_Ending-01	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\QGTeam2_Music_Ending-01_0D01859B.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\EndGame\QGTeam2_Music_Ending-01		72587
 	231476937	PhotonRevealed_Chord 4	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\PhotonRevealed_Chord 4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\CollectPhotons\RevealPhoton\PhotonRevealed_Chord 4		2411544
 	243613298	CollectPhoton_Sparkle 5	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\CollectPhoton_Sparkle 5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\CollectPhotons\CollectPhoton\CollectPhoton_Sparkle 5		780512
 	260987788	CreatePlusMinus_Note2-04	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\CreatePlusMinus_Note2-04_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\CreatePlusMin\CreatePlusMin_Note\CreatePlusMinus_Note2-04		1798732
@@ -73,6 +82,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	520998201	Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01_68A14520.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlusMinUnit\Annihilation\EnergyBlast\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01		19154
 	526652532	SpaceDrone	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Space_Presence_ODY-0295-025_C757FAC8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\SpaceDrone		732212
 	526793258	AreaUnit AstralVoices-03	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\AreaUnit AstralVoices-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\CreateTerritory\SynthChord\AreaUnit AstralVoices-03		2707520
+	531508631	Click menu item	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Click menu item_C347298D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Click menu item		17570
 	539330939	CreatePlusMinus_Note2-15	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\CreatePlusMinus_Note2-15_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\CreatePlusMin\CreatePlusMin_Note\CreatePlusMinus_Note2-15		1324624
 	542034477	Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01_51128C6E.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlusMinUnit\Annihilation\EnergyBlast\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_05-01		10420
 	559169585	CollectPhoton_Sparkle 3	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\CollectPhoton_Sparkle 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\CollectPhotons\CollectPhoton\CollectPhoton_Sparkle 3		658660
@@ -115,9 +125,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	999587089	ParticleMove_ModularV3Mono_03	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\ParticleMove_ModularV3Mono_687B3CED.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlusMinUnit\ParticleMove\ParticleMove_ModularV3Mono_03		143729
 	1001098509	Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01_29F8DC8E.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\Impulse\EnergyBlast_2\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01		735296
 	1002703809	Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01_7F7EA4B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\Impulse\EnergyBlast_2\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_03-01		260160
+	1010086558	Metal_String_Pluck_High_Tension_Twang_SC_BM_488-01	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Metal_String_Pluck_High_Tension_Twang_SC_BM.488-01_C347298D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\EndGame\Metal_String_Pluck_High_Tension_Twang_SC_BM_488-01		85789
 	1010135762	Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01_C4353891.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlusMinUnit\Annihilation\EnergyBlast\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_07-01		7786
 	1026217877	Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01_7326CB9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\Impulse\EnergyBlast_2\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_08-01		346176
 	1029173813	Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01_09110C2A.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlusMinUnit\Annihilation\EnergyBlast\Energy_Blasts_Sharp_Concussive_Hits_KCV1-ProQ3_11-01		32375
+	1038593006	StartGame	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\StartGame_C347298D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\StartGame		85789
 	1050436904	wallhit_space_01	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\wallhit_space_7D3A1D50.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlusMinUnit\WallHit\Space\wallhit_space_01		52722
 	1058100332	Pop_Airy_ODY-0299-045-11	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\Pop_Airy_ODY-0299-045-11_C347298D.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlusMinUnit\Annihilation\Pop\Pop_Airy_ODY-0299-045-11		2464
 	1062060306	CreatePlusMinus_Note2-09	C:\Users\sakua\Documents\GitHub\QG2020Team2_WwiseProject\.cache\Windows\SFX\CreatePlusMinus_Note2-09_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\CharacterControl\CreatePlusMin\CreatePlusMin_Note\CreatePlusMinus_Note2-09		1072984

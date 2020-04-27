@@ -1105,6 +1105,21 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: d320a1ad89292d448992d7c9bc68c1a5,
       type: 2}
+  StartGame:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ad1f1a298355bcb4786601c884000c42,
+      type: 2}
+  EndGame:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 22584fe330b0a724ea2faa82dcd891f6,
+      type: 2}
+  ClickMenuItem:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6ba134ef9bf32bb4880f503f2ce8210d,
+      type: 2}
   StopMusic:
     idInternal: 0
     valueGuidInternal: 

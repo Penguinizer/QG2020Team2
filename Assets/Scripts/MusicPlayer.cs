@@ -8,6 +8,9 @@ public class MusicPlayer : MonoBehaviour
 
     public AK.Wwise.Event PlayMusic;
     public AK.Wwise.Event PlayAmbience;
+    public AK.Wwise.Event StartGame;
+    public AK.Wwise.Event EndGame;
+    public AK.Wwise.Event ClickMenuItem;
 
     public AK.Wwise.Event StopMusic;
     public AK.Wwise.Event StopAmbience;
@@ -30,13 +33,28 @@ public class MusicPlayer : MonoBehaviour
 
     public void PostWwiseStopMusic()
     {
-        //StopMusic.Post(gameObject);
+        StopMusic.Post(gameObject);
        
-        PlayMusic.Stop(gameObject,10);
+        //PlayMusic.Stop(gameObject);
     }
 
     public void PostWwiseStopAmbience()
     {
         StopAmbience.Post(gameObject);
+    }
+
+    public void PostWwiseStartGame()
+    {
+        StartGame.Post(gameObject);
+    }
+
+    public void PostWwiseEndGame()
+    {
+        EndGame.Post(gameObject);
+    }
+
+    public void PostWwiseClickMenuItem()
+    {
+        ClickMenuItem.Post(gameObject);
     }
 }

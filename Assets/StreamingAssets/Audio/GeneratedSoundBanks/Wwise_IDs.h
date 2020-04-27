@@ -14,15 +14,20 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID CHARACTERCONTROL_IMPULSE = 1548417789U;
+        static const AkUniqueID CLICKMENUITEM = 2020472247U;
         static const AkUniqueID COLLECTPHOTON = 420808075U;
         static const AkUniqueID CREATEPLUSMIN = 2454750719U;
         static const AkUniqueID CREATETERRITORY = 1823101429U;
+        static const AkUniqueID ENDGAME = 4264815106U;
         static const AkUniqueID PARTICLEMOVE = 1819005792U;
         static const AkUniqueID PLUSMINBALL_ANNIHILATION = 1543154663U;
         static const AkUniqueID PLUSMINBALL_COLLISION = 3640416505U;
         static const AkUniqueID REVELPHOTON = 3333144297U;
         static const AkUniqueID START_AMBIENCE = 3626999974U;
         static const AkUniqueID START_MUSIC = 540993415U;
+        static const AkUniqueID STARTGAME = 1521187885U;
+        static const AkUniqueID STOP_AMBIENCE = 2477713992U;
+        static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID WALLHIT = 3961855540U;
     } // namespace EVENTS
 

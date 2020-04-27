@@ -44,17 +44,20 @@ public class StartMenuScript : MonoBehaviour
 
         if (GUI.Button(new Rect(200, 400, 200, 100), "Press To Start Game"))
         {
+            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseClickMenuItem();
+            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseStartGame();
             GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwisePlayMusic();
             unpausePlayers();
             Destroy(gameObject);
         }
         if (GUI.Button(new Rect(150, 500, 150, 100), "Press To Exit Game"))
         {
+            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseClickMenuItem();
             Application.Quit();
         }
         if (GUI.Button(new Rect(300, 500, 150, 100), "Press to Restart Game"))
         {
-            
+            GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseClickMenuItem();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         GUI.EndGroup();

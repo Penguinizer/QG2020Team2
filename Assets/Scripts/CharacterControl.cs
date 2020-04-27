@@ -177,7 +177,8 @@ public class CharacterControl : MonoBehaviour{
 			
 				//Check for win, if not reset temp variable.
 				if(tempArea >= areaToCoverToWin){
-					isWinner = true;
+                    GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseEndGame();
+                    isWinner = true;
 					//print(gameObject.tag + " WINS");
 				
 					if (gameObject.tag == "Player1Owned"){
