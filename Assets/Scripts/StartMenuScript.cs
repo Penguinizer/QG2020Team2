@@ -38,7 +38,7 @@ public class StartMenuScript : MonoBehaviour
     void OnGUI()
     {
         GUI.BeginGroup(new Rect((Screen.width / 2) - 300, (Screen.height / 2) - 300, 600, 600));
-        GUI.Box(new Rect(0, 0, 600, 600), "Controls:");
+        GUI.Box(new Rect(0, 0, 600, 600), "");
         GUI.Box(new Rect(0, 0, 600, 200), controlIMG, style);
         GUI.Box(new Rect(100, 200, 400, 200), descriptionText, style);
 
@@ -48,11 +48,11 @@ public class StartMenuScript : MonoBehaviour
             unpausePlayers();
             Destroy(gameObject);
         }
-        if (GUI.Button(new Rect(100, 500, 150, 100), "Press To Exit Game"))
+        if (GUI.Button(new Rect(150, 500, 150, 100), "Press To Exit Game"))
         {
             Application.Quit();
         }
-        if (GUI.Button(new Rect(250, 500, 150, 100), "Press to Restart Game"))
+        if (GUI.Button(new Rect(300, 500, 150, 100), "Press to Restart Game"))
         {
             GameObject.Find("MusicPlayer").GetComponent<MusicPlayer>().PostWwiseStopMusic();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
